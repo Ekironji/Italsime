@@ -4,9 +4,9 @@ public class Modello {
 	
 	private int id;
 	private String Name;
-	private String ariaType;
-	public static String ARIA_PULITA = "pulita";
-	public static String ARIA_SPORCA = "sporca";
+	private int ariaType;
+	public static int ARIA_PULITA = 1; // closed blades
+	public static int ARIA_SPORCA = 2; // opened blades
 	private double Kw;
 	private int Rpm;
 	private int misura1, misura2, misura3, misura4, misura5, misura6, misura7, misura8, misura9, 
@@ -17,7 +17,7 @@ public class Modello {
 	
 	public Modello(){}
 
-	public Modello(String name, String ariaType, double kw, int rpm, int misura1,
+	public Modello(String name, int ariaType, double kw, int rpm, int misura1,
 			int misura2, int misura3, int misura4, int misura5, int misura6,
 			int misura7, int misura8, int misura9, int misura10, int misura11,
 			int misura12, int misura13, int misura14, int misura15,
@@ -84,14 +84,14 @@ public class Modello {
 	/**
 	 * @return the ariaType
 	 */
-	public String getAriaType() {
+	public int getAriaType() {
 		return ariaType;
 	}
 
 	/**
 	 * @param ariaType the ariaType to set
 	 */
-	public void setAriaType(String ariaType) {
+	public void setAriaType(int ariaType) {
 		this.ariaType = ariaType;
 	}
 
@@ -457,6 +457,26 @@ public class Modello {
 	 */
 	public void setM3h5(int m3h5) {
 		this.m3h5 = m3h5;
+	}
+	
+	/**
+	 * convert
+	 */
+	public int m3hTommH20(int m3hValue){
+		return m3hValue;
+	}
+	
+	/**
+	 * @return una stringa leggibie che identifica l'elemento
+	 */
+	public String toString() {
+		return "Name: " + this.Name + " - TipoAria: " + this.ariaType + " - Kw: " + String.valueOf(this.Kw)
+				+ " - Rpm: " + this.Rpm + " - misura1: " + this.misura1 + " - misura2: " + this.misura2 + " - misura3: " + this.misura3
+				 + " - misura4: " + this.misura4 + " - misura5: " + this.misura5 + " - misura6: " + this.misura6 + " - misura7: " + this.misura7
+				 + " - misura8: " + this.misura8 + " - misura9: " + this.misura9 + " - misura10: " + this.misura10 + " - misura11: " + this.misura11
+				 + " - misura12: " + this.misura12 + " - misura13: " + this.misura13 + " - misura14: " + this.misura14 + " - misura15: " + this.misura15
+				 + " - misura16: " + this.misura16 + " - misura17: " + this.misura17 + " - misura18: " + this.misura18 + " - Kg: " + this.Kg
+				 + " - m3h1: " + this.m3h1 + " - m3h2: " + this.m3h2 + " - m3h3: " + this.m3h3 + " - m3h4: " + this.m3h4 + " - m3h5: " + this.m3h5;
 	}
 	
 

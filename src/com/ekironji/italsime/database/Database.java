@@ -58,14 +58,14 @@ public class Database {
     public ArrayList<Modello> getAllAriaPulitaModels(){
     	Cursor cursor = mDb.query(ModelsMetaData.ModelsTab_TABLE, null, 
     			ModelsMetaData.ModelsTab_ARIATYPE_KEY + "= ?",
-				new String[] { Modello.ARIA_PULITA }, null, null, null);
+				new String[] { String.valueOf(Modello.ARIA_PULITA) }, null, null, null);
     	return returnModelsFromCursor(cursor);
     }
     
     public ArrayList<Modello> getAllAriaSporcaModels(){
     	Cursor cursor = mDb.query(ModelsMetaData.ModelsTab_TABLE, null, 
     			ModelsMetaData.ModelsTab_ARIATYPE_KEY + "= ?",
-				new String[] { Modello.ARIA_SPORCA }, null, null, null);
+				new String[] { String.valueOf(Modello.ARIA_SPORCA) }, null, null, null);
     	return returnModelsFromCursor(cursor);
     }
     
@@ -76,7 +76,7 @@ public class Database {
     			Modello myModello = new Modello();
     			myModello.setId(cursor.getInt(ModelsMetaData.ModelsTab_COLUMNINDEX_ID));
     			myModello.setName(cursor.getString(ModelsMetaData.ModelsTab_COLUMNINDEX_NAME));
-    			myModello.setAriaType(cursor.getString(ModelsMetaData.ModelsTab_COLUMNINDEX_ARIATYPE));
+    			myModello.setAriaType(cursor.getInt(ModelsMetaData.ModelsTab_COLUMNINDEX_ARIATYPE));
     			myModello.setKw(cursor.getDouble(ModelsMetaData.ModelsTab_COLUMNINDEX_KW)); 
     			myModello.setRpm(cursor.getInt(ModelsMetaData.ModelsTab_COLUMNINDEX_RPM));
     			myModello.setMisura1(cursor.getInt(ModelsMetaData.ModelsTab_COLUMNINDEX_MISURA1));
@@ -234,9 +234,9 @@ public class Database {
             + ModelsMetaData.ModelsTab_KG_KEY + " integer not null, "
             + ModelsMetaData.ModelsTab_M3H1_KEY + " integer not null, "
             + ModelsMetaData.ModelsTab_M3H2_KEY + " integer not null, "
-            + ModelsMetaData.ModelsTab_M3H3_KEY + " integer not null, "
-            + ModelsMetaData.ModelsTab_M3H4_KEY + " integer not null, "
-            + ModelsMetaData.ModelsTab_M3H5_KEY + " integer not null);";
+            + ModelsMetaData.ModelsTab_M3H3_KEY + " integer, "
+            + ModelsMetaData.ModelsTab_M3H4_KEY + " integer, "
+            + ModelsMetaData.ModelsTab_M3H5_KEY + " integer);";
 	
 	private class DbHelper extends SQLiteOpenHelper { //classe che ci aiuta nella creazione del db
 		
