@@ -19,6 +19,7 @@ import android.view.ViewGroup;
 import com.ekironji.italsime.Modello.Modello;
 import com.ekironji.italsime.csvreader.CSVReader;
 import com.ekironji.italsime.database.Database;
+import com.ekironji.italsime.fragment.AriaPulitaFragment;
 
 public class MainActivity extends ActionBarActivity {
 	
@@ -39,60 +40,15 @@ public class MainActivity extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+		dialog = new ProgressDialog(this);
+//		
+		database = new Database(this);
+        database.open();
+
+		
 		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
-					.add(R.id.container, new PlaceholderFragment()).commit();
-		}
-		
-        //mostro il dialogo di attesa caricamento
-		dialog = new ProgressDialog(this);
-		
-		database = new Database(getApplicationContext());
-        database.open();
-        
-		int size = database.getAllModels().size();
-		
-		if (size == 0) {
-			
-			showProgressDialog("Creazione del database...");
-			
-			String next[] = {};
-			List<String[]> list = new ArrayList<String[]>();
-			int count = 1;
-			try {
-				CSVReader reader = new CSVReader(new InputStreamReader(
-						getAssets().open("tabellaAriaPulitaClosedBlade.csv")));
-				for (;;) {
-					next = reader.readNext();
-					if (next != null) {
-						
-						Log.i(DEBUG_TAG, "Riga " + count + " = ");
-						Modello temp = new Modello(next[0],Modello.ARIA_PULITA,Double.parseDouble(next[1]),Integer.parseInt(next[2]),
-								Integer.parseInt(next[3]),Integer.parseInt(next[4]),Integer.parseInt(next[5]),Integer.parseInt(next[6]),
-								Integer.parseInt(next[7]),Integer.parseInt(next[8]),Integer.parseInt(next[9]),Integer.parseInt(next[10]),
-								Integer.parseInt(next[11]),Integer.parseInt(next[12]),Integer.parseInt(next[13]),Integer.parseInt(next[14]),
-								Integer.parseInt(next[15]),Integer.parseInt(next[16]),Integer.parseInt(next[17]),Integer.parseInt(next[18]),
-								Integer.parseInt(next[19]),Integer.parseInt(next[20]),Integer.parseInt(next[21]),Integer.parseInt(next[22]),
-								Integer.parseInt(next[23]),
-								(next[24]=="")? 0 : Integer.parseInt(next[24]),
-								(next[25]=="")? 0 : Integer.parseInt(next[25]),
-								(next[26]=="")? 0 : Integer.parseInt(next[26]));
-						Log.i(DEBUG_TAG, ""+ temp.toString());	
-						database.insertModel(temp);
-						list.add(next);
-						count++;
-					} else {
-						break;
-					}
-				}
-				
-				hideProgressDialog();
-				
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		} else {
-			Log.i(DEBUG_TAG, "database size = " + size);
+					.add(R.id.container, new AriaPulitaFragment()).commit();
 		}
 		
 		database.close();
@@ -127,23 +83,6 @@ public class MainActivity extends ActionBarActivity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
-	}
-
-	/**
-	 * A placeholder fragment containing a simple view.
-	 */
-	public static class PlaceholderFragment extends Fragment {
-
-		public PlaceholderFragment() {
-		}
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_main, container,
-					false);
-			return rootView;
-		}
 	}
 
 }

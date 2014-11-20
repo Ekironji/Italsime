@@ -119,7 +119,7 @@ public class CSVReader {
     *
     * @param nextLine
     *            the string to parse
-    * @return the comma-tokenized list of elements, or null if nextLine is null
+    * @return the comma-tokenized mListViewAriaPulita of elements, or null if nextLine is null
     * @throws IOException if bad things happen during the read
     */
    private String[] parseLine(String nextLine) throws IOException {

@@ -232,8 +232,8 @@ public class Database {
             + ModelsMetaData.ModelsTab_MISURA17_KEY + " integer not null, "
             + ModelsMetaData.ModelsTab_MISURA18_KEY + " integer not null, "
             + ModelsMetaData.ModelsTab_KG_KEY + " integer not null, "
-            + ModelsMetaData.ModelsTab_M3H1_KEY + " integer not null, "
-            + ModelsMetaData.ModelsTab_M3H2_KEY + " integer not null, "
+            + ModelsMetaData.ModelsTab_M3H1_KEY + " integer, "
+            + ModelsMetaData.ModelsTab_M3H2_KEY + " integer, "
             + ModelsMetaData.ModelsTab_M3H3_KEY + " integer, "
             + ModelsMetaData.ModelsTab_M3H4_KEY + " integer, "
             + ModelsMetaData.ModelsTab_M3H5_KEY + " integer);";
