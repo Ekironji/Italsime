@@ -5,10 +5,6 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.ekironji.italsime.Modello.Modello;
-import com.ekironji.italsime.csvreader.CSVReader;
-import com.ekironji.italsime.database.Database;
-
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -17,6 +13,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.Window;
+
+import com.ekironji.italsime.Modello.Modello;
+import com.ekironji.italsime.csvreader.CSVReader;
+import com.ekironji.italsime.database.Database;
 
  
 public class SplashScreen extends Activity {
@@ -28,7 +28,7 @@ public class SplashScreen extends Activity {
      */
     private Thread mSplashThread;    
 
-	static ProgressDialog dialog;
+	static ProgressDialog barProgressDialog;
 	
 	static Database database;
 	
@@ -47,7 +47,7 @@ public class SplashScreen extends Activity {
         // Splash screen view
         setContentView(R.layout.splash);
         
-		dialog = new ProgressDialog(this);
+		barProgressDialog = new ProgressDialog(this);
 		
         final SplashScreen sPlashScreen = this;   
         
@@ -97,20 +97,32 @@ public class SplashScreen extends Activity {
     }    
     
 	public static void showProgressDialog(String message){
-		dialog.setMessage(message);
-        dialog.setIndeterminate(true);
-        dialog.setCancelable(false);
-        dialog.show();		
+		barProgressDialog.setTitle(message);
+		barProgressDialog.setMessage("L'operazione potrebbe richiedere qualche minuto...");
+//        barProgressDialog.setIndeterminate(true);
+		barProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+        barProgressDialog.setCancelable(false);
+        barProgressDialog.setProgress(0);
+        barProgressDialog.setMax(334);
+        barProgressDialog.show();		
+	}
+	
+	public static void setProgressPercent(int count){
+		barProgressDialog.setProgress(count);
+		 if (count == barProgressDialog.getMax()) {
+			 barProgressDialog.dismiss();
+		 }
+//		barProgressDialog.incrementProgressBy(1);
 	}
 	
 	public static void hideProgressDialog(){
-		dialog.dismiss();		
+		barProgressDialog.dismiss();		
 	}
 	
-	 private class CreateDatabaseTask extends AsyncTask<Void, Void, Void> {
+	 private class CreateDatabaseTask extends AsyncTask<Void, Integer, Void> {
 		 
 		 protected void onPreExecute(){
-			 showProgressDialog("Creazione del database...");
+			 showProgressDialog("Creazione del database");
 		 }
 		 
 		 protected Void doInBackground(Void... args) {
@@ -143,6 +155,7 @@ public class SplashScreen extends Activity {
 							 Log.i(DEBUG_TAG, ""+ temp.toString());	
 							 database.insertModel(temp);
 							 list.add(next);
+							 publishProgress(count);
 							 count++;
 						 } else {
 							 break;
@@ -160,9 +173,9 @@ public class SplashScreen extends Activity {
 			 return null;	    	 
 		 }
 
-//	     protected void onProgressUpdate(Integer... progress) {
-//	         setProgressPercent(progress[0]);
-//	     }
+	     protected void onProgressUpdate(Integer... progress) {
+	         setProgressPercent(progress[0]);
+	     }
 
 	     protected void onPostExecute(Void result) {
 	    	 hideProgressDialog();

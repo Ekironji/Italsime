@@ -1,23 +1,11 @@
 package com.ekironji.italsime;
 
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.ProgressDialog;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 
-import com.ekironji.italsime.Modello.Modello;
-import com.ekironji.italsime.csvreader.CSVReader;
 import com.ekironji.italsime.database.Database;
 import com.ekironji.italsime.fragment.AriaPulitaFragment;
 
@@ -45,7 +33,6 @@ public class MainActivity extends ActionBarActivity {
 		database = new Database(this);
         database.open();
 
-		
 		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
 					.add(R.id.container, new AriaPulitaFragment()).commit();
