@@ -69,6 +69,18 @@ public class Database {
     	return returnModelsFromCursor(cursor);
     }
     
+    public ArrayList<Modello> getModelsbyKW(int sporcaOPulita, int kwMAX, int kwMIN){
+    	Cursor cursor = mDb.query(ModelsMetaData.ModelsTab_TABLE, null, 
+    			ModelsMetaData.ModelsTab_ARIATYPE_KEY + "= ? AND " +
+    			ModelsMetaData.ModelsTab_COLUMNINDEX_KW + "< ? AND " +
+    			ModelsMetaData.ModelsTab_COLUMNINDEX_KW + "> ?",
+				new String[] { String.valueOf(sporcaOPulita),
+    							String.valueOf(kwMAX),
+    							String.valueOf(kwMIN)}, null, null, null);
+    	
+		return returnModelsFromCursor(cursor); 	
+    }
+    
     private ArrayList<Modello> returnModelsFromCursor(Cursor cursor){
     	ArrayList<Modello> modelsList = new ArrayList<Modello>();
     	if(cursor.moveToFirst()){

@@ -98,12 +98,12 @@ public class SplashScreen extends Activity {
     
 	public static void showProgressDialog(String message){
 		barProgressDialog.setTitle(message);
-		barProgressDialog.setMessage("L'operazione potrebbe richiedere qualche minuto...");
+		barProgressDialog.setMessage("L'operazione potrebbe richiedere qualche secondo...");
 //        barProgressDialog.setIndeterminate(true);
 		barProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
         barProgressDialog.setCancelable(false);
         barProgressDialog.setProgress(0);
-        barProgressDialog.setMax(334);
+        barProgressDialog.setMax(456);  // totale dei prodotti nei due file
         barProgressDialog.show();		
 	}
 	
@@ -134,14 +134,54 @@ public class SplashScreen extends Activity {
 				 List<String[]> list = new ArrayList<String[]>();
 				 int count = 1;
 				 try {
-					 CSVReader reader = new CSVReader(new InputStreamReader(
-							 getAssets().open("tabellaAriaPulitaClosedBlade.csv")));
+					 /*
+					  * Parsing primo file closed_blade_puntievirgole.csv
+					  * 
+					  * Closed Blade -> Area Pulita
+					  */
+					 Log.i(DEBUG_TAG, "inizio primo file: closed_blade_puntievirgole.csv");
+					 CSVReader reader1 = new CSVReader(new InputStreamReader(
+							 getAssets().open("closed_blade_puntievirgole.csv")));
 					 for (;;) {
-						 next = reader.readNext();
+						 next = reader1.readNext();
 						 if (next != null) {
 	
 							 Log.i(DEBUG_TAG, "Riga " + count + " = ");
 							 Modello temp = new Modello(next[0],Modello.ARIA_PULITA,Double.parseDouble(next[1]),Integer.parseInt(next[2]),
+									 Integer.parseInt(next[3]),Integer.parseInt(next[4]),Integer.parseInt(next[5]),Integer.parseInt(next[6]),
+									 Integer.parseInt(next[7]),Integer.parseInt(next[8]),Integer.parseInt(next[9]),Integer.parseInt(next[10]),
+									 Integer.parseInt(next[11]),Integer.parseInt(next[12]),Integer.parseInt(next[13]),Integer.parseInt(next[14]),
+									 Integer.parseInt(next[15]),Integer.parseInt(next[16]),Integer.parseInt(next[17]),Integer.parseInt(next[18]),
+									 Integer.parseInt(next[19]),Integer.parseInt(next[20]),Integer.parseInt(next[21]),
+									 (next[22]=="")? 0 : Integer.parseInt(next[22]),
+									 (next[23]=="")? 0 : Integer.parseInt(next[23]),
+									 (next[24]=="")? 0 : Integer.parseInt(next[24]),
+									 (next[25]=="")? 0 : Integer.parseInt(next[25]),
+									 (next[26]=="")? 0 : Integer.parseInt(next[26]));
+							 Log.i(DEBUG_TAG, ""+ temp.toString());	
+							 database.insertModel(temp);
+							 list.add(next);
+							 publishProgress(count);
+							 count++;
+						 } else {
+							 break;
+						 }
+					 }
+					 
+					 /*
+					  * Parsing secondo file open_blade_puntievirgole.csv
+					  * 
+					  * Open Blade -> Area Sporca
+					  */
+					 Log.i(DEBUG_TAG, "inizio secondo file: open_blade_puntievirgole.csv");
+					 CSVReader reader2 = new CSVReader(new InputStreamReader(
+							 getAssets().open("open_blade_puntievirgole.csv")));
+					 for (;;) {
+						 next = reader2.readNext();
+						 if (next != null) {
+	
+							 Log.i(DEBUG_TAG, "Riga " + count + " = ");
+							 Modello temp = new Modello(next[0],Modello.ARIA_SPORCA,Double.parseDouble(next[1]),Integer.parseInt(next[2]),
 									 Integer.parseInt(next[3]),Integer.parseInt(next[4]),Integer.parseInt(next[5]),Integer.parseInt(next[6]),
 									 Integer.parseInt(next[7]),Integer.parseInt(next[8]),Integer.parseInt(next[9]),Integer.parseInt(next[10]),
 									 Integer.parseInt(next[11]),Integer.parseInt(next[12]),Integer.parseInt(next[13]),Integer.parseInt(next[14]),
