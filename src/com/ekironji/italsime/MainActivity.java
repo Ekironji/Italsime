@@ -7,7 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.ekironji.italsime.database.Database;
-import com.ekironji.italsime.fragment.AriaPulitaFragment;
+import com.ekironji.italsime.fragment.ClosedBladeAriaPulitaFragment;
 
 public class MainActivity extends ActionBarActivity {
 	
@@ -35,7 +35,7 @@ public class MainActivity extends ActionBarActivity {
 
 		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
-					.add(R.id.container, new AriaPulitaFragment()).commit();
+					.add(R.id.container, new ClosedBladeAriaPulitaFragment()).commit();
 		}
 		
 		database.close();

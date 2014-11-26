@@ -19,21 +19,21 @@ public class Database {
     private static final String DB_NAME="ItalsimeModelsDatabase";//nome del db
     private static final int DB_VERSION=1; //numero di versione del nostro db
     
-    public Database(Context ctx){
+    public Database(Context ctx) {
         mContext=ctx;
         mDbHelper=new DbHelper(ctx, DB_NAME, null, DB_VERSION);   //quando istanziamo questa classe, istanziamo anche l'helper (vedi sotto)     
 	}
 	
-	public void open(){  //il database su cui agiamo � leggibile/scrivibile
+	public void open() {  //il database su cui agiamo � leggibile/scrivibile
 	        mDb=mDbHelper.getWritableDatabase();	        
 	}
 	
-	public void close(){ //chiudiamo il database su cui agiamo
+	public void close() { //chiudiamo il database su cui agiamo
 	        mDb.close();
 	}
 	
     //inserisce un modello
-    public void insertModel(Modello modello){
+    public void insertModel(Modello modello) {
 			mDb.insert(ModelsMetaData.ModelsTab_TABLE, null, getContentFromModello(modello));
     }
     
@@ -50,30 +50,47 @@ public class Database {
     }
     
     //ritorna tutti i modelli
-    public ArrayList<Modello> getAllModels(){ //metodo per fare la query di tutti i dati    	
+    public ArrayList<Modello> getAllModels() { //metodo per fare la query di tutti i dati    	
 	    	Cursor cursor = mDb.query(ModelsMetaData.ModelsTab_TABLE, null,null,null,null,null,null);
 	    	return returnModelsFromCursor(cursor);
     }
     
-    public ArrayList<Modello> getAllAriaPulitaModels(){
+    public ArrayList<Modello> getAllAriaPulitaModels() {
     	Cursor cursor = mDb.query(ModelsMetaData.ModelsTab_TABLE, null, 
     			ModelsMetaData.ModelsTab_ARIATYPE_KEY + "= ?",
 				new String[] { String.valueOf(Modello.ARIA_PULITA) }, null, null, null);
     	return returnModelsFromCursor(cursor);
     }
     
-    public ArrayList<Modello> getAllAriaSporcaModels(){
+    public ArrayList<Modello> getAllAriaSporcaModels() {
     	Cursor cursor = mDb.query(ModelsMetaData.ModelsTab_TABLE, null, 
     			ModelsMetaData.ModelsTab_ARIATYPE_KEY + "= ?",
 				new String[] { String.valueOf(Modello.ARIA_SPORCA) }, null, null, null);
     	return returnModelsFromCursor(cursor);
     }
     
+    public ArrayList<Modello> getModelsByFilteredSearch(int sporcaOPulita,
+    		int portataM3hMIN, int portataM3hMAX,
+    		int pressioneMMh2oMIN, int pressioneMMh2oMAX) {
+    	Cursor cursor = mDb.query(ModelsMetaData.ModelsTab_TABLE, null, 
+    			ModelsMetaData.ModelsTab_ARIATYPE_KEY + "=? and " +
+    			ModelsMetaData.ModelsTab_M3H1_KEY + ">? and " +
+    			ModelsMetaData.ModelsTab_M3H5_KEY + "<? and " +
+    			ModelsMetaData.ModelsTab_MMH2O1_KEY + ">? and " +
+    			ModelsMetaData.ModelsTab_MMH2O5_KEY + "<?",
+				new String[] { String.valueOf(sporcaOPulita),
+    							String.valueOf(portataM3hMIN),
+    							String.valueOf(portataM3hMAX),
+    							String.valueOf(pressioneMMh2oMIN),
+    							String.valueOf(pressioneMMh2oMAX) }, null, null, null);
+    	return returnModelsFromCursor(cursor); 	
+    }
+    
     public ArrayList<Modello> getModelsbyKW(int sporcaOPulita, int kwMAX, int kwMIN){
     	Cursor cursor = mDb.query(ModelsMetaData.ModelsTab_TABLE, null, 
-    			ModelsMetaData.ModelsTab_ARIATYPE_KEY + "= ? AND " +
-    			ModelsMetaData.ModelsTab_COLUMNINDEX_KW + "< ? AND " +
-    			ModelsMetaData.ModelsTab_COLUMNINDEX_KW + "> ?",
+    			ModelsMetaData.ModelsTab_ARIATYPE_KEY + "=? and " +
+    			ModelsMetaData.ModelsTab_KW_KEY + "<? and " +
+    			ModelsMetaData.ModelsTab_KW_KEY + ">?",
 				new String[] { String.valueOf(sporcaOPulita),
     							String.valueOf(kwMAX),
     							String.valueOf(kwMIN)}, null, null, null);
@@ -115,6 +132,11 @@ public class Database {
     			myModello.setM3h3(cursor.getInt(ModelsMetaData.ModelsTab_COLUMNINDEX_M3H3));
     			myModello.setM3h4(cursor.getInt(ModelsMetaData.ModelsTab_COLUMNINDEX_M3H4));
     			myModello.setM3h5(cursor.getInt(ModelsMetaData.ModelsTab_COLUMNINDEX_M3H5));
+    			myModello.setMmH2O1(cursor.getInt(ModelsMetaData.ModelsTab_COLUMNINDEX_MMH2O1));
+    			myModello.setMmH2O2(cursor.getInt(ModelsMetaData.ModelsTab_COLUMNINDEX_MMH2O2));
+    			myModello.setMmH2O3(cursor.getInt(ModelsMetaData.ModelsTab_COLUMNINDEX_MMH2O3));
+    			myModello.setMmH2O4(cursor.getInt(ModelsMetaData.ModelsTab_COLUMNINDEX_MMH2O4));
+    			myModello.setMmH2O5(cursor.getInt(ModelsMetaData.ModelsTab_COLUMNINDEX_MMH2O5));
     			    			
     			modelsList.add(myModello);   			
     		} while(cursor.moveToNext());
@@ -152,6 +174,11 @@ public class Database {
     	cv.put(ModelsMetaData.ModelsTab_M3H3_KEY, modello.getM3h3());
     	cv.put(ModelsMetaData.ModelsTab_M3H4_KEY, modello.getM3h4());
     	cv.put(ModelsMetaData.ModelsTab_M3H5_KEY, modello.getM3h5());
+    	cv.put(ModelsMetaData.ModelsTab_MMH2O1_KEY, modello.getMmH2O1());
+    	cv.put(ModelsMetaData.ModelsTab_MMH2O2_KEY, modello.getMmH2O2());
+    	cv.put(ModelsMetaData.ModelsTab_MMH2O3_KEY, modello.getMmH2O3());
+    	cv.put(ModelsMetaData.ModelsTab_MMH2O4_KEY, modello.getMmH2O4());
+    	cv.put(ModelsMetaData.ModelsTab_MMH2O5_KEY, modello.getMmH2O5());
     	return cv;
     }
 	
@@ -184,8 +211,13 @@ public class Database {
         static final String ModelsTab_M3H1_KEY = "m3h1";   
         static final String ModelsTab_M3H2_KEY = "m3h2";   
         static final String ModelsTab_M3H3_KEY = "m3h3";   
-        static final String ModelsTab_M3H4_KEY = "m3h4";   
+        static final String ModelsTab_M3H4_KEY = "m3h4";
         static final String ModelsTab_M3H5_KEY = "m3h5";
+        static final String ModelsTab_MMH2O1_KEY = "mmH2O1";
+        static final String ModelsTab_MMH2O2_KEY = "mmH2O2";
+        static final String ModelsTab_MMH2O3_KEY = "mmH2O3";
+        static final String ModelsTab_MMH2O4_KEY = "mmH2O4";
+        static final String ModelsTab_MMH2O5_KEY = "mmH2O5";
         
         static final int ModelsTab_COLUMNINDEX_ID 		=	0;
         static final int ModelsTab_COLUMNINDEX_NAME 	=	1;
@@ -216,6 +248,11 @@ public class Database {
         static final int ModelsTab_COLUMNINDEX_M3H3		= 	26;
         static final int ModelsTab_COLUMNINDEX_M3H4		= 	27;
         static final int ModelsTab_COLUMNINDEX_M3H5		= 	28;
+        static final int ModelsTab_COLUMNINDEX_MMH2O1	= 	29;
+        static final int ModelsTab_COLUMNINDEX_MMH2O2	= 	30;
+        static final int ModelsTab_COLUMNINDEX_MMH2O3	= 	31;
+        static final int ModelsTab_COLUMNINDEX_MMH2O4	= 	32;
+        static final int ModelsTab_COLUMNINDEX_MMH2O5	= 	33;
     }
 	
 	private static final String MODELS_TABLE_CREATE = "CREATE TABLE IF NOT EXISTS "  //codice sql di creazione della tabella
@@ -248,7 +285,12 @@ public class Database {
             + ModelsMetaData.ModelsTab_M3H2_KEY + " integer, "
             + ModelsMetaData.ModelsTab_M3H3_KEY + " integer, "
             + ModelsMetaData.ModelsTab_M3H4_KEY + " integer, "
-            + ModelsMetaData.ModelsTab_M3H5_KEY + " integer);";
+            + ModelsMetaData.ModelsTab_M3H5_KEY + " integer, "
+            + ModelsMetaData.ModelsTab_MMH2O1_KEY + " integer, "
+            + ModelsMetaData.ModelsTab_MMH2O2_KEY + " integer, "
+            + ModelsMetaData.ModelsTab_MMH2O3_KEY + " integer, "
+            + ModelsMetaData.ModelsTab_MMH2O4_KEY + " integer, "
+            + ModelsMetaData.ModelsTab_MMH2O5_KEY + " integer);";
 	
 	private class DbHelper extends SQLiteOpenHelper { //classe che ci aiuta nella creazione del db
 		

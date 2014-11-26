@@ -13,16 +13,19 @@ public class Modello {
 				misura10, misura11, misura12, misura13, misura14, misura15, misura16, misura17, misura18;
 	private int Kg;
 	private int m3h1, m3h2, m3h3, m3h4, m3h5;
+	private int mmH2O1, mmH2O2, mmH2O3, mmH2O4, mmH2O5;
 	
 	
 	public Modello(){}
 
-	public Modello(String name, int ariaType, double kw, int rpm, int misura1,
-			int misura2, int misura3, int misura4, int misura5, int misura6,
-			int misura7, int misura8, int misura9, int misura10, int misura11,
-			int misura12, int misura13, int misura14, int misura15,
-			int misura16, int misura17, int misura18, int kg, int m3h1,
-			int m3h2, int m3h3, int m3h4, int m3h5) {
+	public Modello(String name, int ariaType, double kw, int rpm, 
+			int misura1, int misura2, int misura3, int misura4, int misura5, 
+			int misura6, int misura7, int misura8, int misura9, int misura10, 
+			int misura11, int misura12, int misura13, int misura14, int misura15,
+			int misura16, int misura17, int misura18, 
+			int kg, 
+			int m3h1, int m3h2, int m3h3, int m3h4, int m3h5,
+			int mmH2O1, int mmH2O2, int mmH2O3, int mmH2O4, int mmH2O5) {
 		super();
 		this.Name = name;
 		this.ariaType = ariaType;
@@ -52,6 +55,12 @@ public class Modello {
 		this.m3h3 = m3h3;
 		this.m3h4 = m3h4;
 		this.m3h5 = m3h5;
+		this.mmH2O1 = mmH2O1;
+		this.mmH2O2 = mmH2O2;
+		this.mmH2O3 = mmH2O3;
+		this.mmH2O4 = mmH2O4;
+		this.mmH2O5 = mmH2O5;
+		
 	}
 	
 	/**
@@ -457,26 +466,90 @@ public class Modello {
 	 */
 	public void setM3h5(int m3h5) {
 		this.m3h5 = m3h5;
-	}
+	}	
 	
 	/**
-	 * convert
+	 * @return the mmH2O1
 	 */
-	public int m3hTommH20(int m3hValue){
-		return m3hValue;
+	public int getMmH2O1() {
+		return mmH2O1;
 	}
-	
+
+	/**
+	 * @param mmH2O1 the mmH2O1 to set
+	 */
+	public void setMmH2O1(int mmH2O1) {
+		this.mmH2O1 = mmH2O1;
+	}
+
+	/**
+	 * @return the mmH2O2
+	 */
+	public int getMmH2O2() {
+		return mmH2O2;
+	}
+
+	/**
+	 * @param mmH2O2 the mmH2O2 to set
+	 */
+	public void setMmH2O2(int mmH2O2) {
+		this.mmH2O2 = mmH2O2;
+	}
+
+	/**
+	 * @return the mmH2O3
+	 */
+	public int getMmH2O3() {
+		return mmH2O3;
+	}
+
+	/**
+	 * @param mmH2O3 the mmH2O3 to set
+	 */
+	public void setMmH2O3(int mmH2O3) {
+		this.mmH2O3 = mmH2O3;
+	}
+
+	/**
+	 * @return the mmH2O4
+	 */
+	public int getMmH2O4() {
+		return mmH2O4;
+	}
+
+	/**
+	 * @param mmH2O4 the mmH2O4 to set
+	 */
+	public void setMmH2O4(int mmH2O4) {
+		this.mmH2O4 = mmH2O4;
+	}
+
+	/**
+	 * @return the mmH2O5
+	 */
+	public int getMmH2O5() {
+		return mmH2O5;
+	}
+
+	/**
+	 * @param mmH2O5 the mmH2O5 to set
+	 */
+	public void setMmH2O5(int mmH2O5) {
+		this.mmH2O5 = mmH2O5;
+	}
+
 	/**
 	 * @return una stringa leggibie che identifica l'elemento
 	 */
 	public String toString() {
 		return "Name: " + this.Name + " - TipoAria: " + this.ariaType + " - Kw: " + String.valueOf(this.Kw)
-				+ " - Rpm: " + this.Rpm + " - misura1: " + this.misura1 + " - misura2: " + this.misura2 + " - misura3: " + this.misura3
-				 + " - misura4: " + this.misura4 + " - misura5: " + this.misura5 + " - misura6: " + this.misura6 + " - misura7: " + this.misura7
-				 + " - misura8: " + this.misura8 + " - misura9: " + this.misura9 + " - misura10: " + this.misura10 + " - misura11: " + this.misura11
-				 + " - misura12: " + this.misura12 + " - misura13: " + this.misura13 + " - misura14: " + this.misura14 + " - misura15: " + this.misura15
-				 + " - misura16: " + this.misura16 + " - misura17: " + this.misura17 + " - misura18: " + this.misura18 + " - Kg: " + this.Kg
-				 + " - m3h1: " + this.m3h1 + " - m3h2: " + this.m3h2 + " - m3h3: " + this.m3h3 + " - m3h4: " + this.m3h4 + " - m3h5: " + this.m3h5;
+			+ " - Rpm: " + this.Rpm + " - misura1: " + this.misura1 + " - misura2: " + this.misura2 + " - misura3: " + this.misura3
+			+ " - misura4: " + this.misura4 + " - misura5: " + this.misura5 + " - misura6: " + this.misura6 + " - misura7: " + this.misura7
+			+ " - misura8: " + this.misura8 + " - misura9: " + this.misura9 + " - misura10: " + this.misura10 + " - misura11: " + this.misura11
+			+ " - misura12: " + this.misura12 + " - misura13: " + this.misura13 + " - misura14: " + this.misura14 + " - misura15: " + this.misura15
+			+ " - misura16: " + this.misura16 + " - misura17: " + this.misura17 + " - misura18: " + this.misura18 + " - Kg: " + this.Kg
+			+ " - m3h1: " + this.m3h1 + " - m3h2: " + this.m3h2 + " - m3h3: " + this.m3h3 + " - m3h4: " + this.m3h4 + " - m3h5: " + this.m3h5
+			+ " - mmH2O1: " + this.mmH2O1 + " - mmH2O2: " + this.mmH2O2 + " - mmH2O3: " + this.mmH2O3 + " - mmH2O4: " + this.mmH2O4 + " - mmH2O5: " + this.mmH2O5;
 	}
 	
 

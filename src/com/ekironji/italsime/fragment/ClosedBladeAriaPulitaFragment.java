@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,9 +16,11 @@ import com.ekironji.italsime.R;
 import com.ekironji.italsime.Modello.ModelliListAdapter;
 import com.ekironji.italsime.Modello.Modello;
 
-public class AriaPulitaFragment extends Fragment {
+public class ClosedBladeAriaPulitaFragment extends Fragment {
 	
+	final String DEBUG_TAG = "ClosedBladeAriaPulitaFragment";
 	ListView mListViewAriaPulita;
+	ArrayList<Modello> listaModelli;
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup group, Bundle saved){
@@ -29,13 +32,14 @@ public class AriaPulitaFragment extends Fragment {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
-				
+				Log.i(DEBUG_TAG, listaModelli.get(position).toString());
 			}
 		});
 		
 		MainActivity.database.open();
 		
-		ArrayList<Modello> listaModelli = MainActivity.database.getAllAriaPulitaModels();
+		listaModelli = MainActivity.database.getModelsByFilteredSearch(Modello.ARIA_PULITA, 
+				300, 600, 0, 1000);
 		
 		mListViewAriaPulita.setAdapter(new ModelliListAdapter(getActivity(), listaModelli));
 		
