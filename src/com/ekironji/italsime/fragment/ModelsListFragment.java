@@ -2,6 +2,11 @@ package com.ekironji.italsime.fragment;
 
 import java.util.ArrayList;
 
+import com.ekironji.italsime.MainActivity;
+import com.ekironji.italsime.R;
+import com.ekironji.italsime.Modello.ModelliListAdapter;
+import com.ekironji.italsime.Modello.Modello;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -11,16 +16,13 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.ekironji.italsime.MainActivity;
-import com.ekironji.italsime.R;
-import com.ekironji.italsime.Modello.ModelliListAdapter;
-import com.ekironji.italsime.Modello.Modello;
-
-public class ClosedBladeAriaPulitaFragment extends Fragment {
+public class ModelsListFragment extends Fragment{
 	
-	final String DEBUG_TAG = "ClosedBladeAriaPulitaFragment";
+	final String DEBUG_TAG = "ModelsListFragment";
 	ListView mListViewAriaPulita;
 	ArrayList<Modello> listaModelli;
+	
+	int ariaType = -1;
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup group, Bundle saved){
@@ -38,9 +40,17 @@ public class ClosedBladeAriaPulitaFragment extends Fragment {
 		
 		MainActivity.database.open();
 		
-		listaModelli = MainActivity.database.getModelsByFilteredSearch(Modello.ARIA_PULITA, 
-				300, 600, 0, 1000);
+//		listaModelli = MainActivity.database.getModelsByFilteredSearch(Modello.ARIA_PULITA, 
+//				300, 600, 0, 1000);
+		ariaType = getArguments().getInt(MainActivity.KEY_PASSARIATYPE);
 		
+		if (ariaType == Modello.ARIA_PULITA){
+			listaModelli = MainActivity.database.getAllAriaPulitaModels();
+		} else if (ariaType == Modello.ARIA_SPORCA) {
+			listaModelli = MainActivity.database.getAllAriaSporcaModels();
+		} else if (ariaType == -1){
+			
+		}
 		mListViewAriaPulita.setAdapter(new ModelliListAdapter(getActivity(), listaModelli));
 		
 		MainActivity.database.close();

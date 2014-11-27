@@ -4,5 +4,12 @@
     <string name="app_name">Italsime</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    
+    <string name="title_section1">Aria Pulita - Closed Blade</string>
+    <string name="title_section2">Aria Sporca - Opened Blade</string>
+    <string name="title_section3">Info</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
 
 </resources>

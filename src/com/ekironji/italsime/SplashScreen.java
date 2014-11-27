@@ -45,7 +45,7 @@ public class SplashScreen extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         // Splash screen view
-        setContentView(R.layout.splash);
+        setContentView(R.layout.activity_splash);
         
 		barProgressDialog = new ProgressDialog(this);
 		
