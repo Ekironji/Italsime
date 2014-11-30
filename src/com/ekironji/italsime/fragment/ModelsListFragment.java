@@ -11,10 +11,15 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
+import com.edmodo.rangebar.RangeBar;
+import com.edmodo.rangebar.RangeBar.OnRangeBarChangeListener;
 import com.ekironji.italsime.MainActivity;
 import com.ekironji.italsime.R;
 import com.ekironji.italsime.Modello.ModelliListAdapter;
@@ -28,11 +33,19 @@ public class ModelsListFragment extends Fragment{
 	
 	int ariaType = -1;
 	
+	final int DEFAULT_MIN_PORTATA = 0;
+	final int DEFAULT_MAX_PORTATA = 900;
+	int minPortata = DEFAULT_MIN_PORTATA;
+	int maxPortata = DEFAULT_MAX_PORTATA;
+	
+	final int DEFAULT_MIN_PRESSIONE = 0;
+	final int DEFAULT_MAX_PRESSIONE = 900;
+	int minPressione = DEFAULT_MIN_PRESSIONE;
+	int maxPressione = DEFAULT_MAX_PRESSIONE;
+	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup group, Bundle saved){
 		View view = inflater.inflate(R.layout.fragment_ariapulita, group, false);
-		
-		setHasOptionsMenu(true);
 		
 		mListViewAriaPulita = (ListView) view.findViewById(R.id.listViewAriaPulita);
 		
@@ -65,6 +78,14 @@ public class ModelsListFragment extends Fragment{
 	}
 	
 	@Override
+	public void onActivityCreated(Bundle savedInstanceState) {
+		super.onActivityCreated(savedInstanceState);
+		// Indicate that this fragment would like to influence the set of
+		// actions in the action bar.
+		setHasOptionsMenu(true);
+	}
+	
+	@Override
 	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
 		inflater.inflate(R.menu.fragment_menu, menu);
 	    super.onCreateOptionsMenu(menu, inflater);
@@ -77,24 +98,57 @@ public class ModelsListFragment extends Fragment{
 //			Toast.makeText(getActivity(), "Search", Toast.LENGTH_SHORT)
 //			.show();
 	    	// custom dialog
-			final Dialog dialog = new Dialog(getActivity().getBaseContext());
+			final Dialog dialog = new Dialog(getActivity());
 			dialog.setContentView(R.layout.dialog_searchfilters);
-			dialog.setTitle("Ricerca filtrata");
+			dialog.setTitle("Filtri ricerca");
  
 			// set the custom dialog components - text, image and button
-//			TextView text = (TextView) dialog.findViewById(R.id.text);
-//			text.setText("Android custom dialog example!");
-//			ImageView image = (ImageView) dialog.findViewById(R.id.image);
-//			image.setImageResource(R.drawable.ic_launcher);
-// 
-//			Button dialogButton = (Button) dialog.findViewById(R.id.dialogButtonOK);
-//			// if button is clicked, close the custom dialog
-//			dialogButton.setOnClickListener(new OnClickListener() {
-//				@Override
-//				public void onClick(View v) {
-//					dialog.dismiss();
-//				}
-//			});
+			final TextView textMinPortata = (TextView) dialog.findViewById(R.id.textView_minPortata);
+			textMinPortata.setText(String.valueOf(DEFAULT_MIN_PORTATA));
+			final TextView textMaxPortata = (TextView) dialog.findViewById(R.id.textView_maxPortata);
+			textMaxPortata.setText(String.valueOf(DEFAULT_MAX_PORTATA));
+			RangeBar rangeBarPortata = (RangeBar) dialog.findViewById(R.id.rangebarPortata);
+			rangeBarPortata.setTickCount(900);
+			rangeBarPortata.setOnRangeBarChangeListener(new OnRangeBarChangeListener() {
+				
+				@Override
+				public void onIndexChangeListener(RangeBar rangeBar, int leftThumbIndex,
+						int rightThumbIndex) {
+					textMinPortata.setText(String.valueOf(leftThumbIndex));
+					textMaxPortata.setText(String.valueOf(rightThumbIndex));
+					minPortata = leftThumbIndex;
+					maxPortata = rightThumbIndex;
+				}
+			});
+			
+			final TextView textMinPressione = (TextView) dialog.findViewById(R.id.textView_minPressione);
+			textMinPressione.setText(String.valueOf(DEFAULT_MIN_PRESSIONE));
+			final TextView textMaxPressione = (TextView) dialog.findViewById(R.id.textView_maxPressione);
+			textMaxPressione.setText(String.valueOf(DEFAULT_MAX_PRESSIONE));
+			RangeBar rangeBarPressione = (RangeBar) dialog.findViewById(R.id.rangebarPressione);
+			rangeBarPressione.setTickCount(900);
+			rangeBarPressione.setOnRangeBarChangeListener(new OnRangeBarChangeListener() {
+				
+				@Override
+				public void onIndexChangeListener(RangeBar rangeBar, int leftThumbIndex,
+						int rightThumbIndex) {
+					textMinPressione.setText(String.valueOf(leftThumbIndex));
+					textMaxPressione.setText(String.valueOf(rightThumbIndex));
+					minPressione = leftThumbIndex;
+					maxPressione = rightThumbIndex;
+				}
+			});
+			
+			 
+			Button dialogButton = (Button) dialog.findViewById(R.id.buttonAvviaRicerca);
+			// if button is clicked, close the custom dialog
+			dialogButton.setOnClickListener(new OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					
+					dialog.dismiss();
+				}
+			});
  
 			dialog.show();
 	    	return true;

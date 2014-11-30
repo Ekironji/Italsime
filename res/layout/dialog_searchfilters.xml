@@ -2,7 +2,74 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:padding="5dp" >
+    
+	<RelativeLayout 
+	  android:layout_width="match_parent"
+	  android:layout_height="wrap_content"
+	  android:paddingLeft="10dip"
+	  android:paddingRight="10dip">
+    
+	    <TextView 
+	        android:id="@+id/textView_minPortata"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_alignParentLeft="true" />
+	    
+	    <TextView 
+	        android:id="@+id/textView_maxPortata"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_alignParentRight="true" />
+	    
+	    <com.edmodo.rangebar.RangeBar
+		    xmlns:custom="http://schemas.android.com/apk/res-auto"
+		    android:id="@+id/rangebarPortata"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@+id/textView_minPortata" 
+		    custom:tickHeight="0dip"/>
+	    
+	</RelativeLayout>
+    
+    <RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+		android:paddingLeft="10dip"
+		android:paddingRight="10dip">
+		 
+	    <TextView 
+	        android:id="@+id/textView_minPressione"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_alignParentLeft="true" />
+	    
+	    <TextView 
+	        android:id="@+id/textView_maxPressione"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_alignParentRight="true" />
+	    
+	    <com.edmodo.rangebar.RangeBar
+		    xmlns:custom="http://schemas.android.com/apk/res-auto"
+		    android:id="@+id/rangebarPressione"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@+id/textView_minPressione"
+		    custom:tickHeight="0dip"/>
+	 
+	</RelativeLayout>
+	
+    <Button 
+        android:id="@+id/buttonAvviaRicerca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/avvia_ricerca"/>
     
 
 </LinearLayout>
