@@ -1,6 +1,8 @@
 package com.ekironji.italsime.Modello;
 
-public class Modello {
+import java.io.Serializable;
+
+public class Modello implements Serializable {
 	
 	private int id;
 	private String Name;
@@ -14,6 +16,8 @@ public class Modello {
 	private int Kg;
 	private int m3h1, m3h2, m3h3, m3h4, m3h5;
 	private int mmH2O1, mmH2O2, mmH2O3, mmH2O4, mmH2O5;
+	
+	private static final long serialVersionUID = -7060210544600464481L;
 	
 	
 	public Modello(){}

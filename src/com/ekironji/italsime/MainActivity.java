@@ -11,6 +11,8 @@ import android.view.MenuItem;
 
 import com.ekironji.italsime.Modello.Modello;
 import com.ekironji.italsime.database.Database;
+import com.ekironji.italsime.fragment.HomeFragment;
+import com.ekironji.italsime.fragment.InfoFragment;
 import com.ekironji.italsime.fragment.ModelsListFragment;
 import com.ekironji.italsime.fragment.NavigationDrawerFragment;
 
@@ -18,9 +20,10 @@ import com.ekironji.italsime.fragment.NavigationDrawerFragment;
 public class MainActivity extends ActionBarActivity implements 
 								NavigationDrawerFragment.NavigationDrawerCallbacks {
 	
-	private final String DEBUG_TAG = "MainActivity";
+//	private final String DEBUG_TAG = "MainActivity";
 	
 	public static final String KEY_PASSARIATYPE = "ARIATYPE";
+	public static final String KEY_PASSMODEL	= "MODELCLICKED";
 	
 	public static Database database;
 	
@@ -61,23 +64,31 @@ public class MainActivity extends ActionBarActivity implements
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getSupportFragmentManager();
-        Fragment modelsListfragment = new ModelsListFragment();
-        Bundle mBundle = new Bundle();
+        Fragment mFragment = null;
         switch(position) {
         case 0:
-        	mBundle.putInt(KEY_PASSARIATYPE, Modello.ARIA_PULITA);
+        	mFragment = new HomeFragment();
         	break;
         case 1:
-        	mBundle.putInt(KEY_PASSARIATYPE, Modello.ARIA_SPORCA);
+        	mFragment = new ModelsListFragment();
+            Bundle mBundleAriaPulita = new Bundle();
+        	mBundleAriaPulita.putInt(KEY_PASSARIATYPE, Modello.ARIA_PULITA);
+        	mFragment.setArguments(mBundleAriaPulita);
         	break;
         case 2:
+        	mFragment = new ModelsListFragment();
+        	Bundle mBundleAriaSporca = new Bundle();
+        	mBundleAriaSporca.putInt(KEY_PASSARIATYPE, Modello.ARIA_SPORCA);
+        	mFragment.setArguments(mBundleAriaSporca);
+        	break;
+        case 3:
+        	mFragment = new InfoFragment();
         	break;
     	default: 
     		break;
         }
-        modelsListfragment.setArguments(mBundle);
         fragmentManager.beginTransaction()
-                .replace(R.id.container, modelsListfragment)
+                .replace(R.id.container, mFragment)
                 .commit();
     }
 
@@ -101,7 +112,6 @@ public class MainActivity extends ActionBarActivity implements
         actionBar.setDisplayShowTitleEnabled(true);
         actionBar.setTitle(mTitle);
     }
-
 
 //    @Override
 //    public boolean onCreateOptionsMenu(Menu menu) {

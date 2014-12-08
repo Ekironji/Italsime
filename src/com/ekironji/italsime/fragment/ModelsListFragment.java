@@ -3,9 +3,10 @@ package com.ekironji.italsime.fragment;
 import java.util.ArrayList;
 
 import android.app.Dialog;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -28,8 +29,10 @@ import com.ekironji.italsime.Modello.Modello;
 public class ModelsListFragment extends Fragment{
 	
 	final String DEBUG_TAG = "ModelsListFragment";
-	ListView mListViewAriaPulita;
+	
+	ListView mListViewModels;
 	ArrayList<Modello> listaModelli;
+	ModelliListAdapter mListAdapter;
 	
 	int ariaType = -1;
 	
@@ -45,15 +48,23 @@ public class ModelsListFragment extends Fragment{
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup group, Bundle saved){
-		View view = inflater.inflate(R.layout.fragment_ariapulita, group, false);
+		View view = inflater.inflate(R.layout.fragment_modelslist, group, false);
 		
-		mListViewAriaPulita = (ListView) view.findViewById(R.id.listViewAriaPulita);
+		mListViewModels = (ListView) view.findViewById(R.id.listViewAriaPulita);
 		
-		mListViewAriaPulita.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+		mListViewModels.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
-				Log.i(DEBUG_TAG, listaModelli.get(position).toString());
+//				Log.i(DEBUG_TAG, listaModelli.get(position).toString());
+				FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+				Fragment mFragment = new ModelDescriptorFragment();
+		        Bundle mBundle = new Bundle();
+		    	mBundle.putSerializable(MainActivity.KEY_PASSMODEL, listaModelli.get(position));
+		    	mFragment.setArguments(mBundle);
+		    	fragmentManager.beginTransaction()
+		        .replace(R.id.container, mFragment)
+		        .commit();
 			}
 		});
 		
@@ -67,10 +78,11 @@ public class ModelsListFragment extends Fragment{
 			listaModelli = MainActivity.database.getAllAriaPulitaModels();
 		} else if (ariaType == Modello.ARIA_SPORCA) {
 			listaModelli = MainActivity.database.getAllAriaSporcaModels();
-		} else if (ariaType == -1){
-			
-		}
-		mListViewAriaPulita.setAdapter(new ModelliListAdapter(getActivity(), listaModelli));
+		} else if (ariaType == -1){ }
+		
+		
+		mListAdapter = new ModelliListAdapter(getActivity(), listaModelli);
+		mListViewModels.setAdapter(mListAdapter);
 		
 		MainActivity.database.close();
 		
@@ -97,6 +109,12 @@ public class ModelsListFragment extends Fragment{
 	    case R.id.search:
 //			Toast.makeText(getActivity(), "Search", Toast.LENGTH_SHORT)
 //			.show();
+	    	
+	    	minPortata = DEFAULT_MIN_PORTATA;
+	    	maxPortata = DEFAULT_MAX_PORTATA;
+	    	minPressione = DEFAULT_MIN_PRESSIONE;
+	    	maxPressione = DEFAULT_MAX_PRESSIONE;
+	    	
 	    	// custom dialog
 			final Dialog dialog = new Dialog(getActivity());
 			dialog.setContentView(R.layout.dialog_searchfilters);
@@ -145,7 +163,7 @@ public class ModelsListFragment extends Fragment{
 			dialogButton.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					
+					new UpdateListFromFiltersTask().execute(minPortata, maxPortata, minPressione, maxPressione);
 					dialog.dismiss();
 				}
 			});
@@ -156,5 +174,29 @@ public class ModelsListFragment extends Fragment{
 	    	return super.onOptionsItemSelected(item);
 	    }
 	}
+	
+	
+	private class UpdateListFromFiltersTask extends AsyncTask<Integer, Void, Void> {
+
+		protected void onPreExecute(){
+			MainActivity.showProgressDialog("Ricerca...");
+			listaModelli.clear();
+			MainActivity.database.open();
+		}
+
+		protected Void doInBackground(Integer... args) {
+			listaModelli = MainActivity.database.getModelsByFilteredSearch(ariaType, 
+					args[0], args[1], args[2], args[3]);
+			return null;	    	 
+		}
+
+		protected void onPostExecute(Void result) {
+			mListAdapter.notifyDataSetChanged();
+			MainActivity.hideProgressDialog();
+			MainActivity.database.close();
+		}
+	}
+
+
 
 }

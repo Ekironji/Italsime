@@ -1,0 +1,53 @@
+package com.ekironji.italsime.fragment;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.ImageButton;
+
+import com.ekironji.italsime.MainActivity;
+import com.ekironji.italsime.R;
+import com.ekironji.italsime.Modello.Modello;
+
+public class HomeFragment extends Fragment{
+	
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup group, Bundle saved){
+		View view = inflater.inflate(R.layout.fragment_home, group, false);
+	
+		((ImageButton) view.findViewById(R.id.imageButtonAriaPulita)).setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+				Fragment mFragment = new ModelsListFragment();
+		        Bundle mBundle = new Bundle();
+		    	mBundle.putInt(MainActivity.KEY_PASSARIATYPE, Modello.ARIA_PULITA);
+		    	mFragment.setArguments(mBundle);
+		    	fragmentManager.beginTransaction()
+		        .replace(R.id.container, mFragment)
+		        .commit();
+			}
+		});
+		
+		((ImageButton) view.findViewById(R.id.imageButtonAriaSporca)).setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+				Fragment mFragment = new ModelsListFragment();
+		        Bundle mBundle = new Bundle();
+		    	mBundle.putInt(MainActivity.KEY_PASSARIATYPE, Modello.ARIA_SPORCA);
+		    	mFragment.setArguments(mBundle);
+		    	fragmentManager.beginTransaction()
+		        .replace(R.id.container, mFragment)
+		        .commit();
+			}
+		});
+		
+		return view;
+	}	
+
+}
