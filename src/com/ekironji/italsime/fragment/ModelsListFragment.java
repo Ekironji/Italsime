@@ -57,6 +57,9 @@ public class ModelsListFragment extends Fragment{
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 //				Log.i(DEBUG_TAG, listaModelli.get(position).toString());
+				
+				((MainActivity)getActivity()).getDrawerToggle().setDrawerIndicatorEnabled(false);
+				
 				FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
 				Fragment mFragment = new ModelDescriptorFragment();
 		        Bundle mBundle = new Bundle();
@@ -64,7 +67,8 @@ public class ModelsListFragment extends Fragment{
 		    	mFragment.setArguments(mBundle);
 		    	fragmentManager.beginTransaction()
 		        .replace(R.id.container, mFragment)
-		        .commit();
+		        .addToBackStack("fragBack")
+		        .commit();		    	
 			}
 		});
 		
@@ -116,7 +120,8 @@ public class ModelsListFragment extends Fragment{
 	    	maxPressione = DEFAULT_MAX_PRESSIONE;
 	    	
 	    	// custom dialog
-			final Dialog dialog = new Dialog(getActivity());
+	    	final Dialog dialog = new Dialog(getActivity());
+//			final Dialog dialog = new Dialog(getActivity(), R.style.ItalsimeGreenAHCG);
 			dialog.setContentView(R.layout.dialog_searchfilters);
 			dialog.setTitle("Filtri ricerca");
  

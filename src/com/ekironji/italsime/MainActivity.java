@@ -2,6 +2,7 @@ package com.ekironji.italsime;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
@@ -112,7 +113,19 @@ public class MainActivity extends ActionBarActivity implements
         actionBar.setDisplayShowTitleEnabled(true);
         actionBar.setTitle(mTitle);
     }
-
+    
+    public ActionBarDrawerToggle getDrawerToggle(){
+    	return mNavigationDrawerFragment.getDrawerToggle();
+    }
+    
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        // turn on the Navigation Drawer image; 
+        // this is called in the LowerLevelFragments
+        getDrawerToggle().setDrawerIndicatorEnabled(true);
+    }
+    
 //    @Override
 //    public boolean onCreateOptionsMenu(Menu menu) {
 //        if (!mNavigationDrawerFragment.isDrawerOpen()) {

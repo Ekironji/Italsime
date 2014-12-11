@@ -31,7 +31,11 @@
 		    android:layout_width="match_parent"
 		    android:layout_height="wrap_content"
 		    android:layout_below="@+id/textView_minPortata" 
-		    custom:tickHeight="0dip"/>
+		    custom:tickHeight="0dip"
+		    custom:barColor="@color/italsimegreenahcg_color"
+		    custom:connectingLineColor="@color/italsimegreenahcg_color"
+		    custom:thumbImageNormal="@drawable/italsimegreenahcg_scrubber_control_normal_holo"
+		    custom:thumbImagePressed="@drawable/italsimegreenahcg_scrubber_control_pressed_holo"/>
 	    
 	</RelativeLayout>
     
@@ -61,7 +65,11 @@
 		    android:layout_width="match_parent"
 		    android:layout_height="wrap_content"
 		    android:layout_below="@+id/textView_minPressione"
-		    custom:tickHeight="0dip"/>
+		    custom:tickHeight="0dip"
+		    custom:barColor="@color/italsimegreenahcg_color"
+		    custom:connectingLineColor="@color/italsimegreenahcg_color"
+		    custom:thumbImageNormal="@drawable/italsimegreenahcg_scrubber_control_normal_holo"
+		    custom:thumbImagePressed="@drawable/italsimegreenahcg_scrubber_control_pressed_holo"/>
 	 
 	</RelativeLayout>
 	

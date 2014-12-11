@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <style name="ItalsimeGreenAHCG" parent="@style/_ItalsimeGreenAHCG"/>
+
+  <style name="_ItalsimeGreenAHCG" parent="Theme.AppCompat.Light">
+
+    <item name="android:editTextBackground">@drawable/italsimegreenahcg_edit_text_holo_light</item>
+
+    <item name="android:textColorHighlight">#992bb02e</item>
+    <item name="android:textSelectHandleLeft">@drawable/italsimegreenahcg_text_select_handle_left</item>
+    <item name="android:textSelectHandleRight">@drawable/italsimegreenahcg_text_select_handle_right</item>
+    <item name="android:textSelectHandle">@drawable/italsimegreenahcg_text_select_handle_middle</item>
+
+    <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewItalsimeGreenAHCG</item>
+
+    <item name="android:listChoiceIndicatorMultiple">@drawable/italsimegreenahcg_btn_check_holo_light</item>
+
+    <item name="android:listChoiceIndicatorSingle">@drawable/italsimegreenahcg_btn_radio_holo_light</item>
+
+    <item name="android:buttonStyle">@style/ButtonItalsimeGreenAHCG</item>
+
+    <item name="android:imageButtonStyle">@style/ImageButtonItalsimeGreenAHCG</item>
+
+    <item name="android:dropDownSpinnerStyle">@style/SpinnerItalsimeGreenAHCG</item>
+
+    <item name="android:progressBarStyleHorizontal">@style/ProgressBarItalsimeGreenAHCG</item>
+
+    <item name="android:seekBarStyle">@style/SeekBarItalsimeGreenAHCG</item>
+
+    <item name="android:buttonStyleToggle">@style/ToggleItalsimeGreenAHCG</item>
+
+    <item name="android:listChoiceBackgroundIndicator">@drawable/italsimegreenahcg_list_selector_holo_light</item>
+
+    <item name="android:activatedBackgroundIndicator">@drawable/italsimegreenahcg_activated_background_holo_light</item>
+
+  </style>
+
+</resources>
