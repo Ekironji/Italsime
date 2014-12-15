@@ -9,7 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dip"
         android:layout_weight="1"
-        android:src="@drawable/ic_launcher"
+        android:src="@drawable/ariapulita_menu"
+        android:scaleType="centerInside"
         android:contentDescription="@string/imagedescriptor_ariapulitabutton" />
 
     <ImageButton
@@ -17,7 +18,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dip"
         android:layout_weight="1"
-        android:src="@drawable/ic_launcher"
+        android:src="@drawable/ariasporca_menu"
+        android:scaleType="centerInside"
         android:contentDescription="@string/imagedescriptor_ariasporcabutton" />
 
 </LinearLayout>

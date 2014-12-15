@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.ekironji.italsime.MainActivity;
 import com.ekironji.italsime.R;
@@ -36,6 +38,30 @@ public class ModelDescriptorFragment extends Fragment{
 
 		modello = (Modello)getArguments().getSerializable(MainActivity.KEY_PASSMODEL);
 		Log.i(DEBUG_TAG, modello.toString());
+		
+		((TextView) view.findViewById(R.id.textViewNome)).setText(modello.getName());
+		((TextView) view.findViewById(R.id.TextViewKwValue)).setText(String.valueOf(modello.getKw()));
+		((TextView) view.findViewById(R.id.TextViewRpmValue)).setText(String.valueOf(modello.getRpm()));
+		((TextView) view.findViewById(R.id.TextViewKgValue)).setText(String.valueOf(modello.getKg()));
+		
+		ImageView ariaTypeImage = (ImageView) view.findViewById(R.id.imageViewAriaType);
+		if (modello.getAriaType() == Modello.ARIA_PULITA) {
+			ariaTypeImage.setImageResource(R.drawable.ariapulita);
+		} else if (modello.getAriaType() == Modello.ARIA_SPORCA) {
+			ariaTypeImage.setImageResource(R.drawable.ariasporca);
+		}
+		
+		((TextView) view.findViewById(R.id.TextViewm3h1)).setText((modello.getM3h1() == -1) ? "-" : String.valueOf(modello.getM3h1()));
+		((TextView) view.findViewById(R.id.TextViewm3h2)).setText((modello.getM3h2() == -1) ? "-" : String.valueOf(modello.getM3h2()));
+		((TextView) view.findViewById(R.id.TextViewm3h3)).setText((modello.getM3h3() == -1) ? "-" : String.valueOf(modello.getM3h3()));
+		((TextView) view.findViewById(R.id.TextViewm3h4)).setText((modello.getM3h4() == -1) ? "-" : String.valueOf(modello.getM3h4()));
+		((TextView) view.findViewById(R.id.TextViewm3h5)).setText((modello.getM3h5() == -1) ? "-" : String.valueOf(modello.getM3h5()));
+		
+		((TextView) view.findViewById(R.id.TextViewmmH2O1)).setText((modello.getMmH2O1() == -1) ? "-" : String.valueOf(modello.getMmH2O1()));
+		((TextView) view.findViewById(R.id.TextViewmmH2O2)).setText((modello.getMmH2O2() == -1) ? "-" : String.valueOf(modello.getMmH2O2()));
+		((TextView) view.findViewById(R.id.TextViewmmH2O3)).setText((modello.getMmH2O3() == -1) ? "-" : String.valueOf(modello.getMmH2O3()));
+		((TextView) view.findViewById(R.id.TextViewmmH2O4)).setText((modello.getMmH2O4() == -1) ? "-" : String.valueOf(modello.getMmH2O4()));
+		((TextView) view.findViewById(R.id.TextViewmmH2O5)).setText((modello.getMmH2O5() == -1) ? "-" : String.valueOf(modello.getMmH2O5()));
 
 		return view;
 	}

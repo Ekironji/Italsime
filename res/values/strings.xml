@@ -5,21 +5,38 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     
+<!--     Navigation Drawer strings -->
     <string name="title_section0">Home</string>
     <string name="title_section1">Aria Pulita - Closed Blade</string>
     <string name="title_section2">Aria Sporca - Opened Blade</string>
     <string name="title_section3">Info su Italsime</string>
     
+<!--     Navigation Drawer Fragment -->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
     
-    <string name="avvia_ricerca">Avvia Ricerca</string>
+<!--     Model List Fragment -->
+	<string name="portata_string">Portata</string>
+	<string name="pressione_string">Pressione</string>
     
+<!--     Model Descriptor Fragment -->
+	<string name="dummy_model_name">No Model Name</string>
+	<string name="kw_string">Kw:</string>
+	<string name="rpm_string">Rpm:</string>
+	<string name="kg_string">Kg:</string>
+	<string name="dummy_no_value">no_value</string>
+	<string name="m3h_table_string">m3/h</string>
+	<string name="mmH2O_table_string">mmH2O</string>
+    
+<!--     Image Content Descriptors -->
     <string name="imagedescriptor_ariapulitabutton">Aria Pulita</string>
     <string name="imagedescriptor_ariasporcabutton">Aria Sporca</string>
     <string name="imagedescriptor_italsimelogo">logo Italsime</string>
+    <string name="imagedescriptor_imageariatype">ariatype</string>
     
+    
+<!--     Info Fragment -->
     <string name="dummy_title">Lorem ipsum.</string>
     <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
 

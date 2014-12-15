@@ -76,13 +76,13 @@ public class Database {
     			ModelsMetaData.ModelsTab_ARIATYPE_KEY + "=? and " +
     			ModelsMetaData.ModelsTab_M3H1_KEY + ">? and " +
     			ModelsMetaData.ModelsTab_M3H5_KEY + "<? and " +
-    			ModelsMetaData.ModelsTab_MMH2O1_KEY + ">? and " +
-    			ModelsMetaData.ModelsTab_MMH2O5_KEY + "<?",
+    			ModelsMetaData.ModelsTab_MMH2O1_KEY + "<? and " +
+    			ModelsMetaData.ModelsTab_MMH2O5_KEY + ">?",
 				new String[] { String.valueOf(sporcaOPulita),
     							String.valueOf(portataM3hMIN),
     							String.valueOf(portataM3hMAX),
-    							String.valueOf(pressioneMMh2oMIN),
-    							String.valueOf(pressioneMMh2oMAX) }, null, null, null);
+    							String.valueOf(pressioneMMh2oMAX),
+    							String.valueOf(pressioneMMh2oMIN) }, null, null, null);
     	return returnModelsFromCursor(cursor); 	
     }
     
