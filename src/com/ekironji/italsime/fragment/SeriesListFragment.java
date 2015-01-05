@@ -1,14 +1,15 @@
 package com.ekironji.italsime.fragment;
 
-import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -17,8 +18,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -26,24 +28,17 @@ import com.edmodo.rangebar.RangeBar;
 import com.edmodo.rangebar.RangeBar.OnRangeBarChangeListener;
 import com.ekironji.italsime.MainActivity;
 import com.ekironji.italsime.R;
-import com.ekironji.italsime.Modello.ModelliListAdapter;
 import com.ekironji.italsime.Modello.Modello;
 import com.ekironji.italsime.Modello.Series;
 
-public class ModelsListFragment extends Fragment {
+@SuppressLint("DefaultLocale")
+public class SeriesListFragment extends Fragment{
 	
 	final String DEBUG_TAG = "ModelsListFragment";
 	
-	ListView mListViewModels;
-	ArrayList<Modello> listaModelli;
-	ModelliListAdapter mListAdapter;
-	
 	int ariaType = -1;
 	
-	RelativeLayout searchFiltersLayout;
-	TextView serieFilterValue;
-	TextView portataFilterValues;
-	TextView pressureFilterValues;
+	List<String> listaSeries;
 	
 	final int DEFAULT_MIN_PORTATA = 0;
 	final int DEFAULT_MAX_PORTATA = 60000;
@@ -54,7 +49,6 @@ public class ModelsListFragment extends Fragment {
 	final int DEFAULT_MAX_PRESSIONE = 2000;
 	int minPressione = DEFAULT_MIN_PRESSIONE;
 	int maxPressione = DEFAULT_MAX_PRESSIONE;
-	
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -68,61 +62,37 @@ public class ModelsListFragment extends Fragment {
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup group, Bundle saved){
-		View view = inflater.inflate(R.layout.fragment_modelslist, group, false);
+		View view = inflater.inflate(R.layout.fragment_serieslist, group, false);
 		
-		searchFiltersLayout  = (RelativeLayout) view.findViewById(R.id.layoutSearchFilters);
-		searchFiltersLayout.setVisibility(View.GONE);
-		serieFilterValue	 = (TextView) view.findViewById(R.id.serieFiltersValue);
-		portataFilterValues  = (TextView) view.findViewById(R.id.portataFiltersValues);
-		pressureFilterValues = (TextView) view.findViewById(R.id.pressureFiltersValues);
-		
-		mListViewModels 	 = (ListView) view.findViewById(R.id.listViewModels);
-		
-		mListViewModels.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+		ListView mSeriesListView = (ListView) view.findViewById(R.id.listViewSeries);
+		mSeriesListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 //				Log.i(DEBUG_TAG, listaModelli.get(position).toString());
 				
-				((MainActivity)getActivity()).getDrawerToggle().setDrawerIndicatorEnabled(false);
+//				((MainActivity)getActivity()).getDrawerToggle().setDrawerIndicatorEnabled(false);
 				
 				FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-				Fragment mFragment = new ModelDescriptorFragment();
+				Fragment mFragment = new ModelsListFragment();
 		        Bundle mBundle = new Bundle();
-		    	mBundle.putSerializable(MainActivity.KEY_PASSMODEL, listaModelli.get(position));
+		    	mBundle.putInt(MainActivity.KEY_PASSSERIE, Series.getIntFromName(listaSeries.get(position)));
+		    	mBundle.putInt(MainActivity.KEY_PASSARIATYPE, ariaType);
 		    	mFragment.setArguments(mBundle);
 		    	fragmentManager.beginTransaction()
 		        .replace(R.id.container, mFragment)
-		        .addToBackStack("modListFragBack")
+		        .addToBackStack("serListFragBack")
 		        .commit();		    	
 			}
 		});
 		
-		int serie = getArguments().getInt(MainActivity.KEY_PASSSERIE);
-		Log.i(DEBUG_TAG, "MainActivity.KEY_PASSSERIE: " + serie);
-		if(serie != 0){
-			ariaType = getArguments().getInt(MainActivity.KEY_PASSARIATYPE);
-			MainActivity.database.open();
-			listaModelli = MainActivity.database.getAllModelsBySerie(serie);
-			MainActivity.database.close();
-		} else {
-			int[] filteredResearchArgs = getArguments().getIntArray(MainActivity.KEY_PASSFILTEREDRESEARCH);
-			if (filteredResearchArgs != null) {
-				ariaType = filteredResearchArgs[0];
-				Log.i(DEBUG_TAG, "MainActivity.KEY_PASSFILTEREDRESEARCH: " + " - ariatype: " + filteredResearchArgs[0]
-						+ " - serie: " + filteredResearchArgs[1] + " - minPo: " + filteredResearchArgs[2]
-						+ " - maxPo: " + filteredResearchArgs[3] + " - minPr: " + filteredResearchArgs[4]
-						+ " - maxPr: " + filteredResearchArgs[5]);
-				listaModelli = new ArrayList<Modello>();
-				new UpdateListFromFiltersTask().execute(filteredResearchArgs[0],filteredResearchArgs[1],filteredResearchArgs[2],
-														filteredResearchArgs[3],filteredResearchArgs[4],filteredResearchArgs[5]);
-			} else {
-				Log.i(DEBUG_TAG, "MainActivity.KEY_PASSFILTEREDRESEARCH: null");
-			}
-		}	
+		ariaType = getArguments().getInt(MainActivity.KEY_PASSARIATYPE);
+		listaSeries = Series.getSeriesListByAriaType(ariaType);
 		
-		mListAdapter = new ModelliListAdapter(getActivity(), listaModelli);
-		mListViewModels.setAdapter(mListAdapter);
+		mSeriesListView.setAdapter(new SeriesListAdapter(getActivity(), listaSeries));
+		
+		((MainActivity)getActivity()).onSectionAttached(ariaType);
+		((MainActivity)getActivity()).restoreActionBar();
 		
 		return view;
 	}
@@ -285,7 +255,22 @@ public class ModelsListFragment extends Fragment {
 	    	db.setPositiveButton(getResources().getString(R.string.positive_button_search_filters_dialog), new 
 	    	    DialogInterface.OnClickListener() {
 	    	        public void onClick(DialogInterface dialog, int which) {
-						new UpdateListFromFiltersTask().execute(minPortata, maxPortata, minPressione, maxPressione);
+	    	        	FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+	    				Fragment mFragment = new ModelsListFragment();
+	    		        Bundle mBundle = new Bundle();
+	    		        int[] filteredResearchArgs = new int[] {ariaType,
+	    		        										Series.getIntFromName(spinner.getSelectedItem().toString()),
+	    		        										minPortata,
+	    		        										maxPortata,
+	    		        										minPressione,
+	    		        										maxPressione};
+	    		    	mBundle.putIntArray(MainActivity.KEY_PASSFILTEREDRESEARCH, filteredResearchArgs);
+	    		    	mFragment.setArguments(mBundle);
+	    		    	fragmentManager.beginTransaction()
+	    		        .replace(R.id.container, mFragment)
+	    		        .addToBackStack("serListFragBack")
+	    		        .commit();	
+	    	        	spinner.getSelectedItem().toString();
 						dialog.dismiss();
 	    	        }
 	    		}
@@ -293,7 +278,7 @@ public class ModelsListFragment extends Fragment {
 	    	db.setNegativeButton(getResources().getString(R.string.negative_button_search_filters_dialog), new 
 	    	    DialogInterface.OnClickListener() {
 	    	        public void onClick(DialogInterface dialog, int which) {
-	    	        	dialog.dismiss();
+						dialog.dismiss();
 	    	        }
 	    		}
 	    	);
@@ -305,52 +290,50 @@ public class ModelsListFragment extends Fragment {
 	    }
 	}
 	
-	public void showSearchFiltersView(int ariaType, int serie, int minPo, int maxPo, int minPr, int maxPr) {
-		if (ariaType == Modello.ARIA_PULITA) {
-			serieFilterValue.setTextColor(getResources().getColor(R.color.italsimegreenahcg_color));
-			portataFilterValues.setTextColor(getResources().getColor(R.color.italsimegreenahcg_color));
-			pressureFilterValues.setTextColor(getResources().getColor(R.color.italsimegreenahcg_color));
-		} else if (ariaType == Modello.ARIA_SPORCA) {
-			serieFilterValue.setTextColor(getResources().getColor(R.color.italsimevioletahcg_color));
-			portataFilterValues.setTextColor(getResources().getColor(R.color.italsimevioletahcg_color));
-			pressureFilterValues.setTextColor(getResources().getColor(R.color.italsimevioletahcg_color));
+	public class SeriesListAdapter extends BaseAdapter {
+		private List<String> mSeries;
+		private LayoutInflater mInflater;
+
+		public SeriesListAdapter(Context context, List<String> listaSerie) {
+			mInflater = LayoutInflater.from(context);
+			mSeries = listaSerie;
 		}
-		serieFilterValue.setText(Series.getNameFromInt(serie));
-		portataFilterValues.setText("m3/h: " + minPo + " - " + maxPo);
-		pressureFilterValues.setText("mmH20: " + minPr + " - " + maxPr);
-		searchFiltersLayout.setVisibility(View.VISIBLE);
+
+		public int getCount() {
+			return mSeries.size();
+		}
+
+		public String getItem(int position) {
+			return mSeries.get(position);
+		}
+
+		public long getItemId(int position) {
+			return position;
+		}
+
+		public View getView(int position, View convertView, ViewGroup parent) {
+			ViewGroup vg;
+
+			if (convertView != null) {
+				vg = (ViewGroup) convertView;
+			} else {
+				vg = (ViewGroup) mInflater.inflate(R.layout.listview_serie_item, null);
+
+			}
+			
+			TextView nameSerie = (TextView) vg.findViewById(R.id.textView_serie_name);
+			nameSerie.setText("Serie " + mSeries.get(position));
+			if (ariaType == Modello.ARIA_PULITA) {
+				nameSerie.setBackgroundColor(getResources().getColor(R.color.italsimegreenahcg_color));
+			} else if (ariaType == Modello.ARIA_SPORCA) {
+				nameSerie.setBackgroundColor(getResources().getColor(R.color.italsimevioletahcg_color));
+			}
+			
+			((ImageView) vg.findViewById(R.id.imageView_serie)).setImageResource(
+					getResources().getIdentifier(mSeries.get(position).toLowerCase(Locale.getDefault()), "drawable",  getActivity().getPackageName()));
+			
+			return vg;
+		}
 	}
 	
-	private class UpdateListFromFiltersTask extends AsyncTask<Integer, Integer, Void> {
-
-		protected void onPreExecute(){
-			MainActivity.showProgressDialog(getResources().getString(R.string.title_search_progress_dialog));
-			listaModelli.clear();
-			MainActivity.database.open();
-		}
-
-		protected Void doInBackground(Integer... args) {
-			Log.i(DEBUG_TAG, "ariatype: " + args[0] + "serie: " + args[1] + " - minPortata: " + args[2] + 
-					" - maxPortata: " + args[3] + " - minPressione: " + args[4] + 
-					" - maxPressione: " + args[5]);
-			publishProgress(args);
-			listaModelli = MainActivity.database.getModelsByFilteredSearch(args[0], 
-					args[2], args[3], args[4], args[5]);
-			return null;	    	 
-		}
-
-		protected void onProgressUpdate(Integer... args) {
-			showSearchFiltersView(args[0], args[1], args[2], args[3], args[4], args[5]);
-	    }
-		
-		protected void onPostExecute(Void result) {
-			mListAdapter.notifyDataSetChanged();
-			MainActivity.hideProgressDialog();
-			MainActivity.database.close();
-		}
-	}
-
-	
-
-
 }
