@@ -285,7 +285,12 @@ public class ModelsListFragment extends Fragment {
 	    	db.setPositiveButton(getResources().getString(R.string.positive_button_search_filters_dialog), new 
 	    	    DialogInterface.OnClickListener() {
 	    	        public void onClick(DialogInterface dialog, int which) {
-						new UpdateListFromFiltersTask().execute(minPortata, maxPortata, minPressione, maxPressione);
+						new UpdateListFromFiltersTask().execute(ariaType,
+																Series.getIntFromName(spinner.getSelectedItem().toString()),
+																minPortata, 
+																maxPortata, 
+																minPressione, 
+																maxPressione);
 						dialog.dismiss();
 	    	        }
 	    		}
