@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 
 import com.ekironji.italsime.MainActivity;
 import com.ekironji.italsime.R;
@@ -19,11 +19,11 @@ public class HomeFragment extends Fragment{
 	public View onCreateView(LayoutInflater inflater, ViewGroup group, Bundle saved){
 		View view = inflater.inflate(R.layout.fragment_home, group, false);
 	
-		((ImageButton) view.findViewById(R.id.imageButtonAriaPulita)).setOnClickListener(new OnClickListener() {
+		((RelativeLayout) view.findViewById(R.id.layout_AriaPulita)).setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-				Fragment mFragment = new ModelsListFragment();
+				Fragment mFragment = new SeriesListFragment();
 		        Bundle mBundle = new Bundle();
 		    	mBundle.putInt(MainActivity.KEY_PASSARIATYPE, Modello.ARIA_PULITA);
 		    	mFragment.setArguments(mBundle);
@@ -33,11 +33,11 @@ public class HomeFragment extends Fragment{
 			}
 		});
 		
-		((ImageButton) view.findViewById(R.id.imageButtonAriaSporca)).setOnClickListener(new OnClickListener() {
+		((RelativeLayout) view.findViewById(R.id.layout_AriaSporca)).setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-				Fragment mFragment = new ModelsListFragment();
+				Fragment mFragment = new SeriesListFragment();
 		        Bundle mBundle = new Bundle();
 		    	mBundle.putInt(MainActivity.KEY_PASSARIATYPE, Modello.ARIA_SPORCA);
 		    	mFragment.setArguments(mBundle);

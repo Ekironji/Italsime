@@ -4,22 +4,90 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <ImageButton
-        android:id="@+id/imageButtonAriaPulita"
+    <RelativeLayout 
+        android:id="@+id/layout_AriaPulita"
         android:layout_width="match_parent"
         android:layout_height="0dip"
         android:layout_weight="1"
-        android:src="@drawable/ariapulita_menu"
-        android:scaleType="centerInside"
-        android:contentDescription="@string/imagedescriptor_ariapulitabutton" />
+        android:background="@color/italsimegreenahcg_color">
+       
+        <ImageView
+            android:id="@+id/imageButtonAriaPulita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView1"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/imagedescriptor_ariapulitabutton"
+            android:scaleType="centerInside"
+            android:src="@drawable/closed_blades" />
 
-    <ImageButton
-        android:id="@+id/imageButtonAriaSporca"
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:paddingBottom="15dip"
+            android:text="@string/clean_air_string"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView2"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:paddingTop="15dip"
+            android:text="@string/closed_blade_string"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+        
+    </RelativeLayout>
+    
+	<RelativeLayout 
+        android:id="@+id/layout_AriaSporca"
         android:layout_width="match_parent"
         android:layout_height="0dip"
         android:layout_weight="1"
-        android:src="@drawable/ariasporca_menu"
-        android:scaleType="centerInside"
-        android:contentDescription="@string/imagedescriptor_ariasporcabutton" />
+	    android:background="@color/italsimevioletahcg_color">
+        
+	    <ImageView
+	        android:id="@+id/imageButtonAriaSporca"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_above="@+id/textView3"
+	        android:layout_alignParentTop="true"
+	        android:contentDescription="@string/imagedescriptor_ariasporcabutton"
+	        android:scaleType="centerInside"
+	        android:src="@drawable/opened_blades" />
+	    
+	    <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:paddingBottom="15dip"
+            android:text="@string/dirty_air_string"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView4"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:paddingTop="15dip"
+            android:text="@string/opened_blade_string"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+	    
+    </RelativeLayout>
 
 </LinearLayout>

@@ -69,6 +69,13 @@ public class Database {
     	return returnModelsFromCursor(cursor);
     }
     
+    public ArrayList<Modello> getAllModelsBySerie(int serie) {
+    	Cursor cursor = mDb.query(ModelsMetaData.ModelsTab_TABLE, null, 
+    			ModelsMetaData.ModelsTab_SERIE_KEY + "= ?",
+				new String[] { String.valueOf(serie) }, null, null, null);
+    	return returnModelsFromCursor(cursor);
+    }
+    
     public ArrayList<Modello> getModelsByFilteredSearch(int sporcaOPulita,
     		int portataM3hMIN, int portataM3hMAX,
     		int pressioneMMh2oMIN, int pressioneMMh2oMAX) {
@@ -105,6 +112,7 @@ public class Database {
     			Modello myModello = new Modello();
     			myModello.setId(cursor.getInt(ModelsMetaData.ModelsTab_COLUMNINDEX_ID));
     			myModello.setName(cursor.getString(ModelsMetaData.ModelsTab_COLUMNINDEX_NAME));
+    			myModello.setSerie(cursor.getInt(ModelsMetaData.ModelsTab_COLUMNINDEX_SERIE));
     			myModello.setAriaType(cursor.getInt(ModelsMetaData.ModelsTab_COLUMNINDEX_ARIATYPE));
     			myModello.setKw(cursor.getDouble(ModelsMetaData.ModelsTab_COLUMNINDEX_KW)); 
     			myModello.setRpm(cursor.getInt(ModelsMetaData.ModelsTab_COLUMNINDEX_RPM));
@@ -147,6 +155,7 @@ public class Database {
     private ContentValues getContentFromModello(Modello modello) {
     	ContentValues cv = new ContentValues();
     	cv.put(ModelsMetaData.ModelsTab_NAME_KEY, modello.getName());
+    	cv.put(ModelsMetaData.ModelsTab_SERIE_KEY, modello.getSerie());
     	cv.put(ModelsMetaData.ModelsTab_ARIATYPE_KEY, modello.getAriaType());
     	cv.put(ModelsMetaData.ModelsTab_KW_KEY, modello.getKw());
     	cv.put(ModelsMetaData.ModelsTab_RPM_KEY, modello.getRpm());
@@ -186,6 +195,7 @@ public class Database {
         static final String ModelsTab_TABLE = "models";
         static final String ModelsTab_ID_KEY = "_id";
         static final String ModelsTab_NAME_KEY = "name";
+        static final String ModelsTab_SERIE_KEY = "serie";
         static final String ModelsTab_ARIATYPE_KEY = "ariatype";
         static final String ModelsTab_KW_KEY = "kw";  
         static final String ModelsTab_RPM_KEY = "rpm";  
@@ -221,45 +231,47 @@ public class Database {
         
         static final int ModelsTab_COLUMNINDEX_ID 		=	0;
         static final int ModelsTab_COLUMNINDEX_NAME 	=	1;
-        static final int ModelsTab_COLUMNINDEX_ARIATYPE = 	2;
-        static final int ModelsTab_COLUMNINDEX_KW		= 	3; 
-        static final int ModelsTab_COLUMNINDEX_RPM		= 	4;
-        static final int ModelsTab_COLUMNINDEX_MISURA1	= 	5;
-        static final int ModelsTab_COLUMNINDEX_MISURA2	= 	6;
-        static final int ModelsTab_COLUMNINDEX_MISURA3	= 	7;
-        static final int ModelsTab_COLUMNINDEX_MISURA4	= 	8;
-        static final int ModelsTab_COLUMNINDEX_MISURA5	= 	9;
-        static final int ModelsTab_COLUMNINDEX_MISURA6	= 	10;
-        static final int ModelsTab_COLUMNINDEX_MISURA7	= 	11;
-        static final int ModelsTab_COLUMNINDEX_MISURA8	= 	12;
-        static final int ModelsTab_COLUMNINDEX_MISURA9	= 	13;
-        static final int ModelsTab_COLUMNINDEX_MISURA10	= 	14;
-        static final int ModelsTab_COLUMNINDEX_MISURA11	= 	15;
-        static final int ModelsTab_COLUMNINDEX_MISURA12	= 	16;
-        static final int ModelsTab_COLUMNINDEX_MISURA13	= 	17;
-        static final int ModelsTab_COLUMNINDEX_MISURA14	= 	18;
-        static final int ModelsTab_COLUMNINDEX_MISURA15	= 	19;
-        static final int ModelsTab_COLUMNINDEX_MISURA16	= 	20;
-        static final int ModelsTab_COLUMNINDEX_MISURA17	= 	21;
-        static final int ModelsTab_COLUMNINDEX_MISURA18	= 	22;
-        static final int ModelsTab_COLUMNINDEX_KG		= 	23;
-        static final int ModelsTab_COLUMNINDEX_M3H1		= 	24;
-        static final int ModelsTab_COLUMNINDEX_M3H2		= 	25;
-        static final int ModelsTab_COLUMNINDEX_M3H3		= 	26;
-        static final int ModelsTab_COLUMNINDEX_M3H4		= 	27;
-        static final int ModelsTab_COLUMNINDEX_M3H5		= 	28;
-        static final int ModelsTab_COLUMNINDEX_MMH2O1	= 	29;
-        static final int ModelsTab_COLUMNINDEX_MMH2O2	= 	30;
-        static final int ModelsTab_COLUMNINDEX_MMH2O3	= 	31;
-        static final int ModelsTab_COLUMNINDEX_MMH2O4	= 	32;
-        static final int ModelsTab_COLUMNINDEX_MMH2O5	= 	33;
+        static final int ModelsTab_COLUMNINDEX_SERIE 	=	2;
+        static final int ModelsTab_COLUMNINDEX_ARIATYPE = 	3;
+        static final int ModelsTab_COLUMNINDEX_KW		= 	4; 
+        static final int ModelsTab_COLUMNINDEX_RPM		= 	5;
+        static final int ModelsTab_COLUMNINDEX_MISURA1	= 	6;
+        static final int ModelsTab_COLUMNINDEX_MISURA2	= 	7;
+        static final int ModelsTab_COLUMNINDEX_MISURA3	= 	8;
+        static final int ModelsTab_COLUMNINDEX_MISURA4	= 	9;
+        static final int ModelsTab_COLUMNINDEX_MISURA5	= 	10;
+        static final int ModelsTab_COLUMNINDEX_MISURA6	= 	11;
+        static final int ModelsTab_COLUMNINDEX_MISURA7	= 	12;
+        static final int ModelsTab_COLUMNINDEX_MISURA8	= 	13;
+        static final int ModelsTab_COLUMNINDEX_MISURA9	= 	14;
+        static final int ModelsTab_COLUMNINDEX_MISURA10	= 	15;
+        static final int ModelsTab_COLUMNINDEX_MISURA11	= 	16;
+        static final int ModelsTab_COLUMNINDEX_MISURA12	= 	17;
+        static final int ModelsTab_COLUMNINDEX_MISURA13	= 	18;
+        static final int ModelsTab_COLUMNINDEX_MISURA14	= 	19;
+        static final int ModelsTab_COLUMNINDEX_MISURA15	= 	20;
+        static final int ModelsTab_COLUMNINDEX_MISURA16	= 	21;
+        static final int ModelsTab_COLUMNINDEX_MISURA17	= 	22;
+        static final int ModelsTab_COLUMNINDEX_MISURA18	= 	23;
+        static final int ModelsTab_COLUMNINDEX_KG		= 	24;
+        static final int ModelsTab_COLUMNINDEX_M3H1		= 	25;
+        static final int ModelsTab_COLUMNINDEX_M3H2		= 	26;
+        static final int ModelsTab_COLUMNINDEX_M3H3		= 	27;
+        static final int ModelsTab_COLUMNINDEX_M3H4		= 	28;
+        static final int ModelsTab_COLUMNINDEX_M3H5		= 	29;
+        static final int ModelsTab_COLUMNINDEX_MMH2O1	= 	30;
+        static final int ModelsTab_COLUMNINDEX_MMH2O2	= 	31;
+        static final int ModelsTab_COLUMNINDEX_MMH2O3	= 	32;
+        static final int ModelsTab_COLUMNINDEX_MMH2O4	= 	33;
+        static final int ModelsTab_COLUMNINDEX_MMH2O5	= 	34;
     }
 	
 	private static final String MODELS_TABLE_CREATE = "CREATE TABLE IF NOT EXISTS "  //codice sql di creazione della tabella
             + ModelsMetaData.ModelsTab_TABLE + " (" 
             + ModelsMetaData.ModelsTab_ID_KEY + " integer primary key autoincrement, "
             + ModelsMetaData.ModelsTab_NAME_KEY + " text not null, "
-            + ModelsMetaData.ModelsTab_ARIATYPE_KEY + " text not null, "
+            + ModelsMetaData.ModelsTab_SERIE_KEY + " integer not null, "
+            + ModelsMetaData.ModelsTab_ARIATYPE_KEY + " integer not null, "
             + ModelsMetaData.ModelsTab_KW_KEY + " real not null, "
             + ModelsMetaData.ModelsTab_RPM_KEY + " integer not null, "
             + ModelsMetaData.ModelsTab_MISURA1_KEY + " integer not null, "
