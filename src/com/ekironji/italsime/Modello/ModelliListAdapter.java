@@ -38,14 +38,12 @@ public class ModelliListAdapter extends BaseAdapter {
 		if (convertView != null) {
 			vg = (ViewGroup) convertView;
 		} else {
-			vg = (ViewGroup) mInflater.inflate(R.layout.listview_model_item, null);
+			vg = (ViewGroup) mInflater.inflate(R.layout.listview_item, null);
 
 		}
 		
-		((TextView) vg.findViewById(R.id.textView_model_name)).setText(mModelli.get(position).getName());
-		((TextView) vg.findViewById(R.id.textView_kw_value)).setText(String.valueOf(mModelli.get(position).getKw()));
-		((TextView) vg.findViewById(R.id.textView_rpm_value)).setText(String.valueOf(mModelli.get(position).getRpm()));
-				
+		((TextView) vg.findViewById(R.id.textView_name)).setText(mModelli.get(position).getName());
+
 		return vg;
 	}
 }

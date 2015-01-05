@@ -14,8 +14,8 @@ import com.ekironji.italsime.Modello.Modello;
 import com.ekironji.italsime.database.Database;
 import com.ekironji.italsime.fragment.HomeFragment;
 import com.ekironji.italsime.fragment.InfoFragment;
+import com.ekironji.italsime.fragment.ModelsListFragment;
 import com.ekironji.italsime.fragment.NavigationDrawerFragment;
-import com.ekironji.italsime.fragment.SeriesListFragment;
 
 
 public class MainActivity extends ActionBarActivity implements 
@@ -23,10 +23,8 @@ public class MainActivity extends ActionBarActivity implements
 	
 //	private final String DEBUG_TAG = "MainActivity";
 	
-	public static final String KEY_PASSARIATYPE 		= "ARIATYPE";
-	public static final String KEY_PASSMODEL			= "MODELCLICKED";
-	public static final String KEY_PASSSERIE			= "SERIECLICKED";
-	public static final String KEY_PASSFILTEREDRESEARCH	= "FILTEREDRESEARCH";
+	public static final String KEY_PASSARIATYPE = "ARIATYPE";
+	public static final String KEY_PASSMODEL	= "MODELCLICKED";
 	
 	public static Database database;
 	
@@ -41,7 +39,7 @@ public class MainActivity extends ActionBarActivity implements
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
-    
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -63,30 +61,23 @@ public class MainActivity extends ActionBarActivity implements
 		database.close();
 	}
 	
-	@Override
-	protected void onPause() {
-		super.onPause();
-		hideProgressDialog();
-	}
-	
     @Override
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
-    	FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        FragmentManager fragmentManager = getSupportFragmentManager();
         Fragment mFragment = null;
         switch(position) {
         case 0:
         	mFragment = new HomeFragment();
         	break;
         case 1:
-        	mFragment = new SeriesListFragment();
+        	mFragment = new ModelsListFragment();
             Bundle mBundleAriaPulita = new Bundle();
         	mBundleAriaPulita.putInt(KEY_PASSARIATYPE, Modello.ARIA_PULITA);
         	mFragment.setArguments(mBundleAriaPulita);
         	break;
         case 2:
-        	mFragment = new SeriesListFragment();
+        	mFragment = new ModelsListFragment();
         	Bundle mBundleAriaSporca = new Bundle();
         	mBundleAriaSporca.putInt(KEY_PASSARIATYPE, Modello.ARIA_SPORCA);
         	mFragment.setArguments(mBundleAriaSporca);
@@ -121,7 +112,6 @@ public class MainActivity extends ActionBarActivity implements
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
         actionBar.setDisplayShowTitleEnabled(true);
         actionBar.setTitle(mTitle);
-//        actionBar.setIcon(new ColorDrawable(getResources().getColor(android.R.color.transparent)));
     }
     
     public ActionBarDrawerToggle getDrawerToggle(){

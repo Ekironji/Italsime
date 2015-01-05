@@ -1,7 +1,5 @@
 package com.ekironji.italsime.fragment;
 
-import java.util.Locale;
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -15,7 +13,6 @@ import android.widget.TextView;
 import com.ekironji.italsime.MainActivity;
 import com.ekironji.italsime.R;
 import com.ekironji.italsime.Modello.Modello;
-import com.ekironji.italsime.Modello.Series;
 
 public class ModelDescriptorFragment extends Fragment{
 
@@ -39,31 +36,20 @@ public class ModelDescriptorFragment extends Fragment{
 
 		getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
 
-//		Toast.makeText(getActivity(), "Search", Toast.LENGTH_SHORT).show();
-		
 		modello = (Modello)getArguments().getSerializable(MainActivity.KEY_PASSMODEL);
 		Log.i(DEBUG_TAG, modello.toString());
 		
-		TextView name = (TextView) view.findViewById(R.id.textViewNome);
-		if (modello.getAriaType() == Modello.ARIA_PULITA){
-			name.setBackgroundColor(getResources().getColor(R.color.italsimegreenahcg_color));
-		} else if (modello.getAriaType() == Modello.ARIA_SPORCA) {
-			name.setBackgroundColor(getResources().getColor(R.color.italsimevioletahcg_color));
-		}
-		name.setText(modello.getName());
-		
+		((TextView) view.findViewById(R.id.textViewNome)).setText(modello.getName());
 		((TextView) view.findViewById(R.id.TextViewKwValue)).setText(String.valueOf(modello.getKw()));
 		((TextView) view.findViewById(R.id.TextViewRpmValue)).setText(String.valueOf(modello.getRpm()));
 		((TextView) view.findViewById(R.id.TextViewKgValue)).setText(String.valueOf(modello.getKg()));
 		
-//		ImageView ariaTypeImage = (ImageView) view.findViewById(R.id.imageViewAriaType);
-		((ImageView) (ImageView) view.findViewById(R.id.imageViewAriaType)).setImageResource(
-				getResources().getIdentifier(Series.getNameFromInt(modello.getSerie()).toLowerCase(Locale.getDefault()), "drawable",  getActivity().getPackageName()));
-//		if (modello.getAriaType() == Modello.ARIA_PULITA) {
-//			ariaTypeImage.setImageResource(R.drawable.ariapulita);
-//		} else if (modello.getAriaType() == Modello.ARIA_SPORCA) {
-//			ariaTypeImage.setImageResource(R.drawable.ariasporca);
-//		}
+		ImageView ariaTypeImage = (ImageView) view.findViewById(R.id.imageViewAriaType);
+		if (modello.getAriaType() == Modello.ARIA_PULITA) {
+			ariaTypeImage.setImageResource(R.drawable.ariapulita);
+		} else if (modello.getAriaType() == Modello.ARIA_SPORCA) {
+			ariaTypeImage.setImageResource(R.drawable.ariasporca);
+		}
 		
 		((TextView) view.findViewById(R.id.TextViewm3h1)).setText((modello.getM3h1() == -1) ? "-" : String.valueOf(modello.getM3h1()));
 		((TextView) view.findViewById(R.id.TextViewm3h2)).setText((modello.getM3h2() == -1) ? "-" : String.valueOf(modello.getM3h2()));
@@ -77,7 +63,6 @@ public class ModelDescriptorFragment extends Fragment{
 		((TextView) view.findViewById(R.id.TextViewmmH2O4)).setText((modello.getMmH2O4() == -1) ? "-" : String.valueOf(modello.getMmH2O4()));
 		((TextView) view.findViewById(R.id.TextViewmmH2O5)).setText((modello.getMmH2O5() == -1) ? "-" : String.valueOf(modello.getMmH2O5()));
 
-		
 		return view;
 	}
 

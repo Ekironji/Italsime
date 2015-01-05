@@ -15,7 +15,6 @@ import android.view.MotionEvent;
 import android.view.Window;
 
 import com.ekironji.italsime.Modello.Modello;
-import com.ekironji.italsime.Modello.Series;
 import com.ekironji.italsime.csvreader.CSVReader;
 import com.ekironji.italsime.database.Database;
 
@@ -105,9 +104,10 @@ public class SplashScreen extends Activity {
         return true;
     }    
     
-	public static void showProgressDialog(String title, String message){
-		barProgressDialog.setTitle(title);
-		barProgressDialog.setMessage(message);
+	public static void showProgressDialog(String message){
+		barProgressDialog.setTitle(message);
+		barProgressDialog.setMessage("L'operazione potrebbe richiedere qualche secondo...");
+//        barProgressDialog.setIndeterminate(true);
 		barProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
         barProgressDialog.setCancelable(false);
         barProgressDialog.setProgress(0);
@@ -118,7 +118,7 @@ public class SplashScreen extends Activity {
 	public static void setProgressPercent(int count){
 		barProgressDialog.setProgress(count);
 		 if (count == barProgressDialog.getMax()) {
-			 hideProgressDialog();
+			 barProgressDialog.dismiss();
 		 }
 //		barProgressDialog.incrementProgressBy(1);
 	}
@@ -130,8 +130,7 @@ public class SplashScreen extends Activity {
 	private class CreateDatabaseTask extends AsyncTask<Void, Integer, Void> {
 
 		protected void onPreExecute(){
-			showProgressDialog(getResources().getString(R.string.splash_progress_dialog_title),
-					getResources().getString(R.string.splash_progress_dialog_message));
+			showProgressDialog("Creazione del database");
 		}
 
 		protected Void doInBackground(Void... args) {
@@ -153,7 +152,7 @@ public class SplashScreen extends Activity {
 					if (next != null) {
 
 						Log.i(DEBUG_TAG, "Riga " + count + " = ");
-						Modello temp = new Modello(next[0],Series.getIntFromName(next[0]),Modello.ARIA_PULITA,Double.parseDouble(next[1]),Integer.parseInt(next[2]),
+						Modello temp = new Modello(next[0],Modello.ARIA_PULITA,Double.parseDouble(next[1]),Integer.parseInt(next[2]),
 								Integer.parseInt(next[3]),Integer.parseInt(next[4]),Integer.parseInt(next[5]),Integer.parseInt(next[6]),
 								Integer.parseInt(next[7]),Integer.parseInt(next[8]),Integer.parseInt(next[9]),Integer.parseInt(next[10]),
 								Integer.parseInt(next[11]),Integer.parseInt(next[12]),Integer.parseInt(next[13]),Integer.parseInt(next[14]),
@@ -192,7 +191,7 @@ public class SplashScreen extends Activity {
 					if (next != null) {
 
 						Log.i(DEBUG_TAG, "Riga " + count + " = ");
-						Modello temp = new Modello(next[0],Series.getIntFromName(next[0]),Modello.ARIA_SPORCA,Double.parseDouble(next[1]),Integer.parseInt(next[2]),
+						Modello temp = new Modello(next[0],Modello.ARIA_SPORCA,Double.parseDouble(next[1]),Integer.parseInt(next[2]),
 								Integer.parseInt(next[3]),Integer.parseInt(next[4]),Integer.parseInt(next[5]),Integer.parseInt(next[6]),
 								Integer.parseInt(next[7]),Integer.parseInt(next[8]),Integer.parseInt(next[9]),Integer.parseInt(next[10]),
 								Integer.parseInt(next[11]),Integer.parseInt(next[12]),Integer.parseInt(next[13]),Integer.parseInt(next[14]),

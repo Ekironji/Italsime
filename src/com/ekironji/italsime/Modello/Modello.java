@@ -6,7 +6,6 @@ public class Modello implements Serializable {
 	
 	private int id;
 	private String Name;
-	private int serie;
 	private int ariaType;
 	public static int ARIA_PULITA = 1; // closed blades
 	public static int ARIA_SPORCA = 2; // opened blades
@@ -23,7 +22,7 @@ public class Modello implements Serializable {
 	
 	public Modello(){}
 
-	public Modello(String name, int serie, int ariaType, double kw, int rpm, 
+	public Modello(String name, int ariaType, double kw, int rpm, 
 			int misura1, int misura2, int misura3, int misura4, int misura5, 
 			int misura6, int misura7, int misura8, int misura9, int misura10, 
 			int misura11, int misura12, int misura13, int misura14, int misura15,
@@ -33,7 +32,6 @@ public class Modello implements Serializable {
 			int mmH2O1, int mmH2O2, int mmH2O3, int mmH2O4, int mmH2O5) {
 		super();
 		this.Name = name;
-		this.serie = serie;
 		this.ariaType = ariaType;
 		this.Kw = kw;
 		this.Rpm = rpm;
@@ -94,20 +92,6 @@ public class Modello implements Serializable {
 	 */
 	public void setName(String name) {
 		Name = name;
-	}
-
-	/**
-	 * @return the serie
-	 */
-	public int getSerie() {
-		return serie;
-	}
-
-	/**
-	 * @param serie the serie to set
-	 */
-	public void setSerie(int serie) {
-		this.serie = serie;
 	}
 
 	/**
@@ -562,7 +546,7 @@ public class Modello implements Serializable {
 	 * @return una stringa leggibie che identifica l'elemento
 	 */
 	public String toString() {
-		return "Name: " + this.Name + " - Serie: " + this.serie + " - TipoAria: " + this.ariaType + " - Kw: " + String.valueOf(this.Kw)
+		return "Name: " + this.Name + " - TipoAria: " + this.ariaType + " - Kw: " + String.valueOf(this.Kw)
 			+ " - Rpm: " + this.Rpm + " - misura1: " + this.misura1 + " - misura2: " + this.misura2 + " - misura3: " + this.misura3
 			+ " - misura4: " + this.misura4 + " - misura5: " + this.misura5 + " - misura6: " + this.misura6 + " - misura7: " + this.misura7
 			+ " - misura8: " + this.misura8 + " - misura9: " + this.misura9 + " - misura10: " + this.misura10 + " - misura11: " + this.misura11
