@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <style name="ItalsimeVioletAHCG" parent="@style/_ItalsimeVioletAHCG"/>
+
+  <style name="_ItalsimeVioletAHCG" parent="Theme.AppCompat.Light">
+
+    <item name="android:editTextStyle">@style/EditTextItalsimeVioletAHCG</item>
+
+    <item name="android:buttonStyle">@style/ButtonItalsimeVioletAHCG</item>
+
+    <item name="android:imageButtonStyle">@style/ImageButtonItalsimeVioletAHCG</item>
+
+    <item name="android:spinnerStyle">@style/SpinnerItalsimeVioletAHCG</item>
+
+    <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItemItalsimeVioletAHCG</item>
+
+    <item name="android:seekBarStyle">@style/SeekBarItalsimeVioletAHCG</item>
+
+    <item name="android:listViewStyle">@style/ListViewItalsimeVioletAHCG</item>
+
+    <item name="android:listViewWhiteStyle">@style/ListViewItalsimeVioletAHCG.White</item>
+
+    <item name="android:spinnerItemStyle">@style/SpinnerItemItalsimeVioletAHCG</item>
+
+  </style>
+
+</resources>

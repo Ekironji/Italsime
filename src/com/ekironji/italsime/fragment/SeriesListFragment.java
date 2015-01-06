@@ -3,7 +3,6 @@ package com.ekironji.italsime.fragment;
 import java.util.List;
 import java.util.Locale;
 
-import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -31,7 +30,6 @@ import com.ekironji.italsime.R;
 import com.ekironji.italsime.Modello.Modello;
 import com.ekironji.italsime.Modello.Series;
 
-@SuppressLint("DefaultLocale")
 public class SeriesListFragment extends Fragment{
 	
 	final String DEBUG_TAG = "ModelsListFragment";
@@ -182,8 +180,10 @@ public class SeriesListFragment extends Fragment{
 	    	LayoutInflater inflater = LayoutInflater.from(getActivity());
 	    	View dialog_view = inflater.inflate(R.layout.dialog_searchfilters, null);
 	    	AlertDialog.Builder db = new AlertDialog.Builder(getActivity());
+//	    	AlertDialog.Builder db = new AlertDialog.Builder(getActivity(), R.style.ItalsimeVioletAHCG);
+	    	
 	    	db.setView(dialog_view);
-	    	db.setTitle(getResources().getString(R.string.title_search_filters_dialog));
+	    	
 	    	
 	    	final Spinner spinner = (Spinner) dialog_view.findViewById(R.id.series_spinner);
 	    	int arrayID = (ariaType == Modello.ARIA_PULITA) ? R.array.array_closed_blade_series : R.array.array_opened_blade_series;
@@ -198,17 +198,7 @@ public class SeriesListFragment extends Fragment{
 			final TextView textMaxPortata = (TextView) dialog_view.findViewById(R.id.textView_maxPortata);
 			textMaxPortata.setText(String.valueOf(DEFAULT_MAX_PORTATA));
 			RangeBar rangeBarPortata = (RangeBar) dialog_view.findViewById(R.id.rangebarPortata);
-			if (ariaType == Modello.ARIA_PULITA) {
-				rangeBarPortata.setBarColor(getResources().getColor(R.color.italsimegreenahcg_color));
-				rangeBarPortata.setConnectingLineColor(getResources().getColor(R.color.italsimegreenahcg_color));
-				rangeBarPortata.setThumbImageNormal(R.drawable.italsimegreenahcg_scrubber_control_normal_holo);
-				rangeBarPortata.setThumbImagePressed(R.drawable.italsimegreenahcg_scrubber_control_pressed_holo);
-			} else if (ariaType == Modello.ARIA_SPORCA) {
-				rangeBarPortata.setBarColor(getResources().getColor(R.color.italsimevioletahcg_color));
-				rangeBarPortata.setConnectingLineColor(getResources().getColor(R.color.italsimevioletahcg_color));
-				rangeBarPortata.setThumbColorNormal(R.color.italsimevioletahcg_color);
-				rangeBarPortata.setThumbColorPressed(R.color.italsimevioletahcg_color);
-			}
+			
 			rangeBarPortata.setTickCount(120);
 			rangeBarPortata.setOnRangeBarChangeListener(new OnRangeBarChangeListener() {
 				
@@ -235,8 +225,8 @@ public class SeriesListFragment extends Fragment{
 			} else if (ariaType == Modello.ARIA_SPORCA) {
 				rangeBarPressione.setBarColor(getResources().getColor(R.color.italsimevioletahcg_color));
 				rangeBarPressione.setConnectingLineColor(getResources().getColor(R.color.italsimevioletahcg_color));
-				rangeBarPressione.setThumbColorNormal(R.color.italsimevioletahcg_color);
-				rangeBarPressione.setThumbColorPressed(R.color.italsimevioletahcg_color);
+				rangeBarPressione.setThumbImageNormal(R.drawable.italsimevioletahcg_scrubber_control_normal_holo);
+				rangeBarPressione.setThumbImagePressed(R.drawable.italsimevioletahcg_scrubber_control_pressed_holo);
 			}
 			rangeBarPressione.setTickCount(200);
 			rangeBarPressione.setOnRangeBarChangeListener(new OnRangeBarChangeListener() {
@@ -283,6 +273,35 @@ public class SeriesListFragment extends Fragment{
 	    		}
 	    	);
 	    	
+	    	if (ariaType == Modello.ARIA_PULITA) {
+	    		
+	    		db.setTitle(getResources().getString(R.string.title_search_filters_dialog) + " for Closed Blade");
+	    		
+				rangeBarPortata.setBarColor(getResources().getColor(R.color.italsimegreenahcg_color));
+				rangeBarPortata.setConnectingLineColor(getResources().getColor(R.color.italsimegreenahcg_color));
+				rangeBarPortata.setThumbImageNormal(R.drawable.italsimegreenahcg_scrubber_control_normal_holo);
+				rangeBarPortata.setThumbImagePressed(R.drawable.italsimegreenahcg_scrubber_control_pressed_holo);
+				
+				rangeBarPressione.setBarColor(getResources().getColor(R.color.italsimegreenahcg_color));
+				rangeBarPressione.setConnectingLineColor(getResources().getColor(R.color.italsimegreenahcg_color));
+				rangeBarPressione.setThumbImageNormal(R.drawable.italsimegreenahcg_scrubber_control_normal_holo);
+				rangeBarPressione.setThumbImagePressed(R.drawable.italsimegreenahcg_scrubber_control_pressed_holo);
+			} else if (ariaType == Modello.ARIA_SPORCA) {
+
+	    		db.setTitle(getResources().getString(R.string.title_search_filters_dialog) + " for Opened Blade");
+	    		
+				rangeBarPortata.setBarColor(getResources().getColor(R.color.italsimevioletahcg_color));
+				rangeBarPortata.setConnectingLineColor(getResources().getColor(R.color.italsimevioletahcg_color));
+				rangeBarPortata.setThumbImageNormal(R.drawable.italsimevioletahcg_scrubber_control_normal_holo);
+				rangeBarPortata.setThumbImagePressed(R.drawable.italsimevioletahcg_scrubber_control_pressed_holo);
+				
+				rangeBarPressione.setBarColor(getResources().getColor(R.color.italsimevioletahcg_color));
+				rangeBarPressione.setConnectingLineColor(getResources().getColor(R.color.italsimevioletahcg_color));
+				rangeBarPressione.setThumbImageNormal(R.drawable.italsimevioletahcg_scrubber_control_normal_holo);
+				rangeBarPressione.setThumbImagePressed(R.drawable.italsimevioletahcg_scrubber_control_pressed_holo);
+			}
+	    	
+	    	
 	    	AlertDialog dialog = db.show();
 	    	return true;
 	    default:
@@ -325,8 +344,10 @@ public class SeriesListFragment extends Fragment{
 			nameSerie.setText("Serie " + mSeries.get(position));
 			if (ariaType == Modello.ARIA_PULITA) {
 				nameSerie.setBackgroundColor(getResources().getColor(R.color.italsimegreenahcg_color));
+				vg.setBackgroundResource(R.drawable.italsimegreenahcg_list_selector_holo_light);
 			} else if (ariaType == Modello.ARIA_SPORCA) {
 				nameSerie.setBackgroundColor(getResources().getColor(R.color.italsimevioletahcg_color));
+				vg.setBackgroundResource(R.drawable.italsimevioletahcg_list_selector_holo_light);
 			}
 			
 			((ImageView) vg.findViewById(R.id.imageView_serie)).setImageResource(

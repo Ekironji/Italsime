@@ -236,8 +236,8 @@ public class ModelsListFragment extends Fragment {
 			} else if (ariaType == Modello.ARIA_SPORCA) {
 				rangeBarPortata.setBarColor(getResources().getColor(R.color.italsimevioletahcg_color));
 				rangeBarPortata.setConnectingLineColor(getResources().getColor(R.color.italsimevioletahcg_color));
-				rangeBarPortata.setThumbColorNormal(R.color.italsimevioletahcg_color);
-				rangeBarPortata.setThumbColorPressed(R.color.italsimevioletahcg_color);
+				rangeBarPortata.setThumbImageNormal(R.drawable.italsimevioletahcg_scrubber_control_normal_holo);
+				rangeBarPortata.setThumbImagePressed(R.drawable.italsimevioletahcg_scrubber_control_pressed_holo);
 			}
 			rangeBarPortata.setTickCount(120);
 			rangeBarPortata.setOnRangeBarChangeListener(new OnRangeBarChangeListener() {
@@ -265,8 +265,8 @@ public class ModelsListFragment extends Fragment {
 			} else if (ariaType == Modello.ARIA_SPORCA) {
 				rangeBarPressione.setBarColor(getResources().getColor(R.color.italsimevioletahcg_color));
 				rangeBarPressione.setConnectingLineColor(getResources().getColor(R.color.italsimevioletahcg_color));
-				rangeBarPressione.setThumbColorNormal(R.color.italsimevioletahcg_color);
-				rangeBarPressione.setThumbColorPressed(R.color.italsimevioletahcg_color);
+				rangeBarPressione.setThumbImageNormal(R.drawable.italsimevioletahcg_scrubber_control_normal_holo);
+				rangeBarPressione.setThumbImagePressed(R.drawable.italsimevioletahcg_scrubber_control_pressed_holo);
 			}
 			rangeBarPressione.setTickCount(200);
 			rangeBarPressione.setOnRangeBarChangeListener(new OnRangeBarChangeListener() {
@@ -354,8 +354,5 @@ public class ModelsListFragment extends Fragment {
 			MainActivity.database.close();
 		}
 	}
-
-	
-
 
 }

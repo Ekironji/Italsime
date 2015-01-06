@@ -42,6 +42,12 @@ public class ModelliListAdapter extends BaseAdapter {
 
 		}
 		
+		if (mModelli.get(position).getAriaType() == Modello.ARIA_PULITA) {
+			vg.setBackgroundResource(R.drawable.italsimegreenahcg_list_selector_holo_light);
+		} else if (mModelli.get(position).getAriaType() == Modello.ARIA_SPORCA) {
+			vg.setBackgroundResource(R.drawable.italsimevioletahcg_list_selector_holo_light);
+		}
+		
 		((TextView) vg.findViewById(R.id.textView_model_name)).setText(mModelli.get(position).getName());
 		((TextView) vg.findViewById(R.id.textView_kw_value)).setText(String.valueOf(mModelli.get(position).getKw()));
 		((TextView) vg.findViewById(R.id.textView_rpm_value)).setText(String.valueOf(mModelli.get(position).getRpm()));
