@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Italsime</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+<!--     Splash Screen -->
+	<string name="splash_progress_dialog_title">Database creation</string>
+	<string name="splash_progress_dialog_message">This may take a few seconds&#8230;</string>
+    
+<!--     Navigation Drawer strings -->
+    <string name="title_section0">Home</string>
+    <string name="title_section1">Closed Blade - Clean Air</string>
+    <string name="title_section2">Opened Blade - Dirty Air</string>
+    <string name="title_section3">About Italsime</string>
+    
+<!--     Navigation Drawer Fragment -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    
+<!--     Home Fragment -->
+	<string name="closed_blade_string">Closed Blade</string>
+	<string name="clean_air_string">Clean Air</string>
+	<string name="opened_blade_string">Opened Blade</string>
+	<string name="dirty_air_string">Dirty Air</string>
+    
+<!--     Model List Fragment -->
+	<string name="serie_string">Result For:&#160;</string>
+	<string name="portata_string">Flow Rate</string>
+	<string name="pressure_string">Pressure</string>
+	<string name="min_string">Min:</string>
+	<string name="max_string">Max:</string>
+	
+<!-- 	Search Filters Dialog -->
+	<string name="title_search_filters_dialog">Search fiters</string>
+	<string name="sel_series_string">Select Series:&#160;</string>
+	<string name="positive_button_search_filters_dialog">Search</string>
+	<string name="negative_button_search_filters_dialog">Cancel</string>
+	<string name="title_search_progress_dialog">Searching&#8230;</string>
+
+	<string-array name="array_closed_blade_series">
+        <item>All Series</item>
+        <item>TRM</item>
+        <item>TRU</item>
+        <item>VPM</item>
+        <item>TGR</item>
+        <item>RS</item>
+        <item>LBT</item>
+        <item>TVC</item>
+        <item>TVP</item>
+        <item>TVG</item>
+    </string-array>	
+
+    <string-array name="array_opened_blade_series">
+        <item>All Series</item>
+        <item>TZM</item>
+        <item>TM</item>
+        <item>XM</item>
+        <item>TZA</item>
+        <item>TZB</item>
+        <item>ALA</item>
+        <item>RO</item>
+    </string-array>
+ 
+<!--     Model Descriptor Fragment -->
+	<string name="dummy_model_name">No Model Name</string>
+	<string name="kw_string">Kw:&#160;</string>
+	<string name="rpm_string">Rpm:&#160;</string>
+	<string name="kg_string">Kg:&#160;</string>
+	<string name="dummy_no_value">no_value</string>
+	<string name="m3h_table_string">m3/h</string>
+	<string name="mmH2O_table_string">mmH2O</string>
+    <string name="rotate_string">Rotate to show the dimensions</string>
+    <string name="a">A</string>
+    <string name="b">B</string>
+    <string name="c">C</string>
+    <string name="d">D</string>
+    <string name="e">E</string>
+    <string name="f">F</string>
+    <string name="g">G</string>
+    <string name="h">H</string>
+    <string name="i">I</string>
+    <string name="l">L</string>
+    <string name="m">M</string>
+    <string name="n">N</string>
+    <string name="o">O</string>
+    <string name="p">P</string>
+    <string name="q">Q</string>
+    <string name="r">R</string>
+    <string name="s">S</string>
+    <string name="t">T</string>
+
+
+    
+<!--     Image Content Descriptors -->
+    <string name="imagedescriptor_ariapulitabutton">Clean Air</string>
+    <string name="imagedescriptor_ariasporcabutton">Dirty Air</string>
+    <string name="imagedescriptor_italsimelogo">logo Italsime</string>
+    <string name="imagedescriptor_imageariatype">ariatype</string>
+    <string name="imagedescriptor_serie">serie</string>
+    <string name="imagedescriptor_imagedimension">image_dimension</string>
+    <string name="imagedescriptor_imagedimension_land">image_dimension_land</string>
+    
+<!--     Info Fragment -->
+    <string name="dummy_title">Lorem ipsum.</string>
+    <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+
+</resources>

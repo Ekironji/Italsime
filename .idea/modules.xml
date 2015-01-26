@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Italsime.iml" filepath="$PROJECT_DIR$/Italsime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/italsime/italsime.iml" filepath="$PROJECT_DIR$/italsime/italsime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rangeBar/rangeBar.iml" filepath="$PROJECT_DIR$/rangeBar/rangeBar.iml" />
+    </modules>
+  </component>
+</project>
+

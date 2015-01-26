@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp" >
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:padding="10dp">
+        
+        <TextView 
+            android:id="@+id/textView_selSeries_string"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_centerVertical="true"
+            android:text="@string/sel_series_string"/>
+
+        <Spinner
+            android:id="@+id/series_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/textView_selSeries_string" />
+
+    </RelativeLayout>
+    
+   	<View 
+	    android:layout_width="fill_parent"
+	    android:layout_height="1dp"
+    	android:background="@android:color/darker_gray"/>
+    	
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:padding="10dp" >
+
+	    <TextView
+	        android:id="@+id/textViewPortataString"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:text="@string/portata_string" />
+	    
+	    <TextView
+	        android:id="@+id/textView_minPortata"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/textViewPortataString"
+	        android:layout_alignLeft="@+id/textViewPortataString"
+	        android:layout_marginTop="10dp" />
+
+	    <TextView
+	        android:id="@+id/textView_maxPortata"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/textView_minPortata"
+	        android:layout_alignParentRight="true" />
+
+	    <com.edmodo.rangebar.RangeBar
+	        xmlns:custom="http://schemas.android.com/apk/res-auto"
+	        android:id="@+id/rangebarPortata"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/textView_minPortata"
+	        custom:barColor="@color/italsimegreenahcg_color"
+	        custom:connectingLineColor="@color/italsimegreenahcg_color"
+	        custom:thumbImageNormal="@drawable/italsimegreenahcg_scrubber_control_normal_holo"
+	        custom:thumbImagePressed="@drawable/italsimegreenahcg_scrubber_control_pressed_holo"
+	        custom:tickHeight="0dip" />
+
+	    <TextView
+	        android:id="@+id/textViewMinStringPo"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="5dp"
+	        android:layout_below="@+id/rangebarPortata"
+	        android:layout_alignLeft="@+id/rangebarPortata"
+	        android:text="@string/min_string" />
+
+	    <EditText
+	        android:id="@+id/editTextMinPortata"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@+id/textViewMinStringPo"
+	        android:layout_toRightOf="@+id/textViewMinStringPo"
+	        android:ems="4"
+	        android:inputType="number" >
+	    </EditText>
+
+	    <EditText
+	        android:id="@+id/editTextMaxPortata"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/editTextMinPortata"
+	        android:layout_alignBottom="@+id/editTextMinPortata"
+	        android:layout_alignRight="@+id/rangebarPortata"
+	        android:ems="4"
+	        android:inputType="number" />
+
+	    <TextView
+	        android:id="@+id/TextViewMaxPortataPo"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@+id/editTextMaxPortata"
+	        android:layout_toLeftOf="@+id/editTextMaxPortata"
+	        android:text="@string/max_string" />
+	    
+	</RelativeLayout>
+	
+	<View 
+	    android:layout_width="fill_parent"
+	    android:layout_height="1dp"
+    	android:background="@android:color/darker_gray"/>
+    
+    <RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+		android:padding="10dp">
+		
+        <TextView
+	        android:id="@+id/textViewPressioneString"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:text="@string/pressure_string" />
+        
+	    <TextView 
+	        android:id="@+id/textView_minPressione"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/textViewPressioneString"
+	        android:layout_alignLeft="@+id/textViewPressioneString"
+	        android:layout_marginTop="10dp" />
+	    
+	    <TextView 
+	        android:id="@+id/textView_maxPressione"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/textView_minPressione"
+	        android:layout_alignParentRight="true" />
+	    
+	    <com.edmodo.rangebar.RangeBar
+		    xmlns:custom="http://schemas.android.com/apk/res-auto"
+		    android:id="@+id/rangebarPressione"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@+id/textView_minPressione"
+	        custom:barColor="@color/italsimegreenahcg_color"
+	        custom:connectingLineColor="@color/italsimegreenahcg_color"
+	        custom:thumbImageNormal="@drawable/italsimegreenahcg_scrubber_control_normal_holo"
+	        custom:thumbImagePressed="@drawable/italsimegreenahcg_scrubber_control_pressed_holo"
+		    custom:tickHeight="0dip" />
+	    
+	    <TextView
+	        android:id="@+id/textViewMinStringPr"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="5dp"
+	        android:layout_below="@+id/rangebarPressione"
+	        android:layout_alignLeft="@+id/rangebarPressione"
+	        android:text="@string/min_string" />
+
+	    <EditText
+	        android:id="@+id/editTextMinPressione"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@+id/textViewMinStringPr"
+	        android:layout_toRightOf="@+id/textViewMinStringPr"
+	        android:ems="4"
+	        android:inputType="number" >
+	    </EditText>
+
+	    <EditText
+	        android:id="@+id/editTextMaxPressione"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/editTextMinPressione"
+	        android:layout_alignBottom="@+id/editTextMinPressione"
+	        android:layout_alignRight="@+id/rangebarPressione"
+	        android:ems="4"
+	        android:inputType="number" />
+
+	    <TextView
+	        android:id="@+id/TextViewMaxPortata"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@+id/editTextMaxPressione"
+	        android:layout_toLeftOf="@+id/editTextMaxPressione"
+	        android:text="@string/max_string" />
+	 
+	</RelativeLayout>
+    
+
+</LinearLayout>
+<!-- From: file:/C:/Users/Luigi/AndroidStudioProjects/Italsime/italsime/src/main/res/layout/dialog_searchfilters.xml -->
