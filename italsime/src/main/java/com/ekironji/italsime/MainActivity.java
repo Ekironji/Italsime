@@ -57,6 +57,7 @@ public class MainActivity extends ActionBarActivity implements
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
 		
 		if (savedInstanceState != null) {
 			Log.i(DEBUG_TAG, "savedInstanceState!=null");

@@ -9,18 +9,18 @@
         <dex dex="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\classes-88cbf7b38366c8fcf2a65c749ea61dcb8800971c.jar" />
     </item>
     <item
-        jar="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\exploded-aar\Italsime\rangeBar\unspecified\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="2a36bf661971a8c995769ded3c3d0df6d8acb9e8">
-        <dex dex="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\classes-c15b24c8d0c6fe4bd76680e2761c466f6a76a2fa.jar" />
-    </item>
-    <item
         jar="C:\Users\Luigi\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.0\support-annotations-21.0.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e">
         <dex dex="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\support-annotations-21.0.0-b0199809e87f83da8c0c724aa937a0f78beefccf.jar" />
+    </item>
+    <item
+        jar="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\exploded-aar\Italsime\rangeBar\unspecified\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="bd4d6de7c0deb7370996ed9ff70444003f4e7f00">
+        <dex dex="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\classes-c15b24c8d0c6fe4bd76680e2761c466f6a76a2fa.jar" />
     </item>
     <item
         jar="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.0\classes.jar"

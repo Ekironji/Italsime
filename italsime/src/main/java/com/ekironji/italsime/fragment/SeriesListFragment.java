@@ -142,72 +142,12 @@ public class SeriesListFragment extends Fragment{
 	    	maxPortata = DEFAULT_MAX_PORTATA;
 	    	minPressione = DEFAULT_MIN_PRESSIONE;
 	    	maxPressione = DEFAULT_MAX_PRESSIONE;
-	    	
-	    	// custom dialog
-////	    	final Dialog dialog = new Dialog(getActivity());
-//			final Dialog dialog = new Dialog(getActivity(), R.style.CustomDialogItalsimeGreenAHCG);
-//			dialog.setContentView(R.layout.dialog_searchfilters);
-//			dialog.setTitle("Filtri ricerca");
-// 
-//			// set the custom dialog components - text, image and button
-//			final TextView textMinPortata = (TextView) dialog.findViewById(R.id.textView_minPortata);
-//			textMinPortata.setText(String.valueOf(DEFAULT_MIN_PORTATA));
-//			final TextView textMaxPortata = (TextView) dialog.findViewById(R.id.textView_maxPortata);
-//			textMaxPortata.setText(String.valueOf(DEFAULT_MAX_PORTATA));
-//			RangeBar rangeBarPortata = (RangeBar) dialog.findViewById(R.id.rangebarPortata);
-//			rangeBarPortata.setTickCount(900);
-//			rangeBarPortata.setOnRangeBarChangeListener(new OnRangeBarChangeListener() {
-//				
-//				@Override
-//				public void onIndexChangeListener(RangeBar rangeBar, int leftThumbIndex,
-//						int rightThumbIndex) {
-//					textMinPortata.setText(String.valueOf(leftThumbIndex));
-//					textMaxPortata.setText(String.valueOf(rightThumbIndex));
-//					minPortata = leftThumbIndex;
-//					maxPortata = rightThumbIndex;
-//				}
-//			});
-//			
-//			final TextView textMinPressione = (TextView) dialog.findViewById(R.id.textView_minPressione);
-//			textMinPressione.setText(String.valueOf(DEFAULT_MIN_PRESSIONE));
-//			final TextView textMaxPressione = (TextView) dialog.findViewById(R.id.textView_maxPressione);
-//			textMaxPressione.setText(String.valueOf(DEFAULT_MAX_PRESSIONE));
-//			RangeBar rangeBarPressione = (RangeBar) dialog.findViewById(R.id.rangebarPressione);
-//			rangeBarPressione.setTickCount(900);
-//			rangeBarPressione.setOnRangeBarChangeListener(new OnRangeBarChangeListener() {
-//				
-//				@Override
-//				public void onIndexChangeListener(RangeBar rangeBar, int leftThumbIndex,
-//						int rightThumbIndex) {
-//					textMinPressione.setText(String.valueOf(leftThumbIndex));
-//					textMaxPressione.setText(String.valueOf(rightThumbIndex));
-//					minPressione = leftThumbIndex;
-//					maxPressione = rightThumbIndex;
-//				}
-//			});
-//			
-//			 
-//			Button dialogButton = (Button) dialog.findViewById(R.id.buttonAvviaRicerca);
-//			// if button is clicked, close the custom dialog
-//			dialogButton.setOnClickListener(new OnClickListener() {
-//				@Override
-//				public void onClick(View v) {
-//					new UpdateListFromFiltersTask().execute(minPortata, maxPortata, minPressione, maxPressione);
-//					dialog.dismiss();
-//				}
-//			});
-//			
-//			AlertDialog.Builder db = dialog
-// 
-//			dialog.show();
-	    	
+
 	    	LayoutInflater inflater = LayoutInflater.from(getActivity());
 	    	View dialog_view = inflater.inflate(R.layout.dialog_searchfilters, null);
 	    	AlertDialog.Builder db = new AlertDialog.Builder(getActivity());
-//	    	AlertDialog.Builder db = new AlertDialog.Builder(getActivity(), R.style.ItalsimeVioletAHCG);
 	    	
 	    	db.setView(dialog_view);
-	    	
 	    	
 	    	final Spinner spinner = (Spinner) dialog_view.findViewById(R.id.series_spinner);
 	    	int arrayID = (ariaType == Modello.ARIA_PULITA) ? R.array.array_closed_blade_series : R.array.array_opened_blade_series;
@@ -271,8 +211,7 @@ public class SeriesListFragment extends Fragment{
 	    		    	fragmentManager.beginTransaction()
 	    		        .replace(R.id.container, mFragment)
 	    		        .addToBackStack("serListFragBack")
-	    		        .commit();	
-	    	        	spinner.getSelectedItem().toString();
+	    		        .commit();
 						dialog.dismiss();
 	    	        }
 	    		}
@@ -284,25 +223,32 @@ public class SeriesListFragment extends Fragment{
 	    	        }
 	    		}
 	    	);
-	    	
-	    	if (ariaType == Modello.ARIA_PULITA) {
-	    		
-	    		db.setTitle(getResources().getString(R.string.title_search_filters_dialog) + " for Closed Blade");
-	    		
-				rangeBarPortata.setBarColor(getResources().getColor(R.color.italsimegreenahcg_color));
-				rangeBarPortata.setConnectingLineColor(getResources().getColor(R.color.italsimegreenahcg_color));
-				rangeBarPortata.setThumbImageNormal(R.drawable.italsimegreenahcg_scrubber_control_normal_holo);
-				rangeBarPortata.setThumbImagePressed(R.drawable.italsimegreenahcg_scrubber_control_pressed_holo);
-				
-				rangeBarPressione.setBarColor(getResources().getColor(R.color.italsimegreenahcg_color));
-				rangeBarPressione.setConnectingLineColor(getResources().getColor(R.color.italsimegreenahcg_color));
-				rangeBarPressione.setThumbImageNormal(R.drawable.italsimegreenahcg_scrubber_control_normal_holo);
-				rangeBarPressione.setThumbImagePressed(R.drawable.italsimegreenahcg_scrubber_control_pressed_holo);
-			} else if (ariaType == Modello.ARIA_SPORCA) {
 
-	    		db.setTitle(getResources().getString(R.string.title_search_filters_dialog) + " for Opened Blade");
-	    		
-				rangeBarPortata.setBarColor(getResources().getColor(R.color.italsimevioletahcg_color));
+            TextView mTitle = (TextView) dialog_view.findViewById(R.id.alertTitle);
+            View mDivider = dialog_view.findViewById(R.id.titleDivider);
+
+            if (ariaType == Modello.ARIA_PULITA) {
+
+                mTitle.setText(getResources().getString(R.string.title_search_filters_dialog) + " for Closed Blade");
+                mTitle.setTextColor(getResources().getColor(R.color.italsimegreenahcg_color));
+                mDivider.setBackgroundColor(getResources().getColor(R.color.italsimegreenahcg_color));
+
+                rangeBarPortata.setBarColor(getResources().getColor(R.color.italsimegreenahcg_color));
+                rangeBarPortata.setConnectingLineColor(getResources().getColor(R.color.italsimegreenahcg_color));
+                rangeBarPortata.setThumbImageNormal(R.drawable.italsimegreenahcg_scrubber_control_normal_holo);
+                rangeBarPortata.setThumbImagePressed(R.drawable.italsimegreenahcg_scrubber_control_pressed_holo);
+
+                rangeBarPressione.setBarColor(getResources().getColor(R.color.italsimegreenahcg_color));
+                rangeBarPressione.setConnectingLineColor(getResources().getColor(R.color.italsimegreenahcg_color));
+                rangeBarPressione.setThumbImageNormal(R.drawable.italsimegreenahcg_scrubber_control_normal_holo);
+                rangeBarPressione.setThumbImagePressed(R.drawable.italsimegreenahcg_scrubber_control_pressed_holo);
+            } else if (ariaType == Modello.ARIA_SPORCA) {
+
+                mTitle.setText(getResources().getString(R.string.title_search_filters_dialog) + " for Opened Blade");
+                mTitle.setTextColor(getResources().getColor(R.color.italsimevioletahcg_color));
+                mDivider.setBackgroundColor(getResources().getColor(R.color.italsimevioletahcg_color));
+
+                rangeBarPortata.setBarColor(getResources().getColor(R.color.italsimevioletahcg_color));
 				rangeBarPortata.setConnectingLineColor(getResources().getColor(R.color.italsimevioletahcg_color));
 				rangeBarPortata.setThumbImageNormal(R.drawable.italsimevioletahcg_scrubber_control_normal_holo);
 				rangeBarPortata.setThumbImagePressed(R.drawable.italsimevioletahcg_scrubber_control_pressed_holo);
@@ -312,8 +258,7 @@ public class SeriesListFragment extends Fragment{
 				rangeBarPressione.setThumbImageNormal(R.drawable.italsimevioletahcg_scrubber_control_normal_holo);
 				rangeBarPressione.setThumbImagePressed(R.drawable.italsimevioletahcg_scrubber_control_pressed_holo);
 			}
-	    	
-	    	
+
 	    	AlertDialog dialog = db.show();
 	    	return true;
 	    default:

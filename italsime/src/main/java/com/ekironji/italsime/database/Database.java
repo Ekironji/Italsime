@@ -8,6 +8,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import com.ekironji.italsime.Modello.Modello;
 
@@ -75,22 +76,52 @@ public class Database {
 				new String[] { String.valueOf(serie) }, null, null, null);
     	return returnModelsFromCursor(cursor);
     }
-    
+
     public ArrayList<Modello> getModelsByFilteredSearch(int sporcaOPulita,
+                                                        int portataM3hMIN, int portataM3hMAX,
+                                                        int pressioneMMh2oMIN, int pressioneMMh2oMAX) {
+        Cursor cursor = mDb.query(ModelsMetaData.ModelsTab_TABLE, null,
+                ModelsMetaData.ModelsTab_ARIATYPE_KEY + "=? AND " +
+                        ModelsMetaData.ModelsTab_M3H1_KEY + ">? AND " +
+                        ModelsMetaData.ModelsTab_M3H5_KEY + "<? AND " +
+                        ModelsMetaData.ModelsTab_MMH2O1_KEY + ">? AND " +
+                        ModelsMetaData.ModelsTab_MMH2O5_KEY + "<?",
+                new String[] { String.valueOf(sporcaOPulita),
+                        String.valueOf(portataM3hMIN),
+                        String.valueOf(portataM3hMAX),
+                        String.valueOf(pressioneMMh2oMIN),
+                        String.valueOf(pressioneMMh2oMAX) }, null, null, null);
+        Log.i("DatabaseClass", "SELECT * FROM " +ModelsMetaData.ModelsTab_TABLE+ " WHERE " + ModelsMetaData.ModelsTab_ARIATYPE_KEY + "="+String.valueOf(sporcaOPulita)+" AND " +
+                ModelsMetaData.ModelsTab_M3H1_KEY + ">"+String.valueOf(portataM3hMIN)+" AND " +
+                ModelsMetaData.ModelsTab_M3H5_KEY + "<"+String.valueOf(portataM3hMAX)+" AND " +
+                ModelsMetaData.ModelsTab_MMH2O1_KEY + ">"+String.valueOf(pressioneMMh2oMIN)+" AND " +
+                ModelsMetaData.ModelsTab_MMH2O5_KEY + "<"+String.valueOf(pressioneMMh2oMAX)+ "...returned  cursorlenght: " + cursor.getCount());
+        return returnModelsFromCursor(cursor);
+    }
+    
+    public ArrayList<Modello> getModelsBySeriesFilteredSearch(int sporcaOPulita, int serie,
     		int portataM3hMIN, int portataM3hMAX,
     		int pressioneMMh2oMIN, int pressioneMMh2oMAX) {
     	Cursor cursor = mDb.query(ModelsMetaData.ModelsTab_TABLE, null, 
-    			ModelsMetaData.ModelsTab_ARIATYPE_KEY + "=? and " +
-    			ModelsMetaData.ModelsTab_M3H1_KEY + ">? and " +
-    			ModelsMetaData.ModelsTab_M3H5_KEY + "<? and " +
-    			ModelsMetaData.ModelsTab_MMH2O1_KEY + "<? and " +
-    			ModelsMetaData.ModelsTab_MMH2O5_KEY + ">?",
+    			ModelsMetaData.ModelsTab_ARIATYPE_KEY + "=? AND " +
+                ModelsMetaData.ModelsTab_SERIE_KEY + "=? AND " +
+    			ModelsMetaData.ModelsTab_M3H1_KEY + ">? AND " +
+    			ModelsMetaData.ModelsTab_M3H5_KEY + "<? AND " +
+    			ModelsMetaData.ModelsTab_MMH2O1_KEY + ">? AND " +
+    			ModelsMetaData.ModelsTab_MMH2O5_KEY + "<?",
 				new String[] { String.valueOf(sporcaOPulita),
-    							String.valueOf(portataM3hMIN),
+                                String.valueOf(serie),
+    						    String.valueOf(portataM3hMIN),
     							String.valueOf(portataM3hMAX),
-    							String.valueOf(pressioneMMh2oMAX),
-    							String.valueOf(pressioneMMh2oMIN) }, null, null, null);
-    	return returnModelsFromCursor(cursor); 	
+    							String.valueOf(pressioneMMh2oMIN),
+    							String.valueOf(pressioneMMh2oMAX) }, null, null, null);
+        Log.i("DatabaseClass", "SELECT * FROM " +ModelsMetaData.ModelsTab_TABLE+ " WHERE " + ModelsMetaData.ModelsTab_ARIATYPE_KEY + "="+String.valueOf(sporcaOPulita)+" AND " +
+                        ModelsMetaData.ModelsTab_SERIE_KEY + "=" +  String.valueOf(serie)+" AND " +
+                ModelsMetaData.ModelsTab_M3H1_KEY + ">"+String.valueOf(portataM3hMIN)+" AND " +
+                ModelsMetaData.ModelsTab_M3H5_KEY + "<"+String.valueOf(portataM3hMAX)+" AND " +
+                ModelsMetaData.ModelsTab_MMH2O1_KEY + ">"+String.valueOf(pressioneMMh2oMIN)+" AND " +
+                ModelsMetaData.ModelsTab_MMH2O5_KEY + "<"+String.valueOf(pressioneMMh2oMAX)+ "...returned cursorlenght: " + cursor.getCount());
+        return returnModelsFromCursor(cursor);
     }
     
     public ArrayList<Modello> getModelsbyKW(int sporcaOPulita, int kwMAX, int kwMIN){

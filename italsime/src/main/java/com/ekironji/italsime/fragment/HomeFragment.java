@@ -29,6 +29,7 @@ public class HomeFragment extends Fragment{
 		    	mFragment.setArguments(mBundle);
 		    	fragmentManager.beginTransaction()
 		        .replace(R.id.container, mFragment)
+                .addToBackStack("HomeFragmentBack")
 		        .commit();
 			}
 		});
@@ -43,6 +44,7 @@ public class HomeFragment extends Fragment{
 		    	mFragment.setArguments(mBundle);
 		    	fragmentManager.beginTransaction()
 		        .replace(R.id.container, mFragment)
+                .addToBackStack("HomeFragmentBack")
 		        .commit();
 			}
 		});

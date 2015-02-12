@@ -5,11 +5,40 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="5dp" >
+
+    <LinearLayout android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/title_template"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical|start"
+            android:minHeight="64dip"
+            android:paddingLeft="10dp">
+            <com.android.internal.widget.DialogTitle
+                android:id="@+id/alertTitle"
+                style="@android:style/TextAppearance.Holo.DialogWindowTitle"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View
+            android:id="@+id/titleDivider"
+            android:layout_width="match_parent"
+            android:layout_height="2dip"
+            android:visibility="visible"
+            android:background="@android:color/holo_blue_light" />
+    </LinearLayout>
     
     <RelativeLayout 
         android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
-	    android:padding="10dp">
+	    android:padding="10dp"
+        android:layout_marginTop="10dp">
         
         <TextView 
             android:id="@+id/textView_selSeries_string"

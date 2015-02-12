@@ -5,12 +5,6 @@
     <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
         <!-- API 11 theme customizations can go here. -->
     </style>
-    <!-- From: file:/C:/Users/Luigi/AndroidStudioProjects/Italsime/italsime/src/main/res/values-v11/styles_italsimegreenahcg.xml -->
-    <eat-comment/>
-    <style name="AutoCompleteTextViewItalsimeGreenAHCG" parent="android:Widget.Holo.Light.AutoCompleteTextView">
-      <item name="android:dropDownSelector">@drawable/italsimegreenahcg_list_selector_holo_light</item>
-	    <item name="android:background">@drawable/italsimegreenahcg_edit_text_holo_light</item>
-  </style>
     <!-- From: file:/C:/Users/Luigi/AndroidStudioProjects/Italsime/italsime/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values-v11/values.xml -->
     <eat-comment/>
     <style name="Base.TextAppearance.AppCompat.Inverse">
@@ -167,34 +161,6 @@
         <item name="android:dropDownSelector">?attr/listChoiceBackgroundIndicator</item>
         <item name="android:popupBackground">@drawable/abc_popup_background_mtrl_mult</item>
     </style>
-    <!-- From: file:/C:/Users/Luigi/AndroidStudioProjects/Italsime/italsime/src/main/res/values-v11/styles_italsimegreenahcg.xml -->
-    <eat-comment/>
-    <style name="ButtonItalsimeGreenAHCG" parent="android:Widget.Holo.Light.Button">
-	  <item name="android:background">@drawable/italsimegreenahcg_btn_default_holo_light</item>
-  </style>
-    <!-- From: file:/C:/Users/Luigi/AndroidStudioProjects/Italsime/italsime/src/main/res/values-v11/styles_italsimevioletahcg.xml -->
-    <eat-comment/>
-    <style name="ButtonItalsimeVioletAHCG" parent="android:Widget.Holo.Light.Button">
-	  <item name="android:background">@drawable/italsimevioletahcg_btn_default_holo_light</item>
-  </style>
-    <!-- From: file:/C:/Users/Luigi/AndroidStudioProjects/Italsime/italsime/src/main/res/values-v11/styles_italsimegreenahcg.xml -->
-    <eat-comment/>
-    <style name="ImageButtonItalsimeGreenAHCG" parent="android:Widget.Holo.Light.ImageButton">
-	  <item name="android:background">@drawable/italsimegreenahcg_btn_default_holo_light</item>
-  </style>
-    <!-- From: file:/C:/Users/Luigi/AndroidStudioProjects/Italsime/italsime/src/main/res/values-v11/styles_italsimevioletahcg.xml -->
-    <eat-comment/>
-    <style name="ImageButtonItalsimeVioletAHCG" parent="android:Widget.Holo.Light.ImageButton">
-	  <item name="android:background">@drawable/italsimevioletahcg_btn_default_holo_light</item>
-  </style>
-    <!-- From: file:/C:/Users/Luigi/AndroidStudioProjects/Italsime/italsime/src/main/res/values-v11/themes_italsimegreenahcg.xml -->
-    <eat-comment/>
-    <style name="ItalsimeGreenAHCG" parent="@style/_ItalsimeGreenAHCG"/>
-    <!-- From: file:/C:/Users/Luigi/AndroidStudioProjects/Italsime/italsime/src/main/res/values-v11/themes_italsimevioletahcg.xml -->
-    <eat-comment/>
-    <style name="ItalsimeVioletAHCG" parent="@style/_ItalsimeVioletAHCG"/>
-    <!-- From: file:/C:/Users/Luigi/AndroidStudioProjects/Italsime/italsime/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values-v11/values.xml -->
-    <eat-comment/>
     <style name="Platform.AppCompat" parent="android:Theme.Holo">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>
@@ -381,92 +347,4 @@
         <item name="android:listChoiceIndicatorSingle">@drawable/abc_btn_radio_material</item>
         <item name="android:listChoiceIndicatorMultiple">@drawable/abc_btn_check_material</item>
     </style>
-    <!-- From: file:/C:/Users/Luigi/AndroidStudioProjects/Italsime/italsime/src/main/res/values-v11/styles_italsimegreenahcg.xml -->
-    <eat-comment/>
-    <style name="ProgressBarItalsimeGreenAHCG" parent="android:Widget.Holo.Light.ProgressBar.Horizontal">
-      <item name="android:progressDrawable">@drawable/italsimegreenahcg_progress_horizontal_holo_light</item>
-      <item name="android:indeterminateDrawable">@drawable/italsimegreenahcg_progress_indeterminate_horizontal_holo_light</item>
-  </style>
-    <style name="SeekBarItalsimeGreenAHCG" parent="android:Widget.Holo.Light.SeekBar">
-      <item name="android:progressDrawable">@drawable/italsimegreenahcg_scrubber_progress_horizontal_holo_light</item>
-      <item name="android:indeterminateDrawable">@drawable/italsimegreenahcg_scrubber_progress_horizontal_holo_light</item>
-      <item name="android:thumb">@drawable/italsimegreenahcg_scrubber_control_selector_holo_light</item>
-  </style>
-    <!-- From: file:/C:/Users/Luigi/AndroidStudioProjects/Italsime/italsime/src/main/res/values-v11/styles_italsimevioletahcg.xml -->
-    <eat-comment/>
-    <style name="SeekBarItalsimeVioletAHCG" parent="android:Widget.Holo.Light.SeekBar">
-      <item name="android:progressDrawable">@drawable/italsimevioletahcg_scrubber_progress_horizontal_holo_light</item>
-      <item name="android:indeterminateDrawable">@drawable/italsimevioletahcg_scrubber_progress_horizontal_holo_light</item>
-      <item name="android:thumb">@drawable/italsimevioletahcg_scrubber_control_selector_holo_light</item>
-  </style>
-    <!-- From: file:/C:/Users/Luigi/AndroidStudioProjects/Italsime/italsime/src/main/res/values-v11/styles_italsimegreenahcg.xml -->
-    <eat-comment/>
-    <style name="SpinnerItalsimeGreenAHCG" parent="android:Widget.Holo.Light.Spinner">
-      <item name="android:background">@drawable/italsimegreenahcg_spinner_background_holo_light</item>
-      <item name="android:dropDownSelector">@drawable/italsimegreenahcg_list_selector_holo_light</item>
-  </style>
-    <!-- From: file:/C:/Users/Luigi/AndroidStudioProjects/Italsime/italsime/src/main/res/values-v11/styles_italsimevioletahcg.xml -->
-    <eat-comment/>
-    <style name="SpinnerItalsimeVioletAHCG" parent="android:Widget.Holo.Light.Spinner">
-      <item name="android:background">@drawable/italsimevioletahcg_spinner_background_holo_light</item>
-      <item name="android:dropDownSelector">@drawable/italsimevioletahcg_list_selector_holo_light</item>
-  </style>
-    <!-- From: file:/C:/Users/Luigi/AndroidStudioProjects/Italsime/italsime/src/main/res/values-v11/styles_italsimegreenahcg.xml -->
-    <eat-comment/>
-    <style name="ToggleItalsimeGreenAHCG" parent="android:Widget.Holo.Light.Button.Toggle">
-      <item name="android:background">@drawable/italsimegreenahcg_btn_toggle_holo_light</item>
-  </style>
-    <!-- From: file:/C:/Users/Luigi/AndroidStudioProjects/Italsime/italsime/src/main/res/values-v11/themes_italsimegreenahcg.xml -->
-    <eat-comment/>
-    <style name="_ItalsimeGreenAHCG" parent="Theme.AppCompat.Light">
-
-    <item name="android:editTextBackground">@drawable/italsimegreenahcg_edit_text_holo_light</item>
-
-    <item name="android:textColorHighlight">#992bb02e</item>
-    <item name="android:textSelectHandleLeft">@drawable/italsimegreenahcg_text_select_handle_left</item>
-    <item name="android:textSelectHandleRight">@drawable/italsimegreenahcg_text_select_handle_right</item>
-    <item name="android:textSelectHandle">@drawable/italsimegreenahcg_text_select_handle_middle</item>
-
-    <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewItalsimeGreenAHCG</item>
-
-    <item name="android:listChoiceIndicatorMultiple">@drawable/italsimegreenahcg_btn_check_holo_light</item>
-
-    <item name="android:listChoiceIndicatorSingle">@drawable/italsimegreenahcg_btn_radio_holo_light</item>
-
-    <item name="android:buttonStyle">@style/ButtonItalsimeGreenAHCG</item>
-
-    <item name="android:imageButtonStyle">@style/ImageButtonItalsimeGreenAHCG</item>
-
-    <item name="android:dropDownSpinnerStyle">@style/SpinnerItalsimeGreenAHCG</item>
-
-    <item name="android:progressBarStyleHorizontal">@style/ProgressBarItalsimeGreenAHCG</item>
-
-    <item name="android:seekBarStyle">@style/SeekBarItalsimeGreenAHCG</item>
-
-    <item name="android:buttonStyleToggle">@style/ToggleItalsimeGreenAHCG</item>
-
-    <item name="android:listChoiceBackgroundIndicator">@drawable/italsimegreenahcg_list_selector_holo_light</item>
-
-    <item name="android:activatedBackgroundIndicator">@drawable/italsimegreenahcg_activated_background_holo_light</item>
-
-  </style>
-    <!-- From: file:/C:/Users/Luigi/AndroidStudioProjects/Italsime/italsime/src/main/res/values-v11/themes_italsimevioletahcg.xml -->
-    <eat-comment/>
-    <style name="_ItalsimeVioletAHCG" parent="Theme.AppCompat.Light">
-
-    <item name="android:editTextBackground">@drawable/italsimevioletahcg_edit_text_holo_light</item>
-
-    <item name="android:buttonStyle">@style/ButtonItalsimeVioletAHCG</item>
-
-    <item name="android:imageButtonStyle">@style/ImageButtonItalsimeVioletAHCG</item>
-
-    <item name="android:dropDownSpinnerStyle">@style/SpinnerItalsimeVioletAHCG</item>
-
-    <item name="android:seekBarStyle">@style/SeekBarItalsimeVioletAHCG</item>
-
-    <item name="android:listChoiceBackgroundIndicator">@drawable/italsimevioletahcg_list_selector_holo_light</item>
-
-    <item name="android:activatedBackgroundIndicator">@drawable/italsimevioletahcg_activated_background_holo_light</item>
-
-  </style>
 </resources>

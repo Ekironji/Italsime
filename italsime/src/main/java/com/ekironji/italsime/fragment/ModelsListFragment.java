@@ -28,6 +28,8 @@ import com.ekironji.italsime.Modello.Modello;
 import com.ekironji.italsime.Modello.Series;
 import com.ekironji.italsime.R;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class ModelsListFragment extends Fragment {
@@ -150,65 +152,7 @@ public class ModelsListFragment extends Fragment {
 	    	maxPortata = DEFAULT_MAX_PORTATA;
 	    	minPressione = DEFAULT_MIN_PRESSIONE;
 	    	maxPressione = DEFAULT_MAX_PRESSIONE;
-	    	
-	    	// custom dialog
-////	    	final Dialog dialog = new Dialog(getActivity());
-//			final Dialog dialog = new Dialog(getActivity(), R.style.CustomDialogItalsimeGreenAHCG);
-//			dialog.setContentView(R.layout.dialog_searchfilters);
-//			dialog.setTitle("Filtri ricerca");
-// 
-//			// set the custom dialog components - text, image and button
-//			final TextView textMinPortata = (TextView) dialog.findViewById(R.id.textView_minPortata);
-//			textMinPortata.setText(String.valueOf(DEFAULT_MIN_PORTATA));
-//			final TextView textMaxPortata = (TextView) dialog.findViewById(R.id.textView_maxPortata);
-//			textMaxPortata.setText(String.valueOf(DEFAULT_MAX_PORTATA));
-//			RangeBar rangeBarPortata = (RangeBar) dialog.findViewById(R.id.rangebarPortata);
-//			rangeBarPortata.setTickCount(900);
-//			rangeBarPortata.setOnRangeBarChangeListener(new OnRangeBarChangeListener() {
-//				
-//				@Override
-//				public void onIndexChangeListener(RangeBar rangeBar, int leftThumbIndex,
-//						int rightThumbIndex) {
-//					textMinPortata.setText(String.valueOf(leftThumbIndex));
-//					textMaxPortata.setText(String.valueOf(rightThumbIndex));
-//					minPortata = leftThumbIndex;
-//					maxPortata = rightThumbIndex;
-//				}
-//			});
-//			
-//			final TextView textMinPressione = (TextView) dialog.findViewById(R.id.textView_minPressione);
-//			textMinPressione.setText(String.valueOf(DEFAULT_MIN_PRESSIONE));
-//			final TextView textMaxPressione = (TextView) dialog.findViewById(R.id.textView_maxPressione);
-//			textMaxPressione.setText(String.valueOf(DEFAULT_MAX_PRESSIONE));
-//			RangeBar rangeBarPressione = (RangeBar) dialog.findViewById(R.id.rangebarPressione);
-//			rangeBarPressione.setTickCount(900);
-//			rangeBarPressione.setOnRangeBarChangeListener(new OnRangeBarChangeListener() {
-//				
-//				@Override
-//				public void onIndexChangeListener(RangeBar rangeBar, int leftThumbIndex,
-//						int rightThumbIndex) {
-//					textMinPressione.setText(String.valueOf(leftThumbIndex));
-//					textMaxPressione.setText(String.valueOf(rightThumbIndex));
-//					minPressione = leftThumbIndex;
-//					maxPressione = rightThumbIndex;
-//				}
-//			});
-//			
-//			 
-//			Button dialogButton = (Button) dialog.findViewById(R.id.buttonAvviaRicerca);
-//			// if button is clicked, close the custom dialog
-//			dialogButton.setOnClickListener(new OnClickListener() {
-//				@Override
-//				public void onClick(View v) {
-//					new UpdateListFromFiltersTask().execute(minPortata, maxPortata, minPressione, maxPressione);
-//					dialog.dismiss();
-//				}
-//			});
-//			
-//			AlertDialog.Builder db = dialog
-// 
-//			dialog.show();
-	    	
+
 	    	LayoutInflater inflater = LayoutInflater.from(getActivity());
 	    	View dialog_view = inflater.inflate(R.layout.dialog_searchfilters, null);
 	    	AlertDialog.Builder db = new AlertDialog.Builder(getActivity());
@@ -280,9 +224,14 @@ public class ModelsListFragment extends Fragment {
 	    		}
 	    	);
 
+            TextView mTitle = (TextView) dialog_view.findViewById(R.id.alertTitle);
+            View mDivider = dialog_view.findViewById(R.id.titleDivider);
+
             if (ariaType == Modello.ARIA_PULITA) {
 
-                db.setTitle(getResources().getString(R.string.title_search_filters_dialog) + " for Closed Blade");
+                mTitle.setText(getResources().getString(R.string.title_search_filters_dialog) + " for Closed Blade");
+                mTitle.setTextColor(getResources().getColor(R.color.italsimegreenahcg_color));
+                mDivider.setBackgroundColor(getResources().getColor(R.color.italsimegreenahcg_color));
 
                 rangeBarPortata.setBarColor(getResources().getColor(R.color.italsimegreenahcg_color));
                 rangeBarPortata.setConnectingLineColor(getResources().getColor(R.color.italsimegreenahcg_color));
@@ -295,7 +244,9 @@ public class ModelsListFragment extends Fragment {
                 rangeBarPressione.setThumbImagePressed(R.drawable.italsimegreenahcg_scrubber_control_pressed_holo);
             } else if (ariaType == Modello.ARIA_SPORCA) {
 
-                db.setTitle(getResources().getString(R.string.title_search_filters_dialog) + " for Opened Blade");
+                mTitle.setText(getResources().getString(R.string.title_search_filters_dialog) + " for Opened Blade");
+                mTitle.setTextColor(getResources().getColor(R.color.italsimevioletahcg_color));
+                mDivider.setBackgroundColor(getResources().getColor(R.color.italsimevioletahcg_color));
 
                 rangeBarPortata.setBarColor(getResources().getColor(R.color.italsimevioletahcg_color));
                 rangeBarPortata.setConnectingLineColor(getResources().getColor(R.color.italsimevioletahcg_color));
@@ -344,8 +295,15 @@ public class ModelsListFragment extends Fragment {
 					" - maxPortata: " + args[3] + " - minPressione: " + args[4] + 
 					" - maxPressione: " + args[5]);
 			publishProgress(args);
-			listaModelli = MainActivity.database.getModelsByFilteredSearch(args[0], 
-					args[2], args[3], args[4], args[5]);
+            if (args[1] == 0) {
+                listaModelli = MainActivity.database.getModelsByFilteredSearch(args[0],
+                        args[2], args[3], args[4], args[5]);
+            } else {
+                listaModelli = MainActivity.database.getModelsBySeriesFilteredSearch(args[0], args[1],
+                        args[2], args[3], args[4], args[5]);
+            }
+            Log.i(DEBUG_TAG, "listamodelli size: " + listaModelli.size());
+            MainActivity.database.close();
 			return null;	    	 
 		}
 
@@ -354,9 +312,12 @@ public class ModelsListFragment extends Fragment {
 	    }
 		
 		protected void onPostExecute(Void result) {
-			mListAdapter.notifyDataSetChanged();
+//			mListAdapter.notifyDataSetChanged();
+            mListAdapter=null;
+            mListAdapter = new ModelliListAdapter(getActivity(), listaModelli);
+            mListViewModels.setAdapter(mListAdapter);
 			MainActivity.hideProgressDialog();
-			MainActivity.database.close();
+
 		}
 	}
 

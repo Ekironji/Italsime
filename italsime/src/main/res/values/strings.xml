@@ -104,6 +104,16 @@
     <string name="imagedescriptor_imagedimension_land">image_dimension_land</string>
     
 <!--     Info Fragment -->
+    <string name="chiara_bianchini">REQUEST OFFERS: Sig. Chiara Bianchini\nEmail: chiara.clienti@italsime.com\nTel: +390558951259\nFax: 0558952636</string>
+    <string name="david_gai">TECHNICAL OFFICE: Sig. David Gai\nEmail: david.gai@italsime.com\nTel: +390558952707\nFax: 0558952636</string>
+    <string name="matteo_pagliai">ITALY: Sig. Matteo Pagliai\nEmail: matteo.clienti@italsime.com\nTel: +393292318334\nFax: 0558952636</string>
+    <string name="federico_sarnico">EST EUROPE: Sig. Federico Sarnico\nEmail: federico.sarnico@italsime.com\nTel: +393474133277</string>
+    <string name="indirizzo_sede">VIA BRUNELLESCHI 3/E 50010 CAPANNELLE\n CAMPI B.ZIO (FI)\n\nEXIT PRATO EST FI-MARE</string>
+    <string name="dummy_address">Via Filippo Brunelleschi, Campi Bisenzio, Firenze</string>
+    <string name="address2">Via Filippo Brunelleschi, 50013 Campi Bisenzio FI</string>
+    <string name="address3">Italsime Macchine Elettriche Srl, Campi Bisenzio FI 50010</string>
+    <string name="address4">Italsime Macchine Elettriche Srl, Via Filippo Brunelleschi, Firenze</string>
+    <string name="address5">Italsime Macchine Elettriche Srl, Via Filippo Brunelleschi, Firenze, Campi Bisenzio FI 50010</string>
     <string name="dummy_title">Lorem ipsum.</string>
     <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
 
