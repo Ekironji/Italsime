@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="RangeBar"><attr format="integer" name="tickCount"/><attr format="dimension" name="tickHeight"/><attr format="dimension" name="barWeight"/><attr format="reference|color" name="barColor"/><attr format="dimension" name="connectingLineWeight"/><attr format="reference|color" name="connectingLineColor"/><attr format="dimension" name="thumbRadius"/><attr format="reference" name="thumbImageNormal"/><attr format="reference" name="thumbImagePressed"/><attr format="reference|color" name="thumbColorNormal"/><attr format="reference|color" name="thumbColorPressed"/></declare-styleable>
-    <!-- From: file:/C:/Users/Luigi/AndroidStudioProjects/Italsime/rangeBar/src/main/res/values/strings.xml -->
+    <!-- From: file:/D:/Android/AndroidProjects/Italsime/rangeBar/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="app_name">RangeBar</string>
-    <!-- From: file:/C:/Users/Luigi/AndroidStudioProjects/Italsime/rangeBar/src/main/res/values/styles.xml -->
+    <!-- From: file:/D:/Android/AndroidProjects/Italsime/rangeBar/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--

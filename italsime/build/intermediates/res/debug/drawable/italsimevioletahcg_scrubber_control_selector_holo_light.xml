@@ -20,4 +20,4 @@
     <item android:state_selected="true" android:drawable="@drawable/italsimevioletahcg_scrubber_control_focused_holo" />
     <item android:drawable="@drawable/italsimevioletahcg_scrubber_control_normal_holo" />
 </selector>
-<!-- From: file:/C:/Users/Luigi/AndroidStudioProjects/Italsime/italsime/src/main/res/drawable/italsimevioletahcg_scrubber_control_selector_holo_light.xml -->
+<!-- From: file:/D:/Android/AndroidProjects/Italsime/italsime/src/main/res/drawable/italsimevioletahcg_scrubber_control_selector_holo_light.xml -->

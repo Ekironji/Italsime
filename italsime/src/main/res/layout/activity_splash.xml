@@ -3,7 +3,7 @@
 	android:id="@+id/AbsoluteLayout01" 
 	android:layout_width="fill_parent" 
 	android:layout_height="fill_parent"
-	android:background="@drawable/splash_page"
+	android:background="@drawable/splash_page_old"
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="vertical">
 </LinearLayout>

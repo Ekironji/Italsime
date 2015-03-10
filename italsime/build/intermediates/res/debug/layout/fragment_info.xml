@@ -14,7 +14,6 @@
             android:id="@+id/imageView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dip"
             android:src="@drawable/italsime"
             android:contentDescription="@string/imagedescriptor_italsimelogo"/>
 
@@ -103,4 +102,4 @@
 
     </LinearLayout>
 
-</ScrollView><!-- From: file:/C:/Users/Luigi/AndroidStudioProjects/Italsime/italsime/src/main/res/layout/fragment_info.xml -->
+</ScrollView><!-- From: file:/D:/Android/AndroidProjects/Italsime/italsime/src/main/res/layout/fragment_info.xml -->
