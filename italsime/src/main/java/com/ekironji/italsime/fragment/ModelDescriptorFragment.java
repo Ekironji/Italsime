@@ -103,6 +103,12 @@ public class ModelDescriptorFragment extends Fragment{
             ((TextView) subview.findViewById(R.id.TextViewmmH2O4)).setText((model.getMmH2O4() == -1) ? "-" : String.valueOf(model.getMmH2O4()));
             ((TextView) subview.findViewById(R.id.TextViewmmH2O5)).setText((model.getMmH2O5() == -1) ? "-" : String.valueOf(model.getMmH2O5()));
 
+            ((ImageView) subview.findViewById(R.id.imageViewDimensioni)).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(getActivity(), getResources().getText(R.string.rotate_string), Toast.LENGTH_SHORT).show();
+                }
+            });
             Toast.makeText(getActivity(), getResources().getText(R.string.rotate_string), Toast.LENGTH_SHORT).show();
         }
         else if (orientation == Configuration.ORIENTATION_LANDSCAPE) {

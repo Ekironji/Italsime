@@ -30,7 +30,9 @@ public class MainActivity extends ActionBarActivity implements
 	public static final String KEY_PASSMODEL			= "MODELCLICKED";
 	public static final String KEY_PASSSERIE			= "SERIECLICKED";
 	public static final String KEY_PASSFILTEREDRESEARCH	= "FILTEREDRESEARCH";
-	
+
+    public static final int HOME_FRAG_ID                = 0;
+    public static final int INFO_FRAG_ID                = 3;
 	public static Database database;
 	
 	static ProgressDialog dialog;
@@ -74,8 +76,6 @@ public class MainActivity extends ActionBarActivity implements
         setUpNavigationDrawer();
 		
 		database.close();
-		
-//	    Toast.makeText(this, "onCreate", Toast.LENGTH_SHORT).show();
 	}
 
     public Toolbar getToolbar(){
@@ -139,6 +139,9 @@ public class MainActivity extends ActionBarActivity implements
 
     public void onSectionAttached(int number) {
         switch (number) {
+            case 0:
+                mTitle = getString(R.string.app_name);
+                break;
             case 1:
                 mTitle = getString(R.string.title_section1);
                 break;

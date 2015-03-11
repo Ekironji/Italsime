@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.ekironji.italsime.MainActivity;
 import com.ekironji.italsime.R;
 
 public class InfoFragment extends Fragment {
@@ -18,6 +19,9 @@ public class InfoFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup group, Bundle saved){
 		View view = inflater.inflate(R.layout.fragment_info, group, false);
+
+        ((MainActivity)getActivity()).onSectionAttached(MainActivity.INFO_FRAG_ID);
+        ((MainActivity)getActivity()).restoreActionBar();
 
         SpannableString string = new SpannableString("Search on Google Maps");
         string.setSpan(new UnderlineSpan(), 0, string.length(), 0);

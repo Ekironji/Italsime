@@ -17,6 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_above="@+id/textView1"
             android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
             android:contentDescription="@string/imagedescriptor_ariapulitabutton"
             android:scaleType="centerInside"
             android:src="@drawable/closed_blades" />
@@ -60,6 +61,7 @@
 	        android:layout_height="wrap_content"
 	        android:layout_above="@+id/textView3"
 	        android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
 	        android:contentDescription="@string/imagedescriptor_ariasporcabutton"
 	        android:scaleType="centerInside"
 	        android:src="@drawable/opened_blades" />

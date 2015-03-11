@@ -91,8 +91,6 @@ public class SeriesListFragment extends Fragment{
 					int position, long id) {
 //				Log.i(DEBUG_TAG, listaModelli.get(position).toString());
 				
-//				((MainActivity)getActivity()).getDrawerToggle().setDrawerIndicatorEnabled(false);
-				
 				FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
 				Fragment mFragment = new ModelsListFragment();
 		        Bundle mBundle = new Bundle();
