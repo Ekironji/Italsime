@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout 
+<RelativeLayout
 	android:id="@+id/AbsoluteLayout01" 
 	android:layout_width="fill_parent" 
 	android:layout_height="fill_parent"
-	android:background="@drawable/splash_page_old"
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="vertical">
-</LinearLayout><!-- From: file:/D:/Android/AndroidProjects/Italsime/italsime/src/main/res/layout/activity_splash.xml -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dip"
+        android:src="@drawable/italsime"
+        android:scaleType="centerInside"/>
+
+</RelativeLayout><!-- From: file:/D:/Android/AndroidProjects/Italsime/italsime/src/main/res/layout/activity_splash.xml -->

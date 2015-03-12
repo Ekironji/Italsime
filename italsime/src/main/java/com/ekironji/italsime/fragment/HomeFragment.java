@@ -3,6 +3,7 @@ package com.ekironji.italsime.fragment;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -48,8 +49,11 @@ public class HomeFragment extends Fragment{
 		        .commit();
 			}
 		});
-		
+
+        Log.i("home", "onCreateView()");
+        ((MainActivity)getActivity()).onSectionAttached(MainActivity.HOME_FRAG_ID);
+        ((MainActivity)getActivity()).restoreActionBar();
 		return view;
-	}	
+	}
 
 }

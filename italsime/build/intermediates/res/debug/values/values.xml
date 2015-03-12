@@ -286,7 +286,7 @@
     <eat-comment/>
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">#fafafa</item>
-        <item name="colorPrimaryDark">#616161</item>
+        <item name="colorPrimaryDark">#9e9e9e</item>
         <item name="colorAccent">#9e9e9e</item>
     </style>
     <!-- From: file:/D:/Android/AndroidProjects/Italsime/italsime/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
@@ -1284,6 +1284,7 @@ m>        <item name="android:textColorLink">@color/link_text_material_dark</ite
     <eat-comment/>
     <style name="ToolbarCustomIconColor" parent="AppTheme">
         <!-- android:textColorSecondary is used for coloring the navigation drawer icon and up arrow. -->
+        <item name="android:textColorPrimary">#616161</item>
         <item name="android:textColorSecondary">#616161</item>
     </style>
     <!-- From: file:/D:/Android/AndroidProjects/Italsime/italsime/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->

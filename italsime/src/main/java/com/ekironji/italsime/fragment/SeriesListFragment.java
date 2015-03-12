@@ -33,7 +33,7 @@ import java.util.Locale;
 
 public class SeriesListFragment extends Fragment{
 	
-	final String DEBUG_TAG = "ModelsListFragment";
+	final String DEBUG_TAG = "SeriesListFragment";
 	
 	/**
 	 * Remember the position of the selected item.
@@ -68,8 +68,7 @@ public class SeriesListFragment extends Fragment{
 					.getInt(STATE_SELECTED_ARIATYPE);
 //			mFromSavedInstanceState = true;
 		}
-		
-	    Log.i(DEBUG_TAG, "onCreate()");
+
 	}
 	
 	@Override
@@ -111,9 +110,7 @@ public class SeriesListFragment extends Fragment{
 		
 		((MainActivity)getActivity()).onSectionAttached(ariaType);
 		((MainActivity)getActivity()).restoreActionBar();
-		
-		Log.i(DEBUG_TAG, "onCreateView()");
-		
+
 		return view;
 	}
 	
