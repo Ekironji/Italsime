@@ -2263,7 +2263,7 @@ m>        <item name="android:textColorLink">@color/link_text_material_dark</ite
         <item>TVC</item>
         <item>TVP</item>
         <item>TVG</item>
-    </string-array><string name="dirty_air_string">Dirty Air</string><string name="dummy_model_name">No Model Name</string><string name="imagedescriptor_ariapulitabutton">Clean Air</string><string name="action_example">Example action</string><string name="navigation_drawer_close">Close navigation drawer</string><string name="imagedescriptor_imagedimension">image_dimension</string><string name="rpm_string">Rpm: </string><string name="negative_button_search_filters_dialog">Cancel</string><string-array name="array_opened_blade_series">
+    </string-array><string name="dirty_air_string">Dirty Air</string><string name="dummy_model_name">No Model Name</string><string name="imagedescriptor_ariapulitabutton">Clean Air</string><string name="action_example">Example action</string><string name="navigation_drawer_close">Close navigation drawer</string><string name="imagedescriptor_imagedimension">image_dimension</string><string name="set_manually_string">Set range manually</string><string name="rpm_string">Rpm: </string><string name="negative_button_search_filters_dialog">Cancel</string><string-array name="array_opened_blade_series">
         <item>All Series</item>
         <item>TZM</item>
         <item>TM</item>

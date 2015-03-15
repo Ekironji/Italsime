@@ -39,6 +39,7 @@
 	<string name="positive_button_search_filters_dialog">Search</string>
 	<string name="negative_button_search_filters_dialog">Cancel</string>
 	<string name="title_search_progress_dialog">Searching&#8230;</string>
+    <string name="set_manually_string">Set range manually</string>
 
 	<string-array name="array_closed_blade_series">
         <item>All Series</item>

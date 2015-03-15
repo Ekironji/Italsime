@@ -102,42 +102,64 @@
 	        custom:thumbImagePressed="@drawable/italsimegreenahcg_scrubber_control_pressed_holo"
 	        custom:tickHeight="0dip" />
 
-	    <TextView
-	        android:id="@+id/textViewMinStringPo"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_marginTop="5dp"
-	        android:layout_below="@+id/rangebarPortata"
-	        android:layout_alignLeft="@+id/rangebarPortata"
-	        android:text="@string/min_string" />
+        <CheckBox
+            android:id="@+id/checkbox_portata_manually"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rangebarPortata"
+            android:layout_alignLeft="@+id/rangebarPortata"
+            android:layout_marginTop="10dp"
+            android:text="@string/set_manually_string"/>
 
-	    <EditText
-	        android:id="@+id/editTextMinPortata"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignBottom="@+id/textViewMinStringPo"
-	        android:layout_toRightOf="@+id/textViewMinStringPo"
-	        android:ems="4"
-	        android:inputType="number" >
-	    </EditText>
+        <RelativeLayout
+            android:id="@+id/layout_editstext_portata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_below="@+id/rangebarPortata"
+            android:layout_alignLeft="@+id/rangebarPortata">
 
-	    <EditText
-	        android:id="@+id/editTextMaxPortata"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignBaseline="@+id/editTextMinPortata"
-	        android:layout_alignBottom="@+id/editTextMinPortata"
-	        android:layout_alignRight="@+id/rangebarPortata"
-	        android:ems="4"
-	        android:inputType="number" />
+            <TextView
+                android:id="@+id/textViewMinStringPo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentLeft="true"
+                android:text="@string/min_string" />
 
-	    <TextView
-	        android:id="@+id/TextViewMaxPortataPo"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignBottom="@+id/editTextMaxPortata"
-	        android:layout_toLeftOf="@+id/editTextMaxPortata"
-	        android:text="@string/max_string" />
+            <EditText
+                android:id="@+id/editTextMinPortata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewMinStringPo"
+                android:layout_toRightOf="@+id/textViewMinStringPo"
+                android:ems="4"
+                android:maxLength="5"
+                android:inputType="numberDecimal"
+                android:imeOptions="actionDone">
+            </EditText>
+
+            <EditText
+                android:id="@+id/editTextMaxPortata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editTextMinPortata"
+                android:layout_alignBottom="@+id/editTextMinPortata"
+                android:layout_alignParentRight="true"
+                android:ems="4"
+                android:maxLength="5"
+                android:inputType="numberDecimal"
+                android:imeOptions="actionDone" />
+
+            <TextView
+                android:id="@+id/TextViewMaxPortataPo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/editTextMaxPortata"
+                android:layout_toLeftOf="@+id/editTextMaxPortata"
+                android:text="@string/max_string" />
+
+        </RelativeLayout>
 	    
 	</RelativeLayout>
 	
@@ -185,44 +207,66 @@
 	        custom:thumbImageNormal="@drawable/italsimegreenahcg_scrubber_control_normal_holo"
 	        custom:thumbImagePressed="@drawable/italsimegreenahcg_scrubber_control_pressed_holo"
 		    custom:tickHeight="0dip" />
+
+        <CheckBox
+            android:id="@+id/checkbox_pressione_manually"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rangebarPressione"
+            android:layout_alignLeft="@+id/rangebarPressione"
+            android:layout_marginTop="10dp"
+            android:text="@string/set_manually_string"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_editstext_pressione"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_below="@+id/rangebarPressione"
+            android:layout_alignLeft="@+id/rangebarPressione">
 	    
-	    <TextView
-	        android:id="@+id/textViewMinStringPr"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_marginTop="5dp"
-	        android:layout_below="@+id/rangebarPressione"
-	        android:layout_alignLeft="@+id/rangebarPressione"
-	        android:text="@string/min_string" />
+            <TextView
+                android:id="@+id/textViewMinStringPr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentLeft="true"
+                android:text="@string/min_string" />
 
-	    <EditText
-	        android:id="@+id/editTextMinPressione"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignBottom="@+id/textViewMinStringPr"
-	        android:layout_toRightOf="@+id/textViewMinStringPr"
-	        android:ems="4"
-	        android:inputType="number" >
-	    </EditText>
+            <EditText
+                android:id="@+id/editTextMinPressione"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textViewMinStringPr"
+                android:layout_toRightOf="@+id/textViewMinStringPr"
+                android:ems="4"
+                android:maxLength="4"
+                android:inputType="numberDecimal"
+                android:imeOptions="actionDone" >
+            </EditText>
 
-	    <EditText
-	        android:id="@+id/editTextMaxPressione"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignBaseline="@+id/editTextMinPressione"
-	        android:layout_alignBottom="@+id/editTextMinPressione"
-	        android:layout_alignRight="@+id/rangebarPressione"
-	        android:ems="4"
-	        android:inputType="number" />
+            <EditText
+                android:id="@+id/editTextMaxPressione"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/editTextMinPressione"
+                android:layout_alignBottom="@+id/editTextMinPressione"
+                android:layout_alignParentRight="true"
+                android:ems="4"
+                android:maxLength="4"
+                android:inputType="numberDecimal"
+                android:imeOptions="actionDone" />
 
-	    <TextView
-	        android:id="@+id/TextViewMaxPortata"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignBottom="@+id/editTextMaxPressione"
-	        android:layout_toLeftOf="@+id/editTextMaxPressione"
-	        android:text="@string/max_string" />
-	 
+            <TextView
+                android:id="@+id/TextViewMaxPortata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/editTextMaxPressione"
+                android:layout_toLeftOf="@+id/editTextMaxPressione"
+                android:text="@string/max_string" />
+
+        </RelativeLayout>
+
 	</RelativeLayout>
     
 

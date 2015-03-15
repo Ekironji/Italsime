@@ -264,6 +264,7 @@
     <string name="s">S</string>
     <string name="sel_series_string">Select Series: </string>
     <string name="serie_string">Result For: </string>
+    <string name="set_manually_string">Set range manually</string>
     <string name="splash_progress_dialog_message">This may take a few seconds…</string>
     <string name="splash_progress_dialog_title">Database creation</string>
     <string name="t">T</string>

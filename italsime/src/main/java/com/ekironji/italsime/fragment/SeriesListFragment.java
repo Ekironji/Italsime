@@ -7,17 +7,24 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -139,7 +146,7 @@ public class SeriesListFragment extends Fragment{
 	    	maxPressione = DEFAULT_MAX_PRESSIONE;
 
 	    	LayoutInflater inflater = LayoutInflater.from(getActivity());
-	    	View dialog_view = inflater.inflate(R.layout.dialog_searchfilters, null);
+	    	final View dialog_view = inflater.inflate(R.layout.dialog_searchfilters, null);
 	    	AlertDialog.Builder db = new AlertDialog.Builder(getActivity());
 	    	
 	    	db.setView(dialog_view);
@@ -156,7 +163,7 @@ public class SeriesListFragment extends Fragment{
 			textMinPortata.setText(String.valueOf(DEFAULT_MIN_PORTATA));
 			final TextView textMaxPortata = (TextView) dialog_view.findViewById(R.id.textView_maxPortata);
 			textMaxPortata.setText(String.valueOf(DEFAULT_MAX_PORTATA));
-			RangeBar rangeBarPortata = (RangeBar) dialog_view.findViewById(R.id.rangebarPortata);
+			final RangeBar rangeBarPortata = (RangeBar) dialog_view.findViewById(R.id.rangebarPortata);
 			rangeBarPortata.setTickCount(120);
 			rangeBarPortata.setOnRangeBarChangeListener(new OnRangeBarChangeListener() {
 				
@@ -169,7 +176,49 @@ public class SeriesListFragment extends Fragment{
 					textMaxPortata.setText(String.valueOf(maxPortata));
 				}
 			});
-			
+
+            final CheckBox mCheckBox_portata_man = (CheckBox) dialog_view.findViewById(R.id.checkbox_portata_manually);
+            mCheckBox_portata_man.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    ((RelativeLayout) dialog_view.findViewById(R.id.layout_editstext_portata)).setVisibility(View.VISIBLE);
+                    mCheckBox_portata_man.setVisibility(View.GONE);
+                }
+            });
+
+            final EditText editMinPort = (EditText) dialog_view.findViewById(R.id.editTextMinPortata);
+            editMinPort.setOnEditorActionListener(new EditText.OnEditorActionListener() {
+                @Override
+                public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                    boolean handled = false;
+                    if (actionId == EditorInfo.IME_ACTION_DONE) {
+                        handled = true;
+                        if (editMinPort.getText().toString() != "") {
+                            int value = Integer.valueOf(editMinPort.getText().toString());
+                            InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+                            imm.hideSoftInputFromWindow(v.getWindowToken(),
+                                    InputMethodManager.HIDE_NOT_ALWAYS);
+
+                            Log.i(DEBUG_TAG, "numero scritto: " + value);
+                        }
+                    }
+                    return handled;
+                }
+            });
+
+            EditText editMaxPort = (EditText) dialog_view.findViewById(R.id.editTextMaxPortata);
+            editMaxPort.setOnEditorActionListener(new EditText.OnEditorActionListener() {
+                @Override
+                public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                    boolean handled = false;
+                    if (actionId == EditorInfo.IME_ACTION_DONE) {
+                        handled = true;
+
+                    }
+                    return handled;
+                }
+            });
+
 			final TextView textMinPressione = (TextView) dialog_view.findViewById(R.id.textView_minPressione);
 			textMinPressione.setText(String.valueOf(DEFAULT_MIN_PRESSIONE));
 			final TextView textMaxPressione = (TextView) dialog_view.findViewById(R.id.textView_maxPressione);
@@ -185,11 +234,45 @@ public class SeriesListFragment extends Fragment{
 					maxPressione = rightThumbIndex*10;
 					textMinPressione.setText(String.valueOf(minPressione));
 					textMaxPressione.setText(String.valueOf(maxPressione));
-					
 				}
 			});
-	    	
-	    	db.setPositiveButton(getResources().getString(R.string.positive_button_search_filters_dialog), new 
+
+            final CheckBox mCheckBox_pressione_man = (CheckBox) dialog_view.findViewById(R.id.checkbox_pressione_manually);
+            mCheckBox_pressione_man.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    ((RelativeLayout) dialog_view.findViewById(R.id.layout_editstext_pressione)).setVisibility(View.VISIBLE);
+                    mCheckBox_pressione_man.setVisibility(View.GONE);
+                }
+            });
+
+            EditText editMinPress = (EditText) dialog_view.findViewById(R.id.editTextMinPressione);
+            editMinPress.setOnEditorActionListener(new EditText.OnEditorActionListener() {
+                @Override
+                public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                    boolean handled = false;
+                    if (actionId == EditorInfo.IME_ACTION_DONE) {
+                        handled = true;
+
+                    }
+                    return handled;
+                }
+            });
+
+            EditText editMaxPress = (EditText) dialog_view.findViewById(R.id.editTextMaxPressione);
+            editMaxPress.setOnEditorActionListener(new EditText.OnEditorActionListener() {
+                @Override
+                public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                    boolean handled = false;
+                    if (actionId == EditorInfo.IME_ACTION_DONE) {
+                        handled = true;
+
+                    }
+                    return handled;
+                }
+            });
+
+            db.setPositiveButton(getResources().getString(R.string.positive_button_search_filters_dialog), new
 	    	    DialogInterface.OnClickListener() {
 	    	        public void onClick(DialogInterface dialog, int which) {
 	    	        	FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
