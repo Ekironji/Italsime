@@ -6,7 +6,7 @@
         <item>All Series</item>
         <item>TRM</item>
         <item>TRU</item>
-        <item>VPM</item>
+        <item>VPMR</item>
         <item>TGR</item>
         <item>RS</item>
         <item>LBT</item>
@@ -54,6 +54,12 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
+    <!-- From: file:/D:/Android/AndroidProjects/Italsime/italsime/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="colorPrimary">#fafafa</color>
+    <color name="colorPrimaryDark">#9e9e9e</color>
+    <!-- From: file:/D:/Android/AndroidProjects/Italsime/italsime/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values/values.xml -->
+    <eat-comment/>
     <color name="dim_foreground_disabled_material_dark">#80bebebe</color>
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
@@ -238,6 +244,7 @@
     <string name="imagedescriptor_italsimelogo">logo Italsime</string>
     <string name="imagedescriptor_serie">serie</string>
     <string name="indirizzo_sede">VIA BRUNELLESCHI 3/E 50010 CAPANNELLE\n CAMPI B.ZIO (FI)\n\nEXIT PRATO EST FI-MARE</string>
+    <string name="invalide_range">: Invalide range</string>
     <string name="kg_string">Kg: </string>
     <string name="kw_string">Kw: </string>
     <string name="l">L</string>

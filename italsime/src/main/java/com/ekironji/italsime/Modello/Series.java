@@ -11,7 +11,7 @@ public class Series {
 	
 	public static final int SERIE_TRM		= 1;
 	public static final int SERIE_TRU		= 2;
-	public static final int SERIE_VPM		= 3;
+	public static final int SERIE_VPMR      = 3;
 	public static final int SERIE_TGR		= 4;
 	public static final int SERIE_RS		= 5;
 	public static final int SERIE_LBT		= 6;
@@ -21,7 +21,7 @@ public class Series {
 	
 	public static final String PREFIX_TRM	= "TRM";
 	public static final String PREFIX_TRU	= "TRU";
-	public static final String PREFIX_VPM	= "VPM";
+	public static final String PREFIX_VPMR  = "VPMR";
 	public static final String PREFIX_TGR	= "TGR";
 	public static final String PREFIX_RS	= "RS";
 	public static final String PREFIX_LBT	= "LBT";
@@ -31,7 +31,7 @@ public class Series {
 	
 	static List<String> seriesClosedBlade = Arrays.asList(PREFIX_TRM, 
 													PREFIX_TRU,
-													PREFIX_VPM,
+                                                    PREFIX_VPMR,
 													PREFIX_TGR,
 													PREFIX_RS,
 													PREFIX_LBT,
@@ -69,7 +69,7 @@ public class Series {
 		
 		if (name.startsWith(PREFIX_TRM)) return SERIE_TRM;
 		else if (name.startsWith(PREFIX_TRU)) return SERIE_TRU;
-		else if (name.startsWith(PREFIX_VPM)) return SERIE_VPM;
+		else if (name.startsWith(PREFIX_VPMR)) return SERIE_VPMR;
 		else if (name.startsWith(PREFIX_TGR)) return SERIE_TGR;
 		else if (name.startsWith(PREFIX_RS)) return SERIE_RS;
 		else if (name.startsWith(PREFIX_LBT)) return SERIE_LBT;
@@ -95,8 +95,8 @@ public class Series {
 			return PREFIX_TRM;
 		case SERIE_TRU:
 			return PREFIX_TRU;
-		case SERIE_VPM:
-			return PREFIX_VPM;
+		case SERIE_VPMR:
+			return PREFIX_VPMR;
 		case SERIE_TGR:
 			return PREFIX_TGR;
 		case SERIE_RS:

@@ -40,12 +40,13 @@
 	<string name="negative_button_search_filters_dialog">Cancel</string>
 	<string name="title_search_progress_dialog">Searching&#8230;</string>
     <string name="set_manually_string">Set range manually</string>
+    <string name="invalide_range">: Invalide range</string>
 
 	<string-array name="array_closed_blade_series">
         <item>All Series</item>
         <item>TRM</item>
         <item>TRU</item>
-        <item>VPM</item>
+        <item>VPMR</item>
         <item>TGR</item>
         <item>RS</item>
         <item>LBT</item>

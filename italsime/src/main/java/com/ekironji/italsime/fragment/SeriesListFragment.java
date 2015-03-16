@@ -27,6 +27,7 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.edmodo.rangebar.RangeBar;
 import com.edmodo.rangebar.RangeBar.OnRangeBarChangeListener;
@@ -181,8 +182,28 @@ public class SeriesListFragment extends Fragment{
             mCheckBox_portata_man.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    ((RelativeLayout) dialog_view.findViewById(R.id.layout_editstext_portata)).setVisibility(View.VISIBLE);
-                    mCheckBox_portata_man.setVisibility(View.GONE);
+                    if (isChecked) {
+                        ((RelativeLayout) dialog_view.findViewById(R.id.layout_editstext_portata)).setVisibility(View.VISIBLE);
+                        rangeBarPortata.setEnabled(false);
+                        rangeBarPortata.setBarColor(getResources().getColor(R.color.colorPrimaryDark));
+                        rangeBarPortata.setConnectingLineColor(getResources().getColor(R.color.colorPrimaryDark));
+                        rangeBarPortata.setThumbRadius(0);
+                        rangeBarPortata.setConnectingLineWeight(2);
+                    } else {
+                        ((RelativeLayout) dialog_view.findViewById(R.id.layout_editstext_portata)).setVisibility(View.GONE);
+                        rangeBarPortata.setEnabled(true);
+                        rangeBarPortata.setThumbRadius(-1);
+                        rangeBarPortata.setThumbColorNormal(-1);
+                        rangeBarPortata.setThumbColorPressed(-1);
+                        rangeBarPortata.setConnectingLineWeight(4);
+                        if (ariaType == Modello.ARIA_PULITA) {
+                            rangeBarPortata.setBarColor(getResources().getColor(R.color.italsimegreenahcg_color));
+                            rangeBarPortata.setConnectingLineColor(getResources().getColor(R.color.italsimegreenahcg_color));
+                        } else if (ariaType == Modello.ARIA_SPORCA) {
+                            rangeBarPortata.setBarColor(getResources().getColor(R.color.italsimevioletahcg_color));
+                            rangeBarPortata.setConnectingLineColor(getResources().getColor(R.color.italsimevioletahcg_color));
+                        }
+                    }
                 }
             });
 
@@ -193,27 +214,34 @@ public class SeriesListFragment extends Fragment{
                     boolean handled = false;
                     if (actionId == EditorInfo.IME_ACTION_DONE) {
                         handled = true;
-                        if (editMinPort.getText().toString() != "") {
+                        if (!editMinPort.getText().toString().equals("") && !editMinPort.getText().toString().contains(".")) {
                             int value = Integer.valueOf(editMinPort.getText().toString());
+                            minPortata = value;
+                            textMinPortata.setText(String.valueOf(minPortata));
                             InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
                             imm.hideSoftInputFromWindow(v.getWindowToken(),
                                     InputMethodManager.HIDE_NOT_ALWAYS);
-
-                            Log.i(DEBUG_TAG, "numero scritto: " + value);
                         }
                     }
                     return handled;
                 }
             });
 
-            EditText editMaxPort = (EditText) dialog_view.findViewById(R.id.editTextMaxPortata);
+            final EditText editMaxPort = (EditText) dialog_view.findViewById(R.id.editTextMaxPortata);
             editMaxPort.setOnEditorActionListener(new EditText.OnEditorActionListener() {
                 @Override
                 public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                     boolean handled = false;
                     if (actionId == EditorInfo.IME_ACTION_DONE) {
                         handled = true;
-
+                        if (!editMaxPort.getText().toString().equals("") && !editMaxPort.getText().toString().contains(".")) {
+                            int value = Integer.valueOf(editMaxPort.getText().toString());
+                            maxPortata = value;
+                            textMaxPortata.setText(String.valueOf(maxPortata));
+                            InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+                            imm.hideSoftInputFromWindow(v.getWindowToken(),
+                                    InputMethodManager.HIDE_NOT_ALWAYS);
+                        }
                     }
                     return handled;
                 }
@@ -223,7 +251,7 @@ public class SeriesListFragment extends Fragment{
 			textMinPressione.setText(String.valueOf(DEFAULT_MIN_PRESSIONE));
 			final TextView textMaxPressione = (TextView) dialog_view.findViewById(R.id.textView_maxPressione);
 			textMaxPressione.setText(String.valueOf(DEFAULT_MAX_PRESSIONE));
-			RangeBar rangeBarPressione = (RangeBar) dialog_view.findViewById(R.id.rangebarPressione);
+			final RangeBar rangeBarPressione = (RangeBar) dialog_view.findViewById(R.id.rangebarPressione);
 			rangeBarPressione.setTickCount(200);
 			rangeBarPressione.setOnRangeBarChangeListener(new OnRangeBarChangeListener() {
 				
@@ -241,32 +269,66 @@ public class SeriesListFragment extends Fragment{
             mCheckBox_pressione_man.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    ((RelativeLayout) dialog_view.findViewById(R.id.layout_editstext_pressione)).setVisibility(View.VISIBLE);
-                    mCheckBox_pressione_man.setVisibility(View.GONE);
+                    if (isChecked) {
+                        ((RelativeLayout) dialog_view.findViewById(R.id.layout_editstext_pressione)).setVisibility(View.VISIBLE);
+                        rangeBarPressione.setEnabled(false);
+                        rangeBarPressione.setBarColor(getResources().getColor(R.color.colorPrimaryDark));
+                        rangeBarPressione.setConnectingLineColor(getResources().getColor(R.color.colorPrimaryDark));
+                        rangeBarPressione.setThumbRadius(0);
+                        rangeBarPressione.setConnectingLineWeight(2);
+                    } else {
+                        ((RelativeLayout) dialog_view.findViewById(R.id.layout_editstext_pressione)).setVisibility(View.GONE);
+                        rangeBarPressione.setEnabled(true);
+                        rangeBarPressione.setThumbRadius(-1);
+                        rangeBarPressione.setThumbColorNormal(-1);
+                        rangeBarPressione.setThumbColorPressed(-1);
+                        rangeBarPressione.setConnectingLineWeight(4);
+                        if (ariaType == Modello.ARIA_PULITA) {
+                            rangeBarPressione.setBarColor(getResources().getColor(R.color.italsimegreenahcg_color));
+                            rangeBarPressione.setConnectingLineColor(getResources().getColor(R.color.italsimegreenahcg_color));
+                        } else if (ariaType == Modello.ARIA_SPORCA) {
+                            rangeBarPressione.setBarColor(getResources().getColor(R.color.italsimevioletahcg_color));
+                            rangeBarPressione.setConnectingLineColor(getResources().getColor(R.color.italsimevioletahcg_color));
+                        }
+                    }
                 }
             });
 
-            EditText editMinPress = (EditText) dialog_view.findViewById(R.id.editTextMinPressione);
+           final EditText editMinPress = (EditText) dialog_view.findViewById(R.id.editTextMinPressione);
             editMinPress.setOnEditorActionListener(new EditText.OnEditorActionListener() {
                 @Override
                 public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                     boolean handled = false;
                     if (actionId == EditorInfo.IME_ACTION_DONE) {
                         handled = true;
-
+                        if (!editMinPress.getText().toString().equals("") && !editMinPress.getText().toString().contains(".")) {
+                            int value = Integer.valueOf(editMinPress.getText().toString());
+                            minPressione = value;
+                            textMinPressione.setText(String.valueOf(minPressione));
+                            InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+                            imm.hideSoftInputFromWindow(v.getWindowToken(),
+                                    InputMethodManager.HIDE_NOT_ALWAYS);
+                        }
                     }
                     return handled;
                 }
             });
 
-            EditText editMaxPress = (EditText) dialog_view.findViewById(R.id.editTextMaxPressione);
+            final EditText editMaxPress = (EditText) dialog_view.findViewById(R.id.editTextMaxPressione);
             editMaxPress.setOnEditorActionListener(new EditText.OnEditorActionListener() {
                 @Override
                 public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                     boolean handled = false;
                     if (actionId == EditorInfo.IME_ACTION_DONE) {
                         handled = true;
-
+                        if (!editMaxPress.getText().toString().equals("") && !editMaxPress.getText().toString().contains(".")) {
+                            int value = Integer.valueOf(editMaxPress.getText().toString());
+                            maxPressione = value;
+                            textMaxPressione.setText(String.valueOf(maxPressione));
+                            InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+                            imm.hideSoftInputFromWindow(v.getWindowToken(),
+                                    InputMethodManager.HIDE_NOT_ALWAYS);
+                        }
                     }
                     return handled;
                 }
@@ -275,22 +337,32 @@ public class SeriesListFragment extends Fragment{
             db.setPositiveButton(getResources().getString(R.string.positive_button_search_filters_dialog), new
 	    	    DialogInterface.OnClickListener() {
 	    	        public void onClick(DialogInterface dialog, int which) {
-	    	        	FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-	    				Fragment mFragment = new ModelsListFragment();
-	    		        Bundle mBundle = new Bundle();
-	    		        int[] filteredResearchArgs = new int[] {ariaType,
-	    		        										Series.getIntFromName(spinner.getSelectedItem().toString()),
-	    		        										minPortata,
-	    		        										maxPortata,
-	    		        										minPressione,
-	    		        										maxPressione};
-	    		    	mBundle.putIntArray(MainActivity.KEY_PASSFILTEREDRESEARCH, filteredResearchArgs);
-	    		    	mFragment.setArguments(mBundle);
-	    		    	fragmentManager.beginTransaction()
-	    		        .replace(R.id.container, mFragment)
-	    		        .addToBackStack("serListFragBack")
-	    		        .commit();
-						dialog.dismiss();
+                        if (minPortata > maxPortata || minPortata < DEFAULT_MIN_PORTATA || maxPortata > DEFAULT_MAX_PORTATA) {
+                            Toast.makeText(getActivity(), new String(getResources().getText(R.string.portata_string) + "" +
+                                    getResources().getText(R.string.invalide_range)), Toast.LENGTH_LONG).show();
+                        } else {
+                            if (minPressione > maxPressione || minPressione < DEFAULT_MIN_PRESSIONE || maxPressione > DEFAULT_MAX_PRESSIONE) {
+                                Toast.makeText(getActivity(), new String(getResources().getText(R.string.pressure_string) + "" +
+                                        getResources().getText(R.string.invalide_range)), Toast.LENGTH_LONG).show();
+                            } else {
+                                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                                Fragment mFragment = new ModelsListFragment();
+                                Bundle mBundle = new Bundle();
+                                int[] filteredResearchArgs = new int[]{ariaType,
+                                        Series.getIntFromName(spinner.getSelectedItem().toString()),
+                                        minPortata,
+                                        maxPortata,
+                                        minPressione,
+                                        maxPressione};
+                                mBundle.putIntArray(MainActivity.KEY_PASSFILTEREDRESEARCH, filteredResearchArgs);
+                                mFragment.setArguments(mBundle);
+                                fragmentManager.beginTransaction()
+                                        .replace(R.id.container, mFragment)
+                                        .addToBackStack("serListFragBack")
+                                        .commit();
+                                dialog.dismiss();
+                            }
+                        }
 	    	        }
 	    		}
 	    	);
@@ -306,10 +378,13 @@ public class SeriesListFragment extends Fragment{
             View mDivider = dialog_view.findViewById(R.id.titleDivider);
 
             if (ariaType == Modello.ARIA_PULITA) {
-
                 mTitle.setText(getResources().getString(R.string.title_search_filters_dialog) + " for Closed Blade");
                 mTitle.setTextColor(getResources().getColor(R.color.italsimegreenahcg_color));
                 mDivider.setBackgroundColor(getResources().getColor(R.color.italsimegreenahcg_color));
+                textMinPortata.setTextColor(getResources().getColor(R.color.italsimegreenahcg_color));
+                textMaxPortata.setTextColor(getResources().getColor(R.color.italsimegreenahcg_color));
+                textMinPressione.setTextColor(getResources().getColor(R.color.italsimegreenahcg_color));
+                textMaxPressione.setTextColor(getResources().getColor(R.color.italsimegreenahcg_color));
 
                 rangeBarPortata.setBarColor(getResources().getColor(R.color.italsimegreenahcg_color));
                 rangeBarPortata.setConnectingLineColor(getResources().getColor(R.color.italsimegreenahcg_color));
@@ -320,11 +395,15 @@ public class SeriesListFragment extends Fragment{
                 rangeBarPressione.setConnectingLineColor(getResources().getColor(R.color.italsimegreenahcg_color));
                 rangeBarPressione.setThumbImageNormal(R.drawable.italsimegreenahcg_scrubber_control_normal_holo);
                 rangeBarPressione.setThumbImagePressed(R.drawable.italsimegreenahcg_scrubber_control_pressed_holo);
-            } else if (ariaType == Modello.ARIA_SPORCA) {
 
+            } else if (ariaType == Modello.ARIA_SPORCA) {
                 mTitle.setText(getResources().getString(R.string.title_search_filters_dialog) + " for Opened Blade");
                 mTitle.setTextColor(getResources().getColor(R.color.italsimevioletahcg_color));
                 mDivider.setBackgroundColor(getResources().getColor(R.color.italsimevioletahcg_color));
+                textMinPortata.setTextColor(getResources().getColor(R.color.italsimevioletahcg_color));
+                textMaxPortata.setTextColor(getResources().getColor(R.color.italsimevioletahcg_color));
+                textMinPressione.setTextColor(getResources().getColor(R.color.italsimevioletahcg_color));
+                textMaxPressione.setTextColor(getResources().getColor(R.color.italsimevioletahcg_color));
 
                 rangeBarPortata.setBarColor(getResources().getColor(R.color.italsimevioletahcg_color));
 				rangeBarPortata.setConnectingLineColor(getResources().getColor(R.color.italsimevioletahcg_color));
