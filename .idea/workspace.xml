@@ -35,7 +35,36 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.ekironji.italsime" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35ec2dbf-0c07-487d-b03c-91e166f32541" name="Default" comment="" />
+    <list default="true" id="35ec2dbf-0c07-487d-b03c-91e166f32541" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/italsime/src/main/res/drawable/ala.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/italsime/src/main/res/drawable/ro.png" />
+      <change type="DELETED" beforePath="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\src\main\res\drawable\ala.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\src\main\res\drawable\ro.jpg" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\src\main\res\drawable\tgr_old.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/italsime/build/intermediates/exploded-aar/Italsime/rangeBar/unspecified/classes.jar" afterPath="$PROJECT_DIR$/italsime/build/intermediates/exploded-aar/Italsime/rangeBar/unspecified/classes.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/italsime/src/main/res/drawable/tgr.png" afterPath="$PROJECT_DIR$/italsime/src/main/res/drawable/tgr.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/italsime/src/main/res/drawable/tru.png" afterPath="$PROJECT_DIR$/italsime/src/main/res/drawable/tru.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/italsime/src/main/res/drawable/tvc.png" afterPath="$PROJECT_DIR$/italsime/src/main/res/drawable/tvc.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/italsime/src/main/res/drawable/tvg.png" afterPath="$PROJECT_DIR$/italsime/src/main/res/drawable/tvg.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/italsime/src/main/res/drawable/tvp.png" afterPath="$PROJECT_DIR$/italsime/src/main/res/drawable/tvp.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/italsime/src/main/java/com/ekironji/italsime/fragment/ModelsListFragment.java" afterPath="$PROJECT_DIR$/italsime/src/main/java/com/ekironji/italsime/fragment/ModelsListFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/italsime/build/generated/source/r/debug/com/ekironji/italsime/R.java" afterPath="$PROJECT_DIR$/italsime/build/generated/source/r/debug/com/ekironji/italsime/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/italsime/src/main/java/com/ekironji/italsime/fragment/SeriesListFragment.java" afterPath="$PROJECT_DIR$/italsime/src/main/java/com/ekironji/italsime/fragment/SeriesListFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/italsime/build/intermediates/tmp/dex/debug/inputList.txt" afterPath="$PROJECT_DIR$/italsime/build/intermediates/tmp/dex/debug/inputList.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/italsime/italsime.iml" afterPath="$PROJECT_DIR$/italsime/italsime.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rangeBar/rangeBar.iml" afterPath="$PROJECT_DIR$/rangeBar/rangeBar.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/italsime/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/italsime/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_annotations_21_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_21_0_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_21_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_21_0_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/italsime/build/intermediates/exploded-aar/Italsime/rangeBar/unspecified/res/values/values.xml" afterPath="$PROJECT_DIR$/italsime/build/intermediates/exploded-aar/Italsime/rangeBar/unspecified/res/values/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/italsime/build/intermediates/exploded-aar/Italsime/rangeBar/unspecified/res/values-v11/values.xml" afterPath="$PROJECT_DIR$/italsime/build/intermediates/exploded-aar/Italsime/rangeBar/unspecified/res/values-v11/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/italsime/build/intermediates/exploded-aar/Italsime/rangeBar/unspecified/res/values-v14/values.xml" afterPath="$PROJECT_DIR$/italsime/build/intermediates/exploded-aar/Italsime/rangeBar/unspecified/res/values-v14/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="Italsime - Copia.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -65,40 +94,9 @@
       <file leaf-file-name="SeriesListFragment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/italsime/src/main/java/com/ekironji/italsime/fragment/SeriesListFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5464" max-vertical-offset="7429">
-              <caret line="323" column="76" selection-start-line="323" selection-start-column="76" selection-end-line="323" selection-end-column="76" />
-              <folding>
-                <element signature="e#2961#3720#0" expanded="true" />
-                <element signature="e#3715#3716#0" expanded="true" />
-                <element signature="e#6128#6487#0" expanded="true" />
-                <element signature="e#6481#6482#0" expanded="true" />
-                <element signature="e#6672#8575#0" expanded="true" />
-                <element signature="e#8560#8561#0" expanded="true" />
-                <element signature="e#8732#9785#0" expanded="true" />
-                <element signature="e#9770#9771#0" expanded="true" />
-                <element signature="e#9942#10995#0" expanded="true" />
-                <element signature="e#10980#10981#0" expanded="true" />
-                <element signature="e#11527#11896#0" expanded="true" />
-                <element signature="e#11890#11891#0" expanded="true" />
-                <element signature="e#12087#14022#0" expanded="true" />
-                <element signature="e#14007#14008#0" expanded="true" />
-                <element signature="e#14182#15244#0" expanded="true" />
-                <element signature="e#15229#15230#0" expanded="true" />
-                <element signature="e#15405#16467#0" expanded="true" />
-                <element signature="e#16452#16453#0" expanded="true" />
-                <element signature="e#16504#16576#0" expanded="true" />
-                <element signature="e#16578#18746#0" expanded="true" />
-                <element signature="e#16895#16942#0" expanded="true" />
-                <element signature="e#16986#17033#0" expanded="true" />
-                <element signature="e#17312#17360#0" expanded="true" />
-                <element signature="e#17408#17455#0" expanded="true" />
-                <element signature="e#18736#18737#0" expanded="true" />
-                <element signature="e#18783#18855#0" expanded="true" />
-                <element signature="e#18857#19027#0" expanded="true" />
-                <element signature="e#19017#19018#0" expanded="true" />
-                <element signature="e#19278#19340#0" expanded="true" />
-                <element signature="e#20965#21027#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="2897" max-vertical-offset="7599">
+              <caret line="227" column="15" selection-start-line="227" selection-start-column="15" selection-end-line="242" selection-end-column="15" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -106,41 +104,47 @@
       <file leaf-file-name="ModelsListFragment.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/italsime/src/main/java/com/ekironji/italsime/fragment/ModelsListFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.62020904" vertical-offset="5890" max-vertical-offset="8364">
-              <caret line="336" column="76" selection-start-line="336" selection-start-column="76" selection-end-line="336" selection-end-column="76" />
+            <state vertical-scroll-proportion="0.6866029" vertical-offset="3351" max-vertical-offset="8704">
+              <caret line="255" column="17" selection-start-line="255" selection-start-column="17" selection-end-line="255" selection-end-column="17" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#3060#3770#0" expanded="true" />
                 <element signature="e#3765#3766#0" expanded="true" />
                 <element signature="e#7318#7822#0" expanded="true" />
                 <element signature="e#7807#7808#0" expanded="true" />
                 <element signature="e#8007#9910#0" expanded="true" />
                 <element signature="e#9895#9896#0" expanded="true" />
-                <element signature="e#10067#11119#0" expanded="true" />
-                <element signature="e#11104#11105#0" expanded="true" />
-                <element signature="e#11276#12329#0" expanded="true" />
-                <element signature="e#12314#12315#0" expanded="true" />
-                <element signature="e#12924#13438#0" expanded="true" />
-                <element signature="e#13423#13424#0" expanded="true" />
-                <element signature="e#13629#15564#0" expanded="true" />
-                <element signature="e#15549#15550#0" expanded="true" />
-                <element signature="e#15725#16787#0" expanded="true" />
-                <element signature="e#16772#16773#0" expanded="true" />
-                <element signature="e#16948#18010#0" expanded="true" />
-                <element signature="e#17995#17996#0" expanded="true" />
-                <element signature="e#18047#18119#0" expanded="true" />
-                <element signature="e#18121#19619#0" expanded="true" />
-                <element signature="e#18450#18497#0" expanded="true" />
-                <element signature="e#18541#18588#0" expanded="true" />
-                <element signature="e#18867#18915#0" expanded="true" />
-                <element signature="e#18963#19010#0" expanded="true" />
-                <element signature="e#19600#19601#0" expanded="true" />
-                <element signature="e#19662#19734#0" expanded="true" />
-                <element signature="e#19736#20010#0" expanded="true" />
-                <element signature="e#19979#19980#0" expanded="true" />
-                <element signature="e#20267#20329#0" expanded="true" />
-                <element signature="e#21954#22016#0" expanded="true" />
-                <element signature="e#24885#24948#0" expanded="true" />
+                <element signature="e#11196#11243#0" expanded="true" />
+                <element signature="e#11440#12281#0" expanded="true" />
+                <element signature="e#12125#12172#0" expanded="true" />
+                <element signature="e#12438#13491#0" expanded="true" />
+                <element signature="e#13476#13477#0" expanded="true" />
+                <element signature="e#13543#14421#0" expanded="true" />
+                <element signature="e#14406#14407#0" expanded="true" />
+                <element signature="e#15016#15530#0" expanded="true" />
+                <element signature="e#15515#15516#0" expanded="true" />
+                <element signature="e#15721#17656#0" expanded="true" />
+                <element signature="e#17641#17642#0" expanded="true" />
+                <element signature="e#17817#18879#0" expanded="true" />
+                <element signature="e#18864#18865#0" expanded="true" />
+                <element signature="e#18932#19819#0" expanded="true" />
+                <element signature="e#19804#19805#0" expanded="true" />
+                <element signature="e#19980#21042#0" expanded="true" />
+                <element signature="e#21027#21028#0" expanded="true" />
+                <element signature="e#21095#21982#0" expanded="true" />
+                <element signature="e#21967#21968#0" expanded="true" />
+                <element signature="e#22019#22091#0" expanded="true" />
+                <element signature="e#22093#23591#0" expanded="true" />
+                <element signature="e#22422#22469#0" expanded="true" />
+                <element signature="e#22513#22560#0" expanded="true" />
+                <element signature="e#22839#22887#0" expanded="true" />
+                <element signature="e#22935#22982#0" expanded="true" />
+                <element signature="e#23572#23573#0" expanded="true" />
+                <element signature="e#23634#23706#0" expanded="true" />
+                <element signature="e#23708#23982#0" expanded="true" />
+                <element signature="e#23951#23952#0" expanded="true" />
+                <element signature="e#24239#24301#0" expanded="true" />
+                <element signature="e#25926#25988#0" expanded="true" />
+                <element signature="e#28857#28920#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -175,12 +179,12 @@
                 <option name="path" value="$PROJECT_DIR$" />
               </ExternalProjectPojo>
               <ExternalProjectPojo>
-                <option name="name" value=":rangeBar" />
-                <option name="path" value="$PROJECT_DIR$/rangeBar" />
-              </ExternalProjectPojo>
-              <ExternalProjectPojo>
                 <option name="name" value=":italsime" />
                 <option name="path" value="$PROJECT_DIR$/italsime" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value=":rangeBar" />
+                <option name="path" value="$PROJECT_DIR$/rangeBar" />
               </ExternalProjectPojo>
             </list>
           </value>
@@ -1030,7 +1034,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="5704078218000" />
+        <entry key="$PROJECT_DIR$" value="5706463803233" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1184,9 +1188,9 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar" />
-                            <option value="$PROJECT_DIR$/../../sdk/extras/android/m2repository/com/android/support/appcompat-v7/21.0.0/appcompat-v7-21.0.0.aar" />
-                            <option value="$PROJECT_DIR$/../../sdk/extras/android/m2repository/com/android/support/support-v4/21.0.0/support-v4-21.0.0.aar" />
-                            <option value="$PROJECT_DIR$/../../sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.0/support-annotations-21.0.0.jar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/appcompat-v7/21.0.0/appcompat-v7-21.0.0.aar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/support-v4/21.0.0/support-v4-21.0.0.aar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.0/support-annotations-21.0.0.jar" />
                           </list>
                         </option>
                         <option name="path" value="$PROJECT_DIR$/italsime" />
@@ -1262,9 +1266,9 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar" />
-                            <option value="$PROJECT_DIR$/../../sdk/extras/android/m2repository/com/android/support/appcompat-v7/21.0.0/appcompat-v7-21.0.0.aar" />
-                            <option value="$PROJECT_DIR$/../../sdk/extras/android/m2repository/com/android/support/support-v4/21.0.0/support-v4-21.0.0.aar" />
-                            <option value="$PROJECT_DIR$/../../sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.0/support-annotations-21.0.0.jar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/appcompat-v7/21.0.0/appcompat-v7-21.0.0.aar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/support-v4/21.0.0/support-v4-21.0.0.aar" />
+                            <option value="$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.0/support-annotations-21.0.0.jar" />
                           </list>
                         </option>
                         <option name="path" value="$PROJECT_DIR$/rangeBar" />
@@ -1276,59 +1280,6 @@
               <option name="name" value="Italsime" />
               <option name="projectBuildClasspath">
                 <list>
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/ant-1.9.3.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/ant-launcher-1.9.3.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/gradle-base-services-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/gradle-base-services-groovy-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/gradle-cli-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/gradle-core-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/gradle-docs-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/gradle-launcher-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/gradle-messaging-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/gradle-model-core-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/gradle-model-groovy-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/gradle-native-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/gradle-open-api-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/gradle-resources-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/gradle-tooling-api-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/gradle-ui-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/gradle-wrapper-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/groovy-all-2.3.6.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/ant-antlr-1.9.3.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-announce-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-antlr-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-build-comparison-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-build-init-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-code-quality-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-cunit-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-dependency-management-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-diagnostics-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-ear-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-ide-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-ide-native-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-ivy-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-jacoco-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-javascript-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-jetty-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-language-groovy-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-language-java-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-language-jvm-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-language-native-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-maven-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-osgi-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-platform-base-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-platform-jvm-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-platform-native-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-plugin-development-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-plugin-use-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-plugins-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-publish-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-reporting-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-resources-http-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-scala-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-signing-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/gradle-sonar-2.2.1.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.2.1/lib/plugins/ivy-2.2.0.jar" />
                   <option value="$PROJECT_DIR$/buildSrc/src/main/java" />
                   <option value="$PROJECT_DIR$/buildSrc/src/main/groovy" />
                 </list>
@@ -1367,9 +1318,9 @@
         <option value="$PROJECT_DIR$/italsime/src/main/res/layout/fragment_info.xml" />
         <option value="$PROJECT_DIR$/italsime/src/main/res/values/color.xml" />
         <option value="$PROJECT_DIR$/italsime/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/italsime/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/italsime/src/main/res/layout/dialog_searchfilters.xml" />
         <option value="$PROJECT_DIR$/italsime/src/main/java/com/ekironji/italsime/fragment/SeriesListFragment.java" />
+        <option value="$PROJECT_DIR$/italsime/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/italsime/src/main/java/com/ekironji/italsime/fragment/ModelsListFragment.java" />
       </list>
     </option>
@@ -1380,7 +1331,7 @@
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -1406,27 +1357,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Italsime - Copia" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Gradle Scripts" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Italsime - Copia" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1589,6 +1519,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drawable" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Italsime - Copia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Italsime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="italsime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1659,7 +1619,28 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Italsime - Copia" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Italsime - Copia" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1681,66 +1662,28 @@
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
     <property name="FullScreen" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/italsime/src/main/res/drawable" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="AceaTablet" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\src\main\res\drawable" />
       <recent name="D:\Android\AndroidProjects\Italsime\italsime\src\main\res\drawable" />
       <recent name="D:\Android\AndroidProjects\Italsime\italsime\src\main\res\drawable-xxhdpi" />
       <recent name="D:\Android\AndroidProjects\Italsime\italsime\src\main\res\drawable-xhdpi" />
       <recent name="D:\Android\AndroidProjects\Italsime\italsime\src\main\res\drawable-mdpi" />
-      <recent name="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\src\main\res\layout-land" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Android\AndroidProjects\Italsime\italsime\src\main\res\drawable-hdpi" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.italsime">
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
       <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
@@ -1764,13 +1707,12 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -1812,6 +1754,46 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <configuration default="false" name="italsime" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1877,36 +1859,36 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="544" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2753404" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44122657" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2572402" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20726173" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2572402" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21805792" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20726173" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2753404" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24872231" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1931,40 +1913,64 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/italsime/src/main/java/com/ekironji/italsime/fragment/SeriesListFragment.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5491">
+          <caret line="317" column="0" selection-start-line="317" selection-start-column="0" selection-end-line="317" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/italsime/src/main/java/com/ekironji/italsime/fragment/ModelsListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5474" max-vertical-offset="5576">
+          <caret line="324" column="0" selection-start-line="324" selection-start-column="0" selection-end-line="324" selection-end-column="0" />
+          <folding>
+            <element signature="e#3060#3770#0" expanded="true" />
+            <element signature="e#3765#3766#0" expanded="true" />
+            <element signature="e#7318#7822#0" expanded="true" />
+            <element signature="e#7807#7808#0" expanded="true" />
+            <element signature="e#8007#9910#0" expanded="true" />
+            <element signature="e#9895#9896#0" expanded="true" />
+            <element signature="e#11196#11243#0" expanded="true" />
+            <element signature="e#11440#12281#0" expanded="true" />
+            <element signature="e#12125#12172#0" expanded="true" />
+            <element signature="e#12438#13491#0" expanded="true" />
+            <element signature="e#13476#13477#0" expanded="true" />
+            <element signature="e#13543#14421#0" expanded="true" />
+            <element signature="e#14406#14407#0" expanded="true" />
+            <element signature="e#15016#15530#0" expanded="true" />
+            <element signature="e#15515#15516#0" expanded="true" />
+            <element signature="e#15721#17656#0" expanded="true" />
+            <element signature="e#17641#17642#0" expanded="true" />
+            <element signature="e#17817#18879#0" expanded="true" />
+            <element signature="e#18864#18865#0" expanded="true" />
+            <element signature="e#18932#19819#0" expanded="true" />
+            <element signature="e#19804#19805#0" expanded="true" />
+            <element signature="e#19980#21042#0" expanded="true" />
+            <element signature="e#21027#21028#0" expanded="true" />
+            <element signature="e#21095#21982#0" expanded="true" />
+            <element signature="e#21967#21968#0" expanded="true" />
+            <element signature="e#22019#22091#0" expanded="true" />
+            <element signature="e#22093#23591#0" expanded="true" />
+            <element signature="e#22422#22469#0" expanded="true" />
+            <element signature="e#22513#22560#0" expanded="true" />
+            <element signature="e#22839#22887#0" expanded="true" />
+            <element signature="e#22935#22982#0" expanded="true" />
+            <element signature="e#23572#23573#0" expanded="true" />
+            <element signature="e#23634#23706#0" expanded="true" />
+            <element signature="e#23708#23982#0" expanded="true" />
+            <element signature="e#23951#23952#0" expanded="true" />
+            <element signature="e#24239#24301#0" expanded="true" />
+            <element signature="e#25926#25988#0" expanded="true" />
+            <element signature="e#28857#28920#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/italsime/src/main/java/com/ekironji/italsime/fragment/SeriesListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3009" max-vertical-offset="5797">
           <caret line="206" column="12" selection-start-line="206" selection-start-column="12" selection-end-line="206" selection-end-column="12" />
-          <folding>
-            <element signature="e#2961#3720#0" expanded="true" />
-            <element signature="e#3715#3716#0" expanded="true" />
-            <element signature="e#6128#6487#0" expanded="true" />
-            <element signature="e#6481#6482#0" expanded="true" />
-            <element signature="e#6672#8575#0" expanded="true" />
-            <element signature="e#8560#8561#0" expanded="true" />
-            <element signature="e#8732#9785#0" expanded="true" />
-            <element signature="e#9770#9771#0" expanded="true" />
-            <element signature="e#9942#10995#0" expanded="true" />
-            <element signature="e#10980#10981#0" expanded="true" />
-            <element signature="e#11527#11896#0" expanded="true" />
-            <element signature="e#11890#11891#0" expanded="true" />
-            <element signature="e#12087#14022#0" expanded="true" />
-            <element signature="e#14007#14008#0" expanded="true" />
-            <element signature="e#14182#15244#0" expanded="true" />
-            <element signature="e#15229#15230#0" expanded="true" />
-            <element signature="e#15405#16467#0" expanded="true" />
-            <element signature="e#16452#16453#0" expanded="true" />
-            <element signature="e#16504#16576#0" expanded="true" />
-            <element signature="e#16578#18746#0" expanded="true" />
-            <element signature="e#16895#16942#0" expanded="true" />
-            <element signature="e#16986#17033#0" expanded="true" />
-            <element signature="e#17312#17360#0" expanded="true" />
-            <element signature="e#17408#17455#0" expanded="true" />
-            <element signature="e#18736#18737#0" expanded="true" />
-            <element signature="e#18783#18855#0" expanded="true" />
-            <element signature="e#18857#19027#0" expanded="true" />
-            <element signature="e#19017#19018#0" expanded="true" />
-            <element signature="e#19278#19340#0" expanded="true" />
-            <element signature="e#20965#21027#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1998,38 +2004,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="5525" max-vertical-offset="6630">
           <caret line="325" column="13" selection-start-line="299" selection-start-column="12" selection-end-line="325" selection-end-column="13" />
-          <folding>
-            <element signature="e#2961#3720#0" expanded="true" />
-            <element signature="e#3715#3716#0" expanded="true" />
-            <element signature="e#6128#6487#0" expanded="true" />
-            <element signature="e#6481#6482#0" expanded="true" />
-            <element signature="e#6672#8575#0" expanded="true" />
-            <element signature="e#8560#8561#0" expanded="true" />
-            <element signature="e#8732#9785#0" expanded="true" />
-            <element signature="e#9770#9771#0" expanded="true" />
-            <element signature="e#9942#10995#0" expanded="true" />
-            <element signature="e#10980#10981#0" expanded="true" />
-            <element signature="e#11527#11896#0" expanded="true" />
-            <element signature="e#11890#11891#0" expanded="true" />
-            <element signature="e#12087#14022#0" expanded="true" />
-            <element signature="e#14007#14008#0" expanded="true" />
-            <element signature="e#14182#15244#0" expanded="true" />
-            <element signature="e#15229#15230#0" expanded="true" />
-            <element signature="e#15405#16467#0" expanded="true" />
-            <element signature="e#16452#16453#0" expanded="true" />
-            <element signature="e#16504#16576#0" expanded="true" />
-            <element signature="e#16578#18746#0" expanded="true" />
-            <element signature="e#16895#16942#0" expanded="true" />
-            <element signature="e#16986#17033#0" expanded="true" />
-            <element signature="e#17312#17360#0" expanded="true" />
-            <element signature="e#17408#17455#0" expanded="true" />
-            <element signature="e#18736#18737#0" expanded="true" />
-            <element signature="e#18783#18855#0" expanded="true" />
-            <element signature="e#18857#19027#0" expanded="true" />
-            <element signature="e#19017#19018#0" expanded="true" />
-            <element signature="e#19278#19340#0" expanded="true" />
-            <element signature="e#20965#21027#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2067,6 +2042,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/italsime/src/main/res/layout/fragment_modeldescriptor.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="6.296296" vertical-offset="408" max-vertical-offset="3502">
           <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
@@ -2074,9 +2052,6 @@
             <element signature="e#8727#8767#0" expanded="false" />
           </folding>
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/italsime/src/main/java/com/ekironji/italsime/views/TouchImageView.java">
@@ -2087,25 +2062,25 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/italsime/src/main/res/layout/fragment_navigation_drawer.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="325">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/italsime/src/main/res/layout-land/fragment_modeldescriptor.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2345" max-vertical-offset="4556">
           <caret line="128" column="70" selection-start-line="128" selection-start-column="70" selection-end-line="128" selection-end-column="70" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/italsime/src/main/AndroidManifest.xml">
@@ -2138,14 +2113,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/italsime/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8376812" vertical-offset="0" max-vertical-offset="714">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/italsime/build.gradle">
@@ -2153,11 +2128,6 @@
         <state vertical-scroll-proportion="0.58870965" vertical-offset="138" max-vertical-offset="510">
           <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/italsime/src/main/res/drawable/ala.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/italsime/src/main/res/values/colors_italsimevioletahcg.xml">
@@ -2189,42 +2159,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/italsime/src/main/res/drawable/splash_page_old.jpg">
-      <provider selected="true" editor-type-id="images">
+    <entry file="file://$PROJECT_DIR$/italsime/src/main/res/layout/fragment_home.xml">
+      <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/italsime/src/main/res/layout/fragment_home.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.49275362" vertical-offset="0" max-vertical-offset="1717">
           <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/italsime/src/main/res/layout/listview_serie_item.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/italsime/src/main/res/layout/listview_serie_item.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.26086956" vertical-offset="62" max-vertical-offset="493">
           <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/italsime/src/main/res/layout/toolbar.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/italsime/src/main/res/layout/toolbar.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41062802" vertical-offset="0" max-vertical-offset="414">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/italsime/src/main/java/com/ekironji/italsime/MainActivity.java">
@@ -2238,14 +2203,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../sdk/extras/android/m2repository/com/android/support/support-v4/21.0.0/support-v4-21.0.0-sources.jar!/android/support/v4/app/Fragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5" vertical-offset="10302" max-vertical-offset="31637">
-          <caret line="705" column="7" selection-start-line="705" selection-start-column="7" selection-end-line="705" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/italsime/src/main/java/com/ekironji/italsime/fragment/NavigationDrawerFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="4199" max-vertical-offset="4947">
@@ -2253,20 +2210,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/italsime/src/main/res/drawable-hdpi/italsime.png">
-      <provider selected="true" editor-type-id="images">
+    <entry file="file://$PROJECT_DIR$/italsime/src/main/res/layout/activity_splash.xml">
+      <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/italsime/src/main/res/layout/activity_splash.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="391">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/italsime/src/main/java/com/ekironji/italsime/fragment/HomeFragment.java">
@@ -2280,7 +2232,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.584383" vertical-offset="7117" max-vertical-offset="7514">
           <caret line="8" column="21" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2288,7 +2239,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.697733" vertical-offset="1071" max-vertical-offset="5780">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2296,7 +2246,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.54390246" vertical-offset="372" max-vertical-offset="2414">
           <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2312,25 +2261,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.395466" vertical-offset="3621" max-vertical-offset="5899">
           <caret line="101" column="47" selection-start-line="101" selection-start-column="47" selection-end-line="101" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/italsime/src/main/res/layout/fragment_info.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.4074073" vertical-offset="1466" max-vertical-offset="1836">
-          <caret line="98" column="23" selection-start-line="98" selection-start-column="23" selection-end-line="98" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../sdk/sources/android-21/android/view/View.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2902439" vertical-offset="276131" max-vertical-offset="347888">
-          <caret line="16665" column="5" selection-start-line="16665" selection-start-column="5" selection-end-line="16665" selection-end-column="5" />
+        <state vertical-scroll-proportion="-7.4074073" vertical-offset="1466" max-vertical-offset="1836">
+          <caret line="98" column="23" selection-start-line="98" selection-start-column="23" selection-end-line="98" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -2339,14 +2279,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
           <caret line="3" column="12" selection-start-line="2" selection-start-column="4" selection-end-line="3" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/italsime/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.041463416" vertical-offset="0" max-vertical-offset="410">
-          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -2376,110 +2308,95 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/italsime/src/main/res/layout/dialog_searchfilters.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6938776" vertical-offset="3264" max-vertical-offset="5032">
           <caret line="210" column="44" selection-start-line="210" selection-start-column="44" selection-end-line="210" selection-end-column="44" />
           <folding>
-            <element signature="e#2367#2394#0" expanded="true" />
-            <element signature="e#3461#3485#0" expanded="true" />
-            <element signature="e#5494#5523#0" expanded="true" />
-            <element signature="e#6293#6313#0" expanded="true" />
-            <element signature="e#7955#7975#0" expanded="true" />
-            <element signature="e#8749#8774#0" expanded="true" />
-            <element signature="e#10804#10833#0" expanded="true" />
-            <element signature="e#11609#11629#0" expanded="true" />
-            <element signature="e#13282#13302#0" expanded="true" />
+            <element signature="e#2367#2394#0" expanded="false" />
+            <element signature="e#3461#3485#0" expanded="false" />
+            <element signature="e#5494#5523#0" expanded="false" />
+            <element signature="e#6293#6313#0" expanded="false" />
+            <element signature="e#7955#7975#0" expanded="false" />
+            <element signature="e#8749#8774#0" expanded="false" />
+            <element signature="e#10804#10833#0" expanded="false" />
+            <element signature="e#11609#11629#0" expanded="false" />
+            <element signature="e#13282#13302#0" expanded="false" />
           </folding>
         </state>
       </provider>
-      <provider editor-type-id="android-designer">
+    </entry>
+    <entry file="file://$PROJECT_DIR$/italsime/src/main/res/drawable/tvc.png">
+      <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/italsime/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.69074494" vertical-offset="408" max-vertical-offset="2176">
-          <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/italsime/src/main/res/drawable-hdpi/italsime.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/italsime/src/main/java/com/ekironji/italsime/fragment/SeriesListFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5464" max-vertical-offset="7429">
-          <caret line="323" column="76" selection-start-line="323" selection-start-column="76" selection-end-line="323" selection-end-column="76" />
-          <folding>
-            <element signature="e#2961#3720#0" expanded="true" />
-            <element signature="e#3715#3716#0" expanded="true" />
-            <element signature="e#6128#6487#0" expanded="true" />
-            <element signature="e#6481#6482#0" expanded="true" />
-            <element signature="e#6672#8575#0" expanded="true" />
-            <element signature="e#8560#8561#0" expanded="true" />
-            <element signature="e#8732#9785#0" expanded="true" />
-            <element signature="e#9770#9771#0" expanded="true" />
-            <element signature="e#9942#10995#0" expanded="true" />
-            <element signature="e#10980#10981#0" expanded="true" />
-            <element signature="e#11527#11896#0" expanded="true" />
-            <element signature="e#11890#11891#0" expanded="true" />
-            <element signature="e#12087#14022#0" expanded="true" />
-            <element signature="e#14007#14008#0" expanded="true" />
-            <element signature="e#14182#15244#0" expanded="true" />
-            <element signature="e#15229#15230#0" expanded="true" />
-            <element signature="e#15405#16467#0" expanded="true" />
-            <element signature="e#16452#16453#0" expanded="true" />
-            <element signature="e#16504#16576#0" expanded="true" />
-            <element signature="e#16578#18746#0" expanded="true" />
-            <element signature="e#16895#16942#0" expanded="true" />
-            <element signature="e#16986#17033#0" expanded="true" />
-            <element signature="e#17312#17360#0" expanded="true" />
-            <element signature="e#17408#17455#0" expanded="true" />
-            <element signature="e#18736#18737#0" expanded="true" />
-            <element signature="e#18783#18855#0" expanded="true" />
-            <element signature="e#18857#19027#0" expanded="true" />
-            <element signature="e#19017#19018#0" expanded="true" />
-            <element signature="e#19278#19340#0" expanded="true" />
-            <element signature="e#20965#21027#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="2897" max-vertical-offset="7599">
+          <caret line="227" column="15" selection-start-line="227" selection-start-column="15" selection-end-line="242" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/italsime/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.82188296" vertical-offset="408" max-vertical-offset="2193">
+          <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/italsime/src/main/java/com/ekironji/italsime/fragment/ModelsListFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.62020904" vertical-offset="5890" max-vertical-offset="8364">
-          <caret line="336" column="76" selection-start-line="336" selection-start-column="76" selection-end-line="336" selection-end-column="76" />
+        <state vertical-scroll-proportion="0.6866029" vertical-offset="3351" max-vertical-offset="8704">
+          <caret line="255" column="17" selection-start-line="255" selection-start-column="17" selection-end-line="255" selection-end-column="17" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#3060#3770#0" expanded="true" />
             <element signature="e#3765#3766#0" expanded="true" />
             <element signature="e#7318#7822#0" expanded="true" />
             <element signature="e#7807#7808#0" expanded="true" />
             <element signature="e#8007#9910#0" expanded="true" />
             <element signature="e#9895#9896#0" expanded="true" />
-            <element signature="e#10067#11119#0" expanded="true" />
-            <element signature="e#11104#11105#0" expanded="true" />
-            <element signature="e#11276#12329#0" expanded="true" />
-            <element signature="e#12314#12315#0" expanded="true" />
-            <element signature="e#12924#13438#0" expanded="true" />
-            <element signature="e#13423#13424#0" expanded="true" />
-            <element signature="e#13629#15564#0" expanded="true" />
-            <element signature="e#15549#15550#0" expanded="true" />
-            <element signature="e#15725#16787#0" expanded="true" />
-            <element signature="e#16772#16773#0" expanded="true" />
-            <element signature="e#16948#18010#0" expanded="true" />
-            <element signature="e#17995#17996#0" expanded="true" />
-            <element signature="e#18047#18119#0" expanded="true" />
-            <element signature="e#18121#19619#0" expanded="true" />
-            <element signature="e#18450#18497#0" expanded="true" />
-            <element signature="e#18541#18588#0" expanded="true" />
-            <element signature="e#18867#18915#0" expanded="true" />
-            <element signature="e#18963#19010#0" expanded="true" />
-            <element signature="e#19600#19601#0" expanded="true" />
-            <element signature="e#19662#19734#0" expanded="true" />
-            <element signature="e#19736#20010#0" expanded="true" />
-            <element signature="e#19979#19980#0" expanded="true" />
-            <element signature="e#20267#20329#0" expanded="true" />
-            <element signature="e#21954#22016#0" expanded="true" />
-            <element signature="e#24885#24948#0" expanded="true" />
+            <element signature="e#11196#11243#0" expanded="true" />
+            <element signature="e#11440#12281#0" expanded="true" />
+            <element signature="e#12125#12172#0" expanded="true" />
+            <element signature="e#12438#13491#0" expanded="true" />
+            <element signature="e#13476#13477#0" expanded="true" />
+            <element signature="e#13543#14421#0" expanded="true" />
+            <element signature="e#14406#14407#0" expanded="true" />
+            <element signature="e#15016#15530#0" expanded="true" />
+            <element signature="e#15515#15516#0" expanded="true" />
+            <element signature="e#15721#17656#0" expanded="true" />
+            <element signature="e#17641#17642#0" expanded="true" />
+            <element signature="e#17817#18879#0" expanded="true" />
+            <element signature="e#18864#18865#0" expanded="true" />
+            <element signature="e#18932#19819#0" expanded="true" />
+            <element signature="e#19804#19805#0" expanded="true" />
+            <element signature="e#19980#21042#0" expanded="true" />
+            <element signature="e#21027#21028#0" expanded="true" />
+            <element signature="e#21095#21982#0" expanded="true" />
+            <element signature="e#21967#21968#0" expanded="true" />
+            <element signature="e#22019#22091#0" expanded="true" />
+            <element signature="e#22093#23591#0" expanded="true" />
+            <element signature="e#22422#22469#0" expanded="true" />
+            <element signature="e#22513#22560#0" expanded="true" />
+            <element signature="e#22839#22887#0" expanded="true" />
+            <element signature="e#22935#22982#0" expanded="true" />
+            <element signature="e#23572#23573#0" expanded="true" />
+            <element signature="e#23634#23706#0" expanded="true" />
+            <element signature="e#23708#23982#0" expanded="true" />
+            <element signature="e#23951#23952#0" expanded="true" />
+            <element signature="e#24239#24301#0" expanded="true" />
+            <element signature="e#25926#25988#0" expanded="true" />
+            <element signature="e#28857#28920#0" expanded="true" />
           </folding>
         </state>
       </provider>

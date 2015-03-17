@@ -41,6 +41,7 @@
 	<string name="title_search_progress_dialog">Searching&#8230;</string>
     <string name="set_manually_string">Set range manually</string>
     <string name="invalide_range">: Invalide range</string>
+    <string name="invalide_value">Invalide value</string>
 
 	<string-array name="array_closed_blade_series">
         <item>All Series</item>

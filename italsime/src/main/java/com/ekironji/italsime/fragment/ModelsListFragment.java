@@ -227,16 +227,32 @@ public class ModelsListFragment extends Fragment {
                     boolean handled = false;
                     if (actionId == EditorInfo.IME_ACTION_DONE) {
                         handled = true;
-                        if (!editMinPort.getText().toString().equals("")&& !editMinPort.getText().toString().contains(".")) {
+                        if (!editMinPort.getText().toString().equals("")&& !editMinPort.getText().toString().contains(".") && (minPortata > maxPortata || minPortata < DEFAULT_MIN_PORTATA || maxPortata > DEFAULT_MAX_PORTATA)) {
                             int value = Integer.valueOf(editMinPort.getText().toString());
                             minPortata = value;
                             textMinPortata.setText(String.valueOf(minPortata));
                             InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
                             imm.hideSoftInputFromWindow(v.getWindowToken(),
                                     InputMethodManager.HIDE_NOT_ALWAYS);
+                        } else {
+                            Toast.makeText(getActivity(), getResources().getText(R.string.invalide_value), Toast.LENGTH_SHORT).show();
                         }
                     }
                     return handled;
+                }
+            });
+            editMinPort.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+                public void onFocusChange(View v, boolean hasFocus) {
+                    if (!hasFocus) {
+                        if (!editMinPort.getText().toString().equals("") && !editMinPort.getText().toString().contains(".") && (minPortata > maxPortata || minPortata < DEFAULT_MIN_PORTATA || maxPortata > DEFAULT_MAX_PORTATA)) {
+                            int value = Integer.valueOf(editMinPort.getText().toString());
+                            minPortata = value;
+                            textMinPortata.setText(String.valueOf(minPortata));
+                        } else {
+                                Toast.makeText(getActivity(), getResources().getText(R.string.invalide_value), Toast.LENGTH_SHORT).show();
+                        }
+                    }
                 }
             });
 
@@ -257,6 +273,21 @@ public class ModelsListFragment extends Fragment {
                         }
                     }
                     return handled;
+                }
+            });
+            editMaxPort.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+                @Override
+                public void onFocusChange(View v, boolean hasFocus) {
+                    if (!hasFocus) {
+                        if (!editMaxPort.getText().toString().equals("") && !editMaxPort.getText().toString().contains(".")) {
+                            int value = Integer.valueOf(editMaxPort.getText().toString());
+                            maxPortata = value;
+                            textMaxPortata.setText(String.valueOf(maxPortata));
+                            InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+                            imm.hideSoftInputFromWindow(v.getWindowToken(),
+                                    InputMethodManager.HIDE_NOT_ALWAYS);
+                        }
+                    }
                 }
             });
 
@@ -326,6 +357,21 @@ public class ModelsListFragment extends Fragment {
                     return handled;
                 }
             });
+            editMinPress.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+                @Override
+                public void onFocusChange(View v, boolean hasFocus) {
+                    if (!hasFocus) {
+                        if (!editMinPress.getText().toString().equals("") && !editMinPress.getText().toString().contains(".")) {
+                            int value = Integer.valueOf(editMinPress.getText().toString());
+                            minPressione = value;
+                            textMinPressione.setText(String.valueOf(minPressione));
+                            InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+                            imm.hideSoftInputFromWindow(v.getWindowToken(),
+                                    InputMethodManager.HIDE_NOT_ALWAYS);
+                        }
+                    }
+                }
+            });
 
             final EditText editMaxPress = (EditText) dialog_view.findViewById(R.id.editTextMaxPressione);
             editMaxPress.setOnEditorActionListener(new EditText.OnEditorActionListener() {
@@ -344,6 +390,21 @@ public class ModelsListFragment extends Fragment {
                         }
                     }
                     return handled;
+                }
+            });
+            editMaxPress.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+                @Override
+                public void onFocusChange(View v, boolean hasFocus) {
+                    if (!hasFocus) {
+                        if (!editMaxPress.getText().toString().equals("") && !editMaxPress.getText().toString().contains(".")) {
+                            int value = Integer.valueOf(editMaxPress.getText().toString());
+                            maxPressione = value;
+                            textMaxPressione.setText(String.valueOf(maxPressione));
+                            InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+                            imm.hideSoftInputFromWindow(v.getWindowToken(),
+                                    InputMethodManager.HIDE_NOT_ALWAYS);
+                        }
+                    }
                 }
             });
 

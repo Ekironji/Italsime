@@ -1,6 +1,6 @@
-D:\Android\AndroidProjects\Italsime\italsime\build\intermediates\classes\debug
-D:\Android\AndroidProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\support-annotations-21.0.0-942a00eae9e94bbf9436a50907fead2fcde562a3.jar
-D:\Android\AndroidProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\classes-7459e899cd04d832ca8f094d9b849bd5e4711deb.jar
-D:\Android\AndroidProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\internal_impl-21.0.0-f147ed4e2055f1a7f7313d9d7c1940658ed73521.jar
-D:\Android\AndroidProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\classes-f7219a274524cdd460a9558a5e57d7682b039062.jar
-D:\Android\AndroidProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\classes-5c75cf3976ee86a55d80217e7027bfa6d89c7026.jar
+C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\classes\debug
+C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\support-annotations-21.0.0-b0199809e87f83da8c0c724aa937a0f78beefccf.jar
+C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\classes-c15b24c8d0c6fe4bd76680e2761c466f6a76a2fa.jar
+C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\internal_impl-21.0.0-3fb7f28f08449c4c13a660c28965d261265ef579.jar
+C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\classes-bdb2b9f47c5591dac00526c6c4f18ee5e3b1b9f3.jar
+C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\classes-88cbf7b38366c8fcf2a65c749ea61dcb8800971c.jar
