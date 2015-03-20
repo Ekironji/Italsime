@@ -2,39 +2,39 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="686344a780033e4ba22b926cd225f8d4941247e6">
-        <dex dex="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\classes-88cbf7b38366c8fcf2a65c749ea61dcb8800971c.jar" />
-    </item>
-    <item
-        jar="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\exploded-aar\Italsime\rangeBar\unspecified\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="eeb3b2a125b3fa486e7b7d1ed74d1973b5a597f2">
-        <dex dex="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\classes-c15b24c8d0c6fe4bd76680e2761c466f6a76a2fa.jar" />
-    </item>
-    <item
-        jar="C:\Users\Luigi\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.0\support-annotations-21.0.0.jar"
+        jar="D:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.0\support-annotations-21.0.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e">
-        <dex dex="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\support-annotations-21.0.0-b0199809e87f83da8c0c724aa937a0f78beefccf.jar" />
+        <dex dex="D:\Android\AndroidProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\support-annotations-21.0.0-942a00eae9e94bbf9436a50907fead2fcde562a3.jar" />
     </item>
     <item
-        jar="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.0\classes.jar"
+        jar="D:\Android\AndroidProjects\Italsime\italsime\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="686344a780033e4ba22b926cd225f8d4941247e6">
+        <dex dex="D:\Android\AndroidProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\classes-5c75cf3976ee86a55d80217e7027bfa6d89c7026.jar" />
+    </item>
+    <item
+        jar="D:\Android\AndroidProjects\Italsime\italsime\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.0\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="95fd37732ec852e99f07eeb516a3650172f1d136">
-        <dex dex="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\classes-bdb2b9f47c5591dac00526c6c4f18ee5e3b1b9f3.jar" />
+        <dex dex="D:\Android\AndroidProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\classes-f7219a274524cdd460a9558a5e57d7682b039062.jar" />
     </item>
     <item
-        jar="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\libs\internal_impl-21.0.0.jar"
+        jar="D:\Android\AndroidProjects\Italsime\italsime\build\intermediates\exploded-aar\Italsime\rangeBar\unspecified\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d3494e1d2298b0f1a4389509b4e86a2c4ee309ae">
+        <dex dex="D:\Android\AndroidProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\classes-7459e899cd04d832ca8f094d9b849bd5e4711deb.jar" />
+    </item>
+    <item
+        jar="D:\Android\AndroidProjects\Italsime\italsime\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\libs\internal_impl-21.0.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0">
-        <dex dex="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\internal_impl-21.0.0-3fb7f28f08449c4c13a660c28965d261265ef579.jar" />
+        <dex dex="D:\Android\AndroidProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\internal_impl-21.0.0-f147ed4e2055f1a7f7313d9d7c1940658ed73521.jar" />
     </item>
 
 </items>

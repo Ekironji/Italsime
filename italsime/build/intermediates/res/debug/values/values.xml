@@ -245,6 +245,7 @@
     <string name="imagedescriptor_serie">serie</string>
     <string name="indirizzo_sede">VIA BRUNELLESCHI 3/E 50010 CAPANNELLE\n CAMPI B.ZIO (FI)\n\nEXIT PRATO EST FI-MARE</string>
     <string name="invalide_range">: Invalide range</string>
+    <string name="invalide_value">Invalide value</string>
     <string name="kg_string">Kg: </string>
     <string name="kw_string">Kw: </string>
     <string name="l">L</string>
