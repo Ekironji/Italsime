@@ -214,13 +214,15 @@ public class SeriesListFragment extends Fragment{
                     boolean handled = false;
                     if (actionId == EditorInfo.IME_ACTION_DONE) {
                         handled = true;
-                        if (!editMinPort.getText().toString().equals("") && !editMinPort.getText().toString().contains(".")) {
-                            int value = Integer.valueOf(editMinPort.getText().toString());
-                            minPortata = value;
+                        String editValue = editMinPort.getText().toString();
+                        if (!editValue.equals("") && !editValue.contains(".") && !(Integer.valueOf(editValue) < DEFAULT_MIN_PORTATA)) {
+                            minPortata = Integer.valueOf(editValue);
                             textMinPortata.setText(String.valueOf(minPortata));
                             InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
                             imm.hideSoftInputFromWindow(v.getWindowToken(),
                                     InputMethodManager.HIDE_NOT_ALWAYS);
+                        } else {
+                            Toast.makeText(getActivity(), getResources().getText(R.string.invalide_value), Toast.LENGTH_SHORT).show();
                         }
                     }
                     return handled;
@@ -230,13 +232,12 @@ public class SeriesListFragment extends Fragment{
 
                 public void onFocusChange(View v, boolean hasFocus) {
                     if (!hasFocus) {
-                        if (!editMinPort.getText().toString().equals("") && !editMinPort.getText().toString().contains(".")) {
-                            int value = Integer.valueOf(editMinPort.getText().toString());
-                            minPortata = value;
+                        String editValue = editMinPort.getText().toString();
+                        if (!editValue.equals("") && !editValue.contains(".") && !(Integer.valueOf(editValue) < DEFAULT_MIN_PORTATA)) {
+                            minPortata = Integer.valueOf(editValue);
                             textMinPortata.setText(String.valueOf(minPortata));
-                            InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-                            imm.hideSoftInputFromWindow(v.getWindowToken(),
-                                    InputMethodManager.HIDE_NOT_ALWAYS);
+                        } else {
+                            Toast.makeText(getActivity(), getResources().getText(R.string.invalide_value), Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
@@ -249,13 +250,15 @@ public class SeriesListFragment extends Fragment{
                     boolean handled = false;
                     if (actionId == EditorInfo.IME_ACTION_DONE) {
                         handled = true;
-                        if (!editMaxPort.getText().toString().equals("") && !editMaxPort.getText().toString().contains(".")) {
-                            int value = Integer.valueOf(editMaxPort.getText().toString());
-                            maxPortata = value;
+                        String editValue = editMaxPort.getText().toString();
+                        if (!editValue.equals("") && !editValue.contains(".") && !(Integer.valueOf(editValue) > DEFAULT_MAX_PORTATA)) {
+                            maxPortata = Integer.valueOf(editValue);
                             textMaxPortata.setText(String.valueOf(maxPortata));
                             InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
                             imm.hideSoftInputFromWindow(v.getWindowToken(),
                                     InputMethodManager.HIDE_NOT_ALWAYS);
+                        } else {
+                            Toast.makeText(getActivity(), getResources().getText(R.string.invalide_value), Toast.LENGTH_SHORT).show();
                         }
                     }
                     return handled;
@@ -265,13 +268,12 @@ public class SeriesListFragment extends Fragment{
                 @Override
                 public void onFocusChange(View v, boolean hasFocus) {
                     if (!hasFocus) {
-                        if (!editMaxPort.getText().toString().equals("") && !editMaxPort.getText().toString().contains(".")) {
-                            int value = Integer.valueOf(editMaxPort.getText().toString());
-                            maxPortata = value;
+                        String editValue = editMaxPort.getText().toString();
+                        if (!editValue.equals("") && !editValue.contains(".") && !(Integer.valueOf(editValue) > DEFAULT_MAX_PORTATA)) {
+                            maxPortata = Integer.valueOf(editValue);
                             textMaxPortata.setText(String.valueOf(maxPortata));
-                            InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-                            imm.hideSoftInputFromWindow(v.getWindowToken(),
-                                    InputMethodManager.HIDE_NOT_ALWAYS);
+                        } else {
+                            Toast.makeText(getActivity(), getResources().getText(R.string.invalide_value), Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
@@ -331,13 +333,15 @@ public class SeriesListFragment extends Fragment{
                     boolean handled = false;
                     if (actionId == EditorInfo.IME_ACTION_DONE) {
                         handled = true;
-                        if (!editMinPress.getText().toString().equals("") && !editMinPress.getText().toString().contains(".")) {
-                            int value = Integer.valueOf(editMinPress.getText().toString());
-                            minPressione = value;
+                        String editValue = editMinPress.getText().toString();
+                        if (!editValue.equals("") && !editValue.contains(".") && !(Integer.valueOf(editValue) < DEFAULT_MIN_PRESSIONE)) {
+                            minPressione = Integer.valueOf(editValue);
                             textMinPressione.setText(String.valueOf(minPressione));
                             InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
                             imm.hideSoftInputFromWindow(v.getWindowToken(),
                                     InputMethodManager.HIDE_NOT_ALWAYS);
+                        } else {
+                            Toast.makeText(getActivity(), getResources().getText(R.string.invalide_value), Toast.LENGTH_SHORT).show();
                         }
                     }
                     return handled;
@@ -347,13 +351,12 @@ public class SeriesListFragment extends Fragment{
                 @Override
                 public void onFocusChange(View v, boolean hasFocus) {
                     if (!hasFocus) {
-                        if (!editMinPress.getText().toString().equals("") && !editMinPress.getText().toString().contains(".")) {
-                            int value = Integer.valueOf(editMinPress.getText().toString());
-                            minPressione = value;
+                        String editValue = editMinPress.getText().toString();
+                        if (!editValue.equals("") && !editValue.contains(".") && !(Integer.valueOf(editValue) < DEFAULT_MIN_PRESSIONE)) {
+                            minPressione = Integer.valueOf(editValue);
                             textMinPressione.setText(String.valueOf(minPressione));
-                            InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-                            imm.hideSoftInputFromWindow(v.getWindowToken(),
-                                    InputMethodManager.HIDE_NOT_ALWAYS);
+                        } else {
+                            Toast.makeText(getActivity(), getResources().getText(R.string.invalide_value), Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
@@ -366,13 +369,15 @@ public class SeriesListFragment extends Fragment{
                     boolean handled = false;
                     if (actionId == EditorInfo.IME_ACTION_DONE) {
                         handled = true;
-                        if (!editMaxPress.getText().toString().equals("") && !editMaxPress.getText().toString().contains(".")) {
-                            int value = Integer.valueOf(editMaxPress.getText().toString());
-                            maxPressione = value;
+                        String editValue = editMaxPress.getText().toString();
+                        if (!editValue.equals("") && !editValue.contains(".") && !(Integer.valueOf(editValue) > DEFAULT_MAX_PRESSIONE)) {
+                            maxPressione = Integer.valueOf(editValue);
                             textMaxPressione.setText(String.valueOf(maxPressione));
                             InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
                             imm.hideSoftInputFromWindow(v.getWindowToken(),
                                     InputMethodManager.HIDE_NOT_ALWAYS);
+                        } else {
+                            Toast.makeText(getActivity(), getResources().getText(R.string.invalide_value), Toast.LENGTH_SHORT).show();
                         }
                     }
                     return handled;
@@ -382,13 +387,12 @@ public class SeriesListFragment extends Fragment{
                 @Override
                 public void onFocusChange(View v, boolean hasFocus) {
                     if (!hasFocus) {
-                        if (!editMaxPress.getText().toString().equals("") && !editMaxPress.getText().toString().contains(".")) {
-                            int value = Integer.valueOf(editMaxPress.getText().toString());
-                            maxPressione = value;
+                        String editValue = editMaxPress.getText().toString();
+                        if (!editValue.equals("") && !editValue.contains(".") && !(Integer.valueOf(editValue) > DEFAULT_MAX_PRESSIONE)) {
+                            maxPressione = Integer.valueOf(editValue);
                             textMaxPressione.setText(String.valueOf(maxPressione));
-                            InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-                            imm.hideSoftInputFromWindow(v.getWindowToken(),
-                                    InputMethodManager.HIDE_NOT_ALWAYS);
+                        } else {
+                            Toast.makeText(getActivity(), getResources().getText(R.string.invalide_value), Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
