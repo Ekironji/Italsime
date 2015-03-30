@@ -501,8 +501,8 @@ public class ModelsListFragment extends Fragment {
 			pressureFilterValues.setTextColor(getResources().getColor(R.color.italsimevioletahcg_color));
 		}
 		serieFilterValue.setText(Series.getNameFromInt(serie));
-		portataFilterValues.setText("m3/h: " + minPo + " - " + maxPo);
-		pressureFilterValues.setText("mmH20: " + minPr + " - " + maxPr);
+		portataFilterValues.setText(minPo + " - " + maxPo + " +/- 15%");
+		pressureFilterValues.setText(minPr + " - " + maxPr + " +/- 15%");
 		searchFiltersLayout.setVisibility(View.VISIBLE);
 	}
 	
