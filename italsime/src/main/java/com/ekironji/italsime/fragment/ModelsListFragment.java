@@ -63,7 +63,6 @@ public class ModelsListFragment extends Fragment {
 	int minPressione = DEFAULT_MIN_PRESSIONE;
 	int maxPressione = DEFAULT_MAX_PRESSIONE;
 	
-	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
@@ -129,7 +128,7 @@ public class ModelsListFragment extends Fragment {
 		
 		mListAdapter = new ModelliListAdapter(getActivity(), listaModelli);
 		mListViewModels.setAdapter(mListAdapter);
-		
+
 		return view;
 	}
 	
@@ -413,19 +412,34 @@ public class ModelsListFragment extends Fragment {
                 DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         if (minPortata > maxPortata || minPortata < DEFAULT_MIN_PORTATA || maxPortata > DEFAULT_MAX_PORTATA) {
-                            Toast.makeText(getActivity(), new String(getResources().getText(R.string.portata_string) + "" +
+                            Toast.makeText(getActivity(), new String(getResources().getText(R.string.portata_string) + " " +
                                     getResources().getText(R.string.invalide_range)), Toast.LENGTH_LONG).show();
                         } else {
                             if (minPressione > maxPressione || minPressione < DEFAULT_MIN_PRESSIONE || maxPressione > DEFAULT_MAX_PRESSIONE) {
-                                Toast.makeText(getActivity(), new String(getResources().getText(R.string.pressure_string) + "" +
+                                Toast.makeText(getActivity(), new String(getResources().getText(R.string.pressure_string) + " " +
                                         getResources().getText(R.string.invalide_range)), Toast.LENGTH_LONG).show();
                             } else {
-                                new UpdateListFromFiltersTask().execute(ariaType,
+                                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                                Fragment mFragment = new ModelsListFragment();
+                                Bundle mBundle = new Bundle();
+                                int[] filteredResearchArgs = new int[]{ariaType,
                                         Series.getIntFromName(spinner.getSelectedItem().toString()),
                                         minPortata,
                                         maxPortata,
                                         minPressione,
-                                        maxPressione);
+                                        maxPressione};
+                                mBundle.putIntArray(MainActivity.KEY_PASSFILTEREDRESEARCH, filteredResearchArgs);
+                                mFragment.setArguments(mBundle);
+                                fragmentManager.beginTransaction()
+                                        .replace(R.id.container, mFragment)
+                                        .addToBackStack("ModelsListFragBack")
+                                        .commit();
+                              /*  new UpdateListFromFiltersTask().execute(ariaType,
+                                        Series.getIntFromName(spinner.getSelectedItem().toString()),
+                                        minPortata,
+                                        maxPortata,
+                                        minPressione,
+                                        maxPressione);*/
 
                                 dialog.dismiss();
                             }

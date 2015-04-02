@@ -109,10 +109,9 @@
     <string name="imagedescriptor_imagedimension_land">image_dimension_land</string>
     
 <!--     Info Fragment -->
-    <string name="chiara_bianchini">REQUEST OFFERS: Sig. Chiara Bianchini\nEmail: chiara.clienti@italsime.com\nTel: +390558951259\nFax: 0558952636</string>
-    <string name="david_gai">TECHNICAL OFFICE: Sig. David Gai\nEmail: david.gai@italsime.com\nTel: +390558952707\nFax: 0558952636</string>
-    <string name="matteo_pagliai">ITALY: Sig. Matteo Pagliai\nEmail: matteo.clienti@italsime.com\nTel: +393292318334\nFax: 0558952636</string>
-    <string name="federico_sarnico">EST EUROPE: Sig. Federico Sarnico\nEmail: federico.sarnico@italsime.com\nTel: +393474133277</string>
+    <string name="matteo_pagliai">ITALIAN SALES OFFICE:\nEmail: clienti@italsime.com\nTel: +390556288635\nSig. Matteo Pagliai\nEmail: matteo.clienti@italsime.com\nTel: +393292318334</string>
+    <string name="federico_sarnico">EXPORT SALES OFFICE:\nSig. Federico Sarnico\nEmail: federico.sarnico@italsime.com\nTel: +393474133277</string>
+    <string name="david_gai">TECHNICAL AND PROJECTING DEPARTMENT:\nSig. David Gai\nEmail: david.gai@italsime.com\nTel: +393292318332</string>
     <string name="indirizzo_sede">VIA BRUNELLESCHI 3/E 50010 CAPANNELLE\n CAMPI B.ZIO (FI)\n\nEXIT PRATO EST FI-MARE</string>
     <string name="dummy_address">Via Filippo Brunelleschi, Campi Bisenzio, Firenze</string>
     <string name="address2">Via Filippo Brunelleschi, 50013 Campi Bisenzio FI</string>
