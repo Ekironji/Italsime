@@ -87,15 +87,15 @@ public class Database {
                 ModelsMetaData.ModelsTab_MMH2O5_KEY + ">? AND " +
                 ModelsMetaData.ModelsTab_MMH2O5_KEY + "<?",
                 new String[] { String.valueOf(sporcaOPulita),
-                        String.valueOf(portataM3hMIN * 85/100),
-                        String.valueOf(portataM3hMAX * 115/100),
-                        String.valueOf(pressioneMMh2oMIN * 85/100),
-                        String.valueOf(pressioneMMh2oMAX * 115/100) }, null, null, null);
+                        String.valueOf(portataM3hMIN * 95/100),
+                        String.valueOf(portataM3hMAX * 105/100),
+                        String.valueOf(pressioneMMh2oMIN * 95/100),
+                        String.valueOf(pressioneMMh2oMAX * 105/100) }, null, null, null);
         Log.i("DatabaseClass", "SELECT * FROM " +ModelsMetaData.ModelsTab_TABLE+ " WHERE " + ModelsMetaData.ModelsTab_ARIATYPE_KEY + "="+String.valueOf(sporcaOPulita)+" AND " +
-                ModelsMetaData.ModelsTab_M3H5_KEY + ">"+String.valueOf(portataM3hMIN * 85/100)+" AND " +
-                ModelsMetaData.ModelsTab_M3H5_KEY + "<"+String.valueOf(portataM3hMAX * 115/100)+" AND " +
-                ModelsMetaData.ModelsTab_MMH2O5_KEY + ">"+String.valueOf(pressioneMMh2oMIN * 85/100)+" AND " +
-                ModelsMetaData.ModelsTab_MMH2O5_KEY + "<"+String.valueOf(pressioneMMh2oMAX * 115/100)+ "...returned  cursorlenght: " + cursor.getCount());
+                ModelsMetaData.ModelsTab_M3H5_KEY + ">"+String.valueOf(portataM3hMIN * 95/100)+" AND " +
+                ModelsMetaData.ModelsTab_M3H5_KEY + "<"+String.valueOf(portataM3hMAX * 105/100)+" AND " +
+                ModelsMetaData.ModelsTab_MMH2O5_KEY + ">"+String.valueOf(pressioneMMh2oMIN * 95/100)+" AND " +
+                ModelsMetaData.ModelsTab_MMH2O5_KEY + "<"+String.valueOf(pressioneMMh2oMAX * 105/100)+ "...returned  cursorlenght: " + cursor.getCount());
         return returnModelsFromCursor(cursor);
     }
     
@@ -114,16 +114,16 @@ public class Database {
     			ModelsMetaData.ModelsTab_MMH2O5_KEY + "<?",
 				new String[] { String.valueOf(sporcaOPulita),
                                 String.valueOf(serie),
-    						    String.valueOf(portataM3hMIN * 85/100),
-    							String.valueOf(portataM3hMAX * 115/100),
-    							String.valueOf(pressioneMMh2oMIN * 85/100),
-    							String.valueOf(pressioneMMh2oMAX * 115/100) }, null, null, null);
+    						    String.valueOf(portataM3hMIN * 95/100),
+    							String.valueOf(portataM3hMAX * 105/100),
+    							String.valueOf(pressioneMMh2oMIN * 95/100),
+    							String.valueOf(pressioneMMh2oMAX * 105/100) }, null, null, null);
         Log.i("DatabaseClass", "SELECT * FROM " +ModelsMetaData.ModelsTab_TABLE+ " WHERE " + ModelsMetaData.ModelsTab_ARIATYPE_KEY + "="+String.valueOf(sporcaOPulita)+" AND " +
                         ModelsMetaData.ModelsTab_SERIE_KEY + "=" +  String.valueOf(serie)+" AND " +
-                ModelsMetaData.ModelsTab_M3H5_KEY + ">"+String.valueOf(portataM3hMIN * 85/100)+" AND " +
-                ModelsMetaData.ModelsTab_M3H5_KEY + "<"+String.valueOf(portataM3hMAX * 115/100)+" AND " +
-                ModelsMetaData.ModelsTab_MMH2O5_KEY + ">"+String.valueOf(pressioneMMh2oMIN * 85/100)+" AND " +
-                ModelsMetaData.ModelsTab_MMH2O5_KEY + "<"+String.valueOf(pressioneMMh2oMAX * 115/100)+ "...returned cursorlenght: " + cursor.getCount());
+                ModelsMetaData.ModelsTab_M3H5_KEY + ">"+String.valueOf(portataM3hMIN * 95/100)+" AND " +
+                ModelsMetaData.ModelsTab_M3H5_KEY + "<"+String.valueOf(portataM3hMAX * 105/100)+" AND " +
+                ModelsMetaData.ModelsTab_MMH2O5_KEY + ">"+String.valueOf(pressioneMMh2oMIN * 95/100)+" AND " +
+                ModelsMetaData.ModelsTab_MMH2O5_KEY + "<"+String.valueOf(pressioneMMh2oMAX * 105/100)+ "...returned cursorlenght: " + cursor.getCount());
         return returnModelsFromCursor(cursor);
     }
     

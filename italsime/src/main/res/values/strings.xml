@@ -33,7 +33,8 @@
     <string name="portata_string_unit">Flow Rate (m3/h)</string>
     <string name="pressure_string_unit">Pressure (mmH20)</string>
 	<string name="min_string">Min:</string>
-	<string name="max_string">Max:</string>
+    <string name="max_string">Max:</string>
+    <string name="moreorless_percent">&#160;+/- 5%</string>
 	
 <!-- 	Search Filters Dialog -->
 	<string name="title_search_filters_dialog">Search fiters</string>
