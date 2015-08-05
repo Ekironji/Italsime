@@ -2,18 +2,18 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
-        <dex dex="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\classes-81079df357eb880218c95e30ae0c2213183c0f2e.jar" />
-    </item>
-    <item
         jar="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\exploded-aar\Italsime\rangeBar\unspecified\jars\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="b27b075c32eb3da913bd4d74e9677631fb2952af">
         <dex dex="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\classes-f3b482f6c193cd073d91772525fd64592ef98484.jar" />
+    </item>
+    <item
+        jar="C:\Users\Luigi\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\support-annotations-22.0.0-fa9a9055799281d7ee257128c9a64a3a1533abfa.jar" />
     </item>
     <item
         jar="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\jars\libs\internal_impl-22.0.0.jar"
@@ -30,11 +30,11 @@
         <dex dex="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\classes-90536960dc48e1cac5ae3b715071b3c0dac513ef.jar" />
     </item>
     <item
-        jar="C:\Users\Luigi\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
+        jar="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.0.0\jars\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
-        <dex dex="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\support-annotations-22.0.0-fa9a9055799281d7ee257128c9a64a3a1533abfa.jar" />
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="C:\Users\Luigi\AndroidStudioProjects\Italsime\italsime\build\intermediates\pre-dexed\debug\classes-81079df357eb880218c95e30ae0c2213183c0f2e.jar" />
     </item>
 
 </items>
