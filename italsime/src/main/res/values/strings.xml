@@ -42,6 +42,8 @@
     <string name="set_manually_string">Set range manually</string>
     <string name="invalide_range">: Invalide range</string>
     <string name="invalide_value">Invalide value</string>
+    <string name="portata_string_unit">Flow Rate - m3/h</string>
+    <string name="pressure_string_unit">Pressure - mmH2O</string>
 
 	<string-array name="array_closed_blade_series">
         <item>All Series</item>
