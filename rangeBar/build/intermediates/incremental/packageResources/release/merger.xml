@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="D:\Android\AndroidProjects\Italsime\rangeBar\src\main\res"><file name="seek_thumb_normal" path="D:\Android\AndroidProjects\Italsime\rangeBar\src\main\res\drawable-xhdpi\seek_thumb_normal.png" qualifiers="xhdpi-v4" type="drawable"/><file name="seek_thumb_pressed" path="D:\Android\AndroidProjects\Italsime\rangeBar\src\main\res\drawable-xhdpi\seek_thumb_pressed.png" qualifiers="xhdpi-v4" type="drawable"/><file path="D:\Android\AndroidProjects\Italsime\rangeBar\src\main\res\values-v11\styles.xml" qualifiers="v11"><style name="AppBaseTheme" parent="android:Theme.Holo.Light">
-        <!-- API 11 theme customizations can go here. -->
-    </style></file><file path="D:\Android\AndroidProjects\Italsime\rangeBar\src\main\res\values-v14\styles.xml" qualifiers="v14"><style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
-        <!-- API 14 theme customizations can go here. -->
-    </style></file><file path="D:\Android\AndroidProjects\Italsime\rangeBar\src\main\res\values\attrs.xml" qualifiers=""><declare-styleable name="RangeBar">
+<merger version="3"><dataSet config="main"><source path="C:\Users\Luigi\AndroidStudioProjects\Italsime\rangeBar\src\main\res"><file name="seek_thumb_normal" path="C:\Users\Luigi\AndroidStudioProjects\Italsime\rangeBar\src\main\res\drawable-xhdpi\seek_thumb_normal.png" qualifiers="xhdpi" type="drawable"/><file name="seek_thumb_pressed" path="C:\Users\Luigi\AndroidStudioProjects\Italsime\rangeBar\src\main\res\drawable-xhdpi\seek_thumb_pressed.png" qualifiers="xhdpi" type="drawable"/><file path="C:\Users\Luigi\AndroidStudioProjects\Italsime\rangeBar\src\main\res\values\attrs.xml" qualifiers=""><declare-styleable name="RangeBar">
         <attr format="integer" name="tickCount"/>
         <attr format="dimension" name="tickHeight"/>
         <attr format="dimension" name="barWeight"/>
@@ -15,12 +11,16 @@
         <attr format="reference" name="thumbImagePressed"/>
         <attr format="reference|color" name="thumbColorNormal"/>
         <attr format="reference|color" name="thumbColorPressed"/>
-    </declare-styleable></file><file path="D:\Android\AndroidProjects\Italsime\rangeBar\src\main\res\values\strings.xml" qualifiers=""><string name="app_name">RangeBar</string></file><file path="D:\Android\AndroidProjects\Italsime\rangeBar\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
-    </style><style name="AppBaseTheme" parent="android:Theme.Light">
+    </declare-styleable></file><file path="C:\Users\Luigi\AndroidStudioProjects\Italsime\rangeBar\src\main\res\values\strings.xml" qualifiers=""><string name="app_name">RangeBar</string></file><file path="C:\Users\Luigi\AndroidStudioProjects\Italsime\rangeBar\src\main\res\values\styles.xml" qualifiers=""><style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
         -->
-    </style></file></source><source path="D:\Android\AndroidProjects\Italsime\rangeBar\build\generated\res\rs\release"/><source path="D:\Android\AndroidProjects\Italsime\rangeBar\build\generated\res\generated\release"/></dataSet><dataSet config="release"><source path="D:\Android\AndroidProjects\Italsime\rangeBar\src\release\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="RangeBar"><attr format="integer" name="tickCount"/><attr format="dimension" name="tickHeight"/><attr format="dimension" name="barWeight"/><attr format="reference|color" name="barColor"/><attr format="dimension" name="connectingLineWeight"/><attr format="reference|color" name="connectingLineColor"/><attr format="dimension" name="thumbRadius"/><attr format="reference" name="thumbImageNormal"/><attr format="reference" name="thumbImagePressed"/><attr format="reference|color" name="thumbColorNormal"/><attr format="reference|color" name="thumbColorPressed"/></declare-styleable></configuration></mergedItems></merger>
+    </style><style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style></file><file path="C:\Users\Luigi\AndroidStudioProjects\Italsime\rangeBar\src\main\res\values-v11\styles.xml" qualifiers="v11"><style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        <!-- API 11 theme customizations can go here. -->
+    </style></file><file path="C:\Users\Luigi\AndroidStudioProjects\Italsime\rangeBar\src\main\res\values-v14\styles.xml" qualifiers="v14"><style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!-- API 14 theme customizations can go here. -->
+    </style></file></source><source path="C:\Users\Luigi\AndroidStudioProjects\Italsime\rangeBar\build\generated\res\rs\release"/><source path="C:\Users\Luigi\AndroidStudioProjects\Italsime\rangeBar\build\generated\res\generated\release"/></dataSet><dataSet config="release"><source path="C:\Users\Luigi\AndroidStudioProjects\Italsime\rangeBar\src\release\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="RangeBar"><attr format="integer" name="tickCount"/><attr format="dimension" name="tickHeight"/><attr format="dimension" name="barWeight"/><attr format="reference|color" name="barColor"/><attr format="dimension" name="connectingLineWeight"/><attr format="reference|color" name="connectingLineColor"/><attr format="dimension" name="thumbRadius"/><attr format="reference" name="thumbImageNormal"/><attr format="reference" name="thumbImagePressed"/><attr format="reference|color" name="thumbColorNormal"/><attr format="reference|color" name="thumbColorPressed"/></declare-styleable></configuration></mergedItems></merger>

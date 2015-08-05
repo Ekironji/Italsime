@@ -83,7 +83,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:text="@string/portata_string" />
+                    android:text="@string/portata_string_unit" />
 
                 <TextView
                     android:id="@+id/textView_minPortata"
@@ -191,7 +191,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:text="@string/pressure_string" />
+                    android:text="@string/pressure_string_unit" />
 
                 <TextView
                     android:id="@+id/textView_minPressione"
@@ -288,4 +288,4 @@
     </ScrollView>
 
 </LinearLayout>
-<!-- From: file:/D:/Android/AndroidProjects/Italsime/italsime/src/main/res/layout/dialog_searchfilters.xml -->
+<!-- From: file:/C:/Users/Luigi/AndroidStudioProjects/Italsime/italsime/src/main/res/layout/dialog_searchfilters.xml -->

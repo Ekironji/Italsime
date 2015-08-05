@@ -59,7 +59,7 @@
 	                android:layout_height="wrap_content"
 	                android:layout_alignParentTop="true"
 	                android:layout_centerHorizontal="true"
-	                android:text="@string/portata_string" />
+	                android:text="@string/portata_string_unit" />
 	            
 	            <TextView 
 	                android:id="@+id/portataFiltersValues"
@@ -89,7 +89,7 @@
 	                android:layout_height="wrap_content"
 	                android:layout_alignParentTop="true"
 	                android:layout_centerHorizontal="true"
-	                android:text="@string/pressure_string" />
+	                android:text="@string/pressure_string_unit" />
 	            
 	            <TextView 
 	                android:id="@+id/pressureFiltersValues"
@@ -119,4 +119,4 @@
     </ListView>
 
 </RelativeLayout>
-<!-- From: file:/D:/Android/AndroidProjects/Italsime/italsime/src/main/res/layout/fragment_modelslist.xml -->
+<!-- From: file:/C:/Users/Luigi/AndroidStudioProjects/Italsime/italsime/src/main/res/layout/fragment_modelslist.xml -->

@@ -34,32 +34,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autoLink="email|phone"
-                android:text="@string/chiara_bianchini"/>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/darker_gray"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:autoLink="email|phone"
-                android:text="@string/david_gai"/>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/darker_gray"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:autoLink="email|phone"
                 android:text="@string/matteo_pagliai"/>
 
             <View
@@ -74,6 +48,19 @@
                 android:layout_height="wrap_content"
                 android:autoLink="email|phone"
                 android:text="@string/federico_sarnico"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="email|phone"
+                android:text="@string/david_gai"/>
 
             <View
                 android:layout_width="fill_parent"
@@ -100,4 +87,4 @@
 
     </LinearLayout>
 
-</ScrollView><!-- From: file:/D:/Android/AndroidProjects/Italsime/italsime/src/main/res/layout/fragment_info.xml -->
+</ScrollView><!-- From: file:/C:/Users/Luigi/AndroidStudioProjects/Italsime/italsime/src/main/res/layout/fragment_info.xml -->

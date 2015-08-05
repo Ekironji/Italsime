@@ -193,9 +193,9 @@
                 android:layout_centerHorizontal="true"
                 android:padding="10dp"
                 android:scaleType="centerInside"
-                android:src="@drawable/dimensioni_image"
+                android:src="@drawable/dimensions_image"
                 android:contentDescription="@string/imagedescriptor_imagedimension"/>
         </RelativeLayout>
 
 </LinearLayout>
-<!-- From: file:/D:/Android/AndroidProjects/Italsime/italsime/src/main/res/layout/fragment_modeldescriptor.xml -->
+<!-- From: file:/C:/Users/Luigi/AndroidStudioProjects/Italsime/italsime/src/main/res/layout/fragment_modeldescriptor.xml -->

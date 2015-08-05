@@ -1,7 +1,6 @@
 <!--I use android:fitsSystemWindows because I am changing the color of the statusbar as well-->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_parent_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -34,4 +33,4 @@
             android:layout_height="match_parent"
             android:layout_gravity="left|start" />
     </android.support.v4.widget.DrawerLayout>
-</LinearLayout><!-- From: file:/D:/Android/AndroidProjects/Italsime/italsime/src/main/res/layout/activity_main.xml -->
+</LinearLayout><!-- From: file:/C:/Users/Luigi/AndroidStudioProjects/Italsime/italsime/src/main/res/layout/activity_main.xml -->

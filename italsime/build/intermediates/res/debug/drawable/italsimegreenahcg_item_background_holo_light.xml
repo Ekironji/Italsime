@@ -24,4 +24,4 @@
     <item android:state_focused="true"                                                             android:drawable="@drawable/italsimegreenahcg_list_focused_holo" />
     <item                                                                                          android:drawable="@android:color/transparent" />
 </selector>
-<!-- From: file:/D:/Android/AndroidProjects/Italsime/italsime/src/main/res/drawable/italsimegreenahcg_item_background_holo_light.xml -->
+<!-- From: file:/C:/Users/Luigi/AndroidStudioProjects/Italsime/italsime/src/main/res/drawable/italsimegreenahcg_item_background_holo_light.xml -->
