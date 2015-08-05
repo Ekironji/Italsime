@@ -115,7 +115,7 @@ public class ModelDescriptorFragment extends Fragment{
 
             Log.i(DEBUG_TAG,"current: " + orientation + " LAND");
 
-            ((ImageView) subview.findViewById(R.id.imageViewDimensioni_land)).setImageResource(R.drawable.dimensioni_image);
+            ((ImageView) subview.findViewById(R.id.imageViewDimensioni_land)).setImageResource(R.drawable.dimensions_image);
             ((TextView) subview.findViewById(R.id.TextViewA_value)).setText(String.valueOf(model.getMisura1()));
             ((TextView) subview.findViewById(R.id.TextViewB_value)).setText(String.valueOf(model.getMisura2()));
             ((TextView) subview.findViewById(R.id.TextViewC_value)).setText(String.valueOf(model.getMisura3()));
